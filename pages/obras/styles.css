@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    font-family: 'Gelasio', serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.columnas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.categoria-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.categoria {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.categoria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoria-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.toggle-btn {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.open {
+    transform: rotate(45deg);
+}
+
+.description {
+    display: none;
+    padding-top: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.description.show {
+    display: block;
+    opacity: 1;
+}
+
+.description ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.description ul li {
+    margin: 5px 0;
+}
+
+/* Estilo para la columna de imágenes */
+.imagen-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de imágenes */
+    gap: 20px;
+}
+
+.imagen-cuadro {
+    background-color: #fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    position: relative;
+}
+
+.imagen-cuadro img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.texto-cuadro {
+    margin-top: 10px;
+}
+
+.texto-cuadro h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto-cuadro p {
+    font-size: 16px;
+    color: #555;
+}
+
+.signo-plus {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+

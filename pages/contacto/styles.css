@@ -1,0 +1,90 @@
+/* Contenedor general */
+.form-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    align-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.form-container h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.form-container p {
+    text-align: center;
+    font-size: 16px;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+/* Contenedor del formulario */
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+/* Fila del formulario */
+.form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Campo de formulario */
+.form-field {
+    width: 100%;
+}
+
+/* Campos más anchos y estrechos */
+.form-field.wide {
+    flex: 2;
+}
+
+.form-field.narrow {
+    flex: 1;
+}
+
+.form-field.full {
+    width: 100%;
+}
+
+/* Estilos de inputs y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botón */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

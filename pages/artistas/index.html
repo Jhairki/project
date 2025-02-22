@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Mi Proyecto</title>
+
+  <!-- Estilos específicos del navbar y footer -->
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Tipografía Gelasio -->
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar (se cargará dinámicamente) -->
+    <div id="navbar-container"></div>
+
+  <div class="grid-container">
+    <div class="top-section">
+      <div class="occidental">OCCIDENTE</div>
+      <div class="city-card">
+        <div class="image-container">
+          <img src="/api/placeholder/400/300" alt="La Paz" class="city-image">
+          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
+          <h2 class="city-name">La Paz</h2>
+        </div>
+        <div class="city-info">
+          <h3 class="city-title">ARTISTAS DE LA PAZ</h3>
+          <p class="city-description">
+            En el corazón vibrante de La Paz, nuestra galería se enorgullece de ofrecer una ventana única al mundo del arte paceño. Aquí, celebramos la rica diversidad cultural y creativa de los artistas de esta ciudad maravillosa, cuyas obras reflejan la esencia y la identidad de nuestra vibrante comunidad.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-cities">
+      <div class="city-card">
+        <div class="image-container">
+          <img src="/api/placeholder/400/300" alt="Oruro" class="city-image">
+          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
+          <h2 class="city-name">Oruro</h2>
+        </div>
+        <div class="city-info">
+          <h3 class="city-title">ARTISTAS DE ORURO</h3>
+          <p class="city-description">
+            Oruro, famoso por su carnaval, también es conocido por sus artistas como la pintora y muralista Susana Patiño, cuyas obras reflejan la riqueza cultural del festival, y el escultor Juan Carlos Paz, que trabaja con materiales tradicionales para expresar la identidad orureña.
+          </p>
+        </div>
+      </div>
+
+      <div class="city-card">
+        <div class="image-container">
+          <img src="/api/placeholder/400/300" alt="Potosi" class="city-image">
+          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #FFFFFF);"></div>
+          <h2 class="city-name">Potosí</h2>
+        </div>
+        <div class="city-info">
+          <h3 class="city-title">ARTISTAS DE POTOSI</h3>
+          <p class="city-description">
+            Potosí, con su historia minera, inspira a artistas como el pintor y grabador Félix Sánchez, cuyas obras exploran el impacto histórico y social de la minería, y la artista Teresa Calvo, que utiliza técnicas ancestrales para crear piezas únicas que narran historias locales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Footer (se cargará dinámicamente) -->
+  <div id="footer-container"></div>
+
+<!-- Scripts -->
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

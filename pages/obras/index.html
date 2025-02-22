@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Mi Proyecto</title>
+
+  <!-- Estilos específicos del navbar y footer -->
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Tipografía Gelasio -->
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+    
+    <div class="obras">
+        <div class="columnas">
+            <div class="categoria-column">
+                <!-- PINTURA -->
+                <div class="categoria">
+                    <div class="categoria-header">
+                        <h3>PINTURA</h3>
+                        <div class="toggle-btn" onclick="toggleContent('content1', this)">+</div>
+                    </div>
+                    <div class="description" id="content1">
+                        <ul>
+                            <li>OLEO</li>
+                            <li>ACUARELA</li>
+                            <li>PASTEL SECO</li>
+                            <li>ACRILICO</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- DIBUJO -->
+                <div class="categoria">
+                    <div class="categoria-header">
+                        <h3>DIBUJO</h3>
+                        <div class="toggle-btn" onclick="toggleContent('content2', this)">+</div>
+                    </div>
+                    <div class="description" id="content2">
+                        <ul>
+                            <li>CARBONCILLO</li>
+                            <li>GRAFITO</li>
+                            <li>TINTA</li>
+                            <li>SANGUINAS</li>
+                            <li>BOLIGRAFO</li>
+                            <li>MIXTAS</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- ESCULTURA -->
+                <div class="categoria">
+                    <div class="categoria-header">
+                        <h3>ESCULTURA</h3>
+                        <div class="toggle-btn" onclick="toggleContent('content3', this)">+</div>
+                    </div>
+                    <div class="description" id="content3">
+                        <ul>
+                            <li>PIEDRA</li>
+                            <li>MADERA</li>
+                            <li>METAL</li>
+                            <li>MIXTA</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- GRABADO -->
+                <div class="categoria">
+                    <div class="categoria-header">
+                        <h3>GRABADO</h3>
+                        <div class="toggle-btn" onclick="toggleContent('content4', this)">+</div>
+                    </div>
+                    <div class="description" id="content4">
+                        <ul>
+                            <li>XILOGRAFIA</li>
+                            <li>METAL</li>
+                            <li>PUNTA SECA</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- CERAMICA -->
+                <div class="categoria">
+                    <div class="categoria-header">
+                        <h3>CERAMICA</h3>
+                        <div class="toggle-btn" onclick="toggleContent('content5', this)">+</div>
+                    </div>
+                    <div class="description" id="content5">
+                        <ul>
+                            <li>TERRACOTA</li>
+                            <li>ESMALTADO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!-- Columna de imágenes con título y descripción -->
+            <div class="imagen-column">
+                <div class="imagen-cuadro">
+                    <img src="imagen1.jpg" alt="Imagen 1">
+                    <div class="texto-cuadro">
+                        <h4>"URBE EN MOVIMIERNTO"</h4>
+                        <h6>Natalia Montes Davalos</h6>
+                        <p>Pintura - 150 x 150 cm.</p>
+                        <p>Disponible</p>
+                        <h3>2000 Bs.</h3>
+                    </div>
+                    <div class="signo-plus">+</div>
+                </div>
+                <div class="imagen-cuadro">
+                    <img src="imagen2.jpg" alt="Imagen 2">
+                    <div class="texto-cuadro">
+                        <h4>"LEVITAR"</h4>
+                        <h6>Natalia Montes Davalos</h6>
+                        <p>Pintura - 120 x 120 cm.</p>
+                        <p>Disponible</p>
+                        <h3>2800 Bs.</h3>
+                    </div>
+                    <div class="signo-plus">+</div>
+                </div>
+                <div class="imagen-cuadro">
+                    <img src="imagen3.jpg" alt="Imagen 3">
+                    <div class="texto-cuadro">
+                        <h4>SERIE "INTROVERSION"</h4>
+                        <h6>Natalia Montes Davalos</h6>
+                        <p>Pintura - 40 x 30 cm.</p>
+                        <p>Disponible</p>
+                        <h3>700 Bs.</h3>
+                    </div>
+                    <div class="signo-plus">+</div>
+                </div>
+                <div class="imagen-cuadro">
+                    <img src="imagen4.jpg" alt="Imagen 4">
+                    <div class="texto-cuadro">
+                        <h4>"SOLEDAD Y VITILIGIO"</h4>
+                        <h6>Natalia Montes Davalos</h6>
+                        <p>Pintura - 120 x 120 cm.</p>
+                        <p>Disponible</p>
+                        <h3>2600 Bs.</h3>
+                    </div>
+                    <div class="signo-plus">+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div id="footer-container"></div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

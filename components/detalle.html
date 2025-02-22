@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Obra</title>
+    <style>
+        .detalle-container { text-align: center; }
+        .detalle-imagen { width: 300px; height: auto; }
+        .detalle-info { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="detalle-container">
+        <h1 id="titulo"></h1>
+        <img id="imagen-principal" class="detalle-imagen" src="" alt="Imagen de la obra">
+        <p id="descripcion"></p>
+        <p><strong>Precio:</strong> <span id="precio"></span> Bs.</p>
+        <p><strong>Tamaño:</strong> <span id="tamano"></span></p>
+        <p><strong>Estado:</strong> <span id="estado"></span></p>
+        <p><strong>Técnica:</strong> <span id="tecnica"></span></p>
+        <p><strong>Ubicación:</strong> <span id="localizacion"></span></p>
+
+        <!-- Galería de imágenes adicionales -->
+        <h3>Imágenes adicionales</h3>
+        <div id="galeria"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            // Obtener la ID de la obra desde la URL
+            const params = new URLSearchParams(window.location.search);
+            const obraId = params.get('id'); // ej: "img1"
+
+            if (!obraId) {
+                document.body.innerHTML = "<h2>Error: Obra no encontrada</h2>";
+                return;
+            }
+
+            try {
+                // Cargar el JSON de las obras
+                const response = await fetch("/obras.json"); // Asegura la ruta correcta
+                const obras = await response.json();
+
+                // Buscar la obra con el ID correspondiente
+                const obra = obras.find(o => o.id_img === obraId);
+
+                if (!obra) {
+                    document.body.innerHTML = "<h2>Error: Obra no encontrada</h2>";
+                    return;
+                }
+
+                // Insertar los datos en la página
+                document.getElementById("titulo").textContent = obra.titulo;
+                document.getElementById("imagen-principal").src = obra.img[0];
+                document.getElementById("descripcion").textContent = obra.descripcion;
+                document.getElementById("precio").textContent = obra.precio;
+                document.getElementById("tamano").textContent = obra.tamano;
+                document.getElementById("estado").textContent = obra.estado;
+                document.getElementById("tecnica").textContent = obra.tecnica;
+                document.getElementById("localizacion").textContent = obra.localizacion;
+
+                // Agregar imágenes a la galería
+                const galeria = document.getElementById("galeria");
+                obra.img.slice(1).forEach(src => {
+                    const img = document.createElement("img");
+                    img.src = src;
+                    img.className = "detalle-imagen";
+                    galeria.appendChild(img);
+                });
+
+            } catch (error) {
+                console.error("Error cargando los datos:", error);
+            }
+        });
+    </script>
+
+</body>
+</html>

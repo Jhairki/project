@@ -1,0 +1,150 @@
+[
+    {
+      "id": "1",
+      "type": "GRAVADORA",
+      "name": "LAURA",
+      "surname":"Mollinedo Aruni",
+      "location": "La Paz",
+      "imags": [
+        "/assets/images/artistas/TALLER.jpg",
+        "/assets/images/artistas/Foto de presentación.jpg",
+        "/assets/images/artistas/trabajo en taller 2.jpg"
+      ],
+      "destacado" : "2022 - Taller de grabado - realización de proyecto para la Facultad de Medicina de la Universidad Mayor de San Andres",
+      "premios": [
+        "2024 Ganadora PRIMER LUGAR en la especialidad de PINTURA en el concurso LXXII SALÓN MUNICIPAL DE ARTES PLÁSTICAS \"PEDRO DOMINGO MURILLO\"",
+        "2023 Ganadora del Tercer Premio en la mención de Pintura de la categoría \"C\" en la Exposición del \"XXX SALÓN ANUAL\" de in Carrera de Artes Plásticas y Diseño Gráfico de la UMSA.",
+        "2023 Ganadora por la mejor obra de arte del Fomento pintura, de la convocatoria Promoción de Artistas Emergentes Fundación Cultural del Banco Central de Bolivia.",
+        "2023 Premio a una de las obras más destacadas en el Encuentro de Acuarela al aire libre, en homenaje al Maestro Ricardo Pérez Alcalá.",
+        "2022 Ganadora Primer Premio en el concurso Artístico Facultativo \"Fortificando Nuestras Identidades\""
+      ],
+      "descripcion" : "Artista boliviana. Nació en diciembre de 1998 en la ciudad de La Paz, Bolivia. Inició sus estudios académicos/artísticos en la carrera de Artes Plásticas de la Universidad Mayor de San Andrés en 2017. Bajo la mención de Grabado ha realizado y sido participe de varias exposiciones colectivas en la ciudad de La Paz. </br>Gran parte de su obra constituye una estética del reciclaje, donde materiales y temáticas van creando una urdimbre de citas de meditación y acción a lo largo de una extensa trayectoria. </br>Ella, poeta, refuerza y desdobla sus obras abriendo perspectivas de memorias, con una sostenida delicadeza cuyos ejemplos más significativos están en sus representaciones femeninas y una mirada irónica, sorpresiva, ante el mundo contemporáneo. A veces emerge un detalle en una obra que aparece como asunto central en otra.",
+      "obras": ["img1","img2","img3", "img4"]
+    },
+    {
+      "id": "2",
+      "type": "PINTORA",
+      "name": "CAROL",
+      "surname":"Bitre Mamani",
+      "location": "La Paz",
+      "imags": [
+        "/assets/images/artistas/Damarfotoestudio_102227.jpg",
+        "/assets/images/artistas/Fto.DamarBitre_081528.jpg",
+        "/assets/images/artistas/453737044_2783440698481396_171250654198558246_n.jpg"
+      ],
+      "destacado" : "2024-Exposición individual denominada \"Metamorfosis\" Casa de la cultura Franz Tamayo",
+      "premios": [
+        "2024 Ganadora PRIMER LUGAR en a la especialidad de PINTURA en el concurso LXXII SALÓN MUNICIPAL DE ARTES PLÁSTICAS \"PEDRO DOMINGO MURILLO\"",
+        "2023 Ganadora del Tercer Premio en la mención de Pintura de la categoría \"C\" en la Exposición del \"XXX SALÓN ANUAL \" de la Carrera de Artes Plásticas y Diseño Gráfico de la UMSA.",
+        "2023 Ganadora por la mejor obra de arte del Fomento pintura, de la convocatoria Promoción de Artistas Emergentes Fundación Cultural del Banco Central de Bolivia.",
+        "2023 Premio a una de las obras más destacadas en el Encuentro de Acuarela al aire libre, en homenaje al Maestro Ricardo Pérez Alcalá.",
+        "2022 Ganadora Primer Premio en el concurso Artístico Facultativo \"Fortificando Nuestras Identidades\""
+      ],
+      "descripcion" : "Nació en el departamento de La Paz-Bolivia, un 22 de junio del año 2000. Su trayectoria artística se comenzó a formar en sus últimos años de colegio 2016-2017. Entro en cursos modulares en la Academia Nacional de Bellas Artes y continuamente a la carrera de Artes Plásticas de la Universidad Mayor de San Andrés de cuál actualmente ya es egresada.</br>Ha participado en varias exposiciones colectivas en distintas salas y museos de Bolivia, recibiendo premios y distinciones en diferentes concursos, destacando como uno de los más importantes el premio en la especialidad de PINTURA en el concurso LXXII SALÓN MUNICIPAL DE ARTES PLÁSTICAS \"PEDRO DOMINGO MURILLO\". </br>Actualmente trabaja en la mayor parte de su obra con la técnica del pastel seco, de la cual aún va aprendiendo, continuando asícon esa inquietud que ha tenido desde pequeña por el arte.",
+      "obras": ["img5","img6","img7", "img8"]
+    },
+
+    {
+      "id": "3",
+      "type": "PINTOR",
+      "name": "ABDEL",
+      "surname":"Pomacusi Choque",
+      "location": "La Paz",
+      "imags": [
+        "/assets/images/artistas/IMG_20241224_152808.jpg",
+        "/assets/images/artistas/IMG_20240915_230551.jpg",
+        "/assets/images/artistas/251362596_4230820967029837_1983547078308499433_n.jpg"
+
+      ],
+      "destacado" : "2024-Galardon mención de honor en la zta Bienal de Acuarela Quípus Bolivia",
+      "premios": [
+        "2024 Primer premio en el concurso de acuarela en Cochabamba Cascna Santivañez",
+        "2024 Primers Mención en la Bienal taternacional de acuarela Quipus Bolivia Casa de la cultura Cochabamba y Museo Nacional de Arte",
+        "2022 Primera Mención en el concurso las illas de las artes Plásticas Museo Costumbrista Juan de Vargas",
+        "2021 Primer lugar en el salón Anual ANBA ACADEMIA NACIONAL DE BELLAS ARTES",
+        "2021 Tercera Mención en el concurso Las tilas de las artes Plásticas Museo Costambrista Juan de Vargas",
+        "2020 Primera mención en el concurso Octubre negro \"Museo Antonio Paredes Candia\"",
+        "2019 Primera lugar en el Concurso Octubre negro \"Museo Antonio Paredes Cándia\""
+      ],
+      "descripcion" : "Nació en La Paz Bolivia, culminando estudios en la EMDA y en la ANBA. En su trayectoria hizo exposiciones nacionales, en distintos espacios culturales del país e Internacionales también, entre los cuales destacan: \"gra Bienal internacional de acuarela, Kipus Bolivia 2022\", \"4ta Bienal Internacional de acuarela, Kipus Bolivia 2024\", \"Acuarela Contemporánea\", \"2do y 3er Encuentro Nacional de Dibujo\", \"Do you speak watercolor 2023\", \"IWS Ecuador, Diálogos entre acuarela y tinta\", entre otros. Participó en concursos, obteniendo menciones y premios. Actualmente trabaja como artista radicando en la ciudad de La Paz. <\br>La obra de arte radica en un diálogo entre la pieza artística ayel y el observador, pero este acto es mucho mas profundo ya que el artista se enfrenta hacia un soporte en blanco, del cual comienza el desafio de una obra. En este proceso el artista dialoga consigo mismo, con su entorno en el cual se generan conflictos y aciertos.",
+      "obras": ["img9","img10","img11", "img12"]
+    },
+
+    {
+      "id": "4",
+      "type": "DIBUJANTE",
+      "name": "PAOLA",
+      "surname":"Aliaga Villalba",
+      "location": "La Paz",
+      "imags": [
+
+        "assets/images/artistas/IMG-20200620-WA0006.jpeg",
+        "assets/images/artistas/292881254_5303966616358698_4325510538678364647_n-transformed.jpeg",
+        "assets/images/artistas/251362596_4230820967029837_1983547078308499433_n.jpg"
+
+      ],
+      "destacado" : "2021-Exposición en el Salon de laa era de Artes de la Universidad Mayor de San Andres",
+      "premios": [
+        "2024-Mención en la especialidad Dibujo de la 11 vertión del Premio Eduardo Abaros,",
+        "2024-Mención en la especialidad Dibujo de la versión del Premio Eduardo Abaroa.",
+        "2023-Segundo premio en la mención Placura del XXX Salón Anual de la Carrera de Artes Plásticas y Diseño Gráfico",
+        "2022-Finalista en la beca Rese Noriega Matines de la fundación Thayas EE.UU..",
+        "2019-Segunda mención de Honor en Dibujo en el VI Concurso \"Las illas de las Artes Plásticas\"",
+        "2016-Mención de honor en Dibujo en el XXVI Salón Anal de la Carrera de Artes Plásticas y Diseño Grático."
+      ],
+      "descripcion" : "Nació en 1996 en El Alto, de nacionalidad boliviana sunque estudió en Sao Paulo - Brasil hasta la adolescencia. Volvió a La Pas para estudiar la carrera de Artes Plásticas de la Universidad Mayor de San Andrés con mención Pintura, la cual se graduó el 2024. <\br>Dentro de la representación de sus obras, retrata esencialmente el cotidiano y la percepción de su entorno de forma surreal, Inspirada notablemente en la escena rural de la ciudad de El Alto, en especial Puerto Acosta, manifestando una fusión y yuxtaposición de ideas para la realización de obras artísticas que transmitan casi una realidad alterna. <\br> Las técnicas más utilizadas, tanto de la pintura al óleo como del grafito y carboncillo da a conocer ese mundo creado en el límite de lo real, donde se crea un juego con la percepción y sensaciones.",
+      "obras": ["img13","img14","img15", "img16"]
+    },
+
+    {
+      "id": "5",
+      "type": "PINTORA",
+      "name": "NATALIA",
+      "surname":"Montes Dávalos",
+      "location": "La Paz",
+      "imags": [
+        "/assets/images/artistas/IMG_20230412_142818.jpg",
+        "/assets//images//artistas/116713818_2936277543150859_2136998702714981065_n-transformed.jpeg",
+        "/assets/images/artistas/251362596_4230820967029837_1983547078308499433_n.jpg"
+
+      ],
+      "destacado" : "2021 - Exposición colectiva \"Dolencias Simultáneas\" Sótano Espacio de Arte - Cochabamba",
+      "premios": [
+        "2022 Primera Mencion de Honor, en la Especialidad Pintura. Salón Pedro Domingo Murillo. La Paz, Bolivia,",
+        "2021 Cuarta Mención de Honor, en la Especialidad Pintura Saión Pedro Domingo Murillo. La Paz, Bolivia.",
+        "2019 Gran Premio.Saión Anual de la Carrera de Artes Plásticas. La Paz, Bolivia.",
+        "2019 Segunda Mención de Honor, en la especialidad dibujo Salón Pedro Domingo Murillo, La Paz, Bolivia.",
+        "2019 Primer Premio en medios alternativos. Salon Anual de la Carrera de Artes Plásticas. La Paz, Bolivia.",
+        "2018 Gran Premio. Salón Anual de la Carrera de Artes Plásticas. La Paz, Bolivia.",
+        "2017 Gran Premio Salón Anual de la Carrera de Artes Plásticas, La Paz, Bolivia."
+      ],
+      "descripcion" : "Nació en La Paz - Bolivia (1998). Obtuvo su licenciatura en Arte con mención Pintura en la carrera de Artes Plásticas de la Universidad Mayor de San Andrés.</br>A menudo se refiere a su trabajo en la importancia de la percepción. Sin esto, no sería posible crear. Un aspecto clave de su práctica es la exploración de ideas sobre la forma en que nos vemos y cómo nos relacionamos con nuestro espacio y contexto. Una historia contada a través del encuadre de su propia historia personal, narrando lo que puede ver. En su trabajo el medio ambiente, la ciudad y la forma de actuar de las personas, define lo que busca como ejemplo de narración.<\br>Describe su trabajo como una autopresentación observando y encontrando escenas y pintándolas tratando de manejar un lenguaje que denota énfasis en elementos y situaciones pop -contemporáneos que buscan el interés de manera oculta con una paleta aveces limitada y expresiones intrínsecas.",
+      "obras": ["img17","img18","img19", "img20"]
+    },
+
+    {
+      "id": "6",
+      "type": "PINTOR",
+      "name": "GUIDO",
+      "surname":"Quispe Pillco",
+      "location": "La Paz",
+      "imags": [
+        "/assets/images/artistas/IMG_20240810_155621_811_122840.jpg",
+        "/assets/images/artistas/IMG_20240810_152226_833_122906.jpg",
+        "/assets/images/artistas/GUIDO EXPO.jpg"
+      ],
+      "destacado" : "2022 - Exposicion individual denominada \"Atmósfer de los Andes\" Casa de la cultura Franz Tamayo",
+      "premios": [
+        "2020 Ganador de la beca René Noriegs en artes plásticas, etorgado por la fundación THAYAS de EEUU",
+        "2021 Pramer lugar en el concurso Nacional de piacura al stre libre SAN LUCAS-ORURO",
+        "2022 Mención de honar en pintaru al aire libre el el marco de la BIENAL INTERNACIONAL IWS BOLIVIA, Taraa-Cochabaraba",
+        "2022 Primer lugar en pintura categoría Nacional en el marco de la BIENAL INTERNACIONAL TWS BOLIVIA, el Alto-La Pas",
+        "2013 Reconocimiento especial en la categoría de photura por la fundación cultural del banco centrai, en el marco del evento Artistas eroergemes",
+        "2024 Mención honorifica en el concurso \"el valor del dibujo, Fernsado Montes Peñarında\""
+      ],
+      "descripcion" : "Nació un 1 de abril de 1995 en la localidad de Chipamaya, Prov. Los Andes del departamento de La Paz - BOLIVIA.<\br>En su juventud logro el primer lugar en la categoría de artes plásticas a nivel Inter colegial la misma que motivo a optar por la carrera de Artes Plásticas. Cursando el primer semestre en la Universidad Pública del Alto UPRA, y posteriormente en la Universidad Mayor de San Andrés UMSA de la cual es egresado.<\br>Durante su trayectoria artística Guido, realizó varias exposiciones colectivas e individuales a nivel nacional e Internacional, como también obtuvo varios reconocimientos en certámenes internacionales y premios a nivel Nacional, asímismo sus obras se encuentras diseminados en colecciones privadas y municipales a nivel nacional e internacional.<\br>Actualmente se encuentra desarrollando y experimentando en la técnica de la Acuarela de manera independiente.",
+      "obras": ["img21","img22","img23", "img24"]
+    }
+
+  ]
+  

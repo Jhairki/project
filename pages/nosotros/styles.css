@@ -1,0 +1,123 @@
+/* Contenedor de las columnas */
+.time-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Cada columna de texto */
+.time-column {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/*vont*/
+
+/* Contenedor principal */
+.container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: una para el texto y otra para la imagen */
+    gap: 20px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Contenedor de texto */
+.content-description2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Bordes y estilo del contenedor del texto */
+.border-container2 {
+    position: relative;
+    padding: 20px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título con fondo negro */
+.border-container2 h1 {
+    position: absolute;
+    top: -40px;  /* Para que el título quede justo sobre el borde */
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 1; /* Asegura que el título esté por encima del borde */
+}
+
+/* Estilo del párrafo y descripción */
+.description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 60px;
+}
+
+/* Sección de la imagen */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+
+/*lista*/
+.container{
+    width: 90%;
+}
+
+.number {
+    left: 15%;
+}
+
+.title {
+    text-align: left; 
+    padding-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 1fr; /* Dos columnas: una para el cuadrado y otra para el texto */
+    gap: 40px; /* Espacio entre los elementos */
+    align-items: start; /* Alineación vertical en la parte superior */
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+    background-color: rgb(197, 110, 110); /* Color rojo claro */
+}
+
+.value-text h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #d4beb6; /* Color salmon */
+}
+
+.value-text p {
+    margin: 5px 0;
+    font-size: 16px;
+}
