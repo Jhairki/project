@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #252530;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artwork {
+    margin: 15px;
+    text-align: center;
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s; /* Añade un efecto de transición */
+    width: 200px; /* Ajusta el ancho del contenedor de cada obra */
+}
+
+.artwork img {
+    width: 100%; /* El ancho de la imagen se adapta al contenedor */
+    height: 250px; /* Establece un alto fijo para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    border-radius: 5px;
+}
+
+.artwork h2 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.artwork p {
+    margin: 5px 0;
+}
+
+.artwork:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+}

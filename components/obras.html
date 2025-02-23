@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras de Arte</title>
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/assets/css/obras.css"> <!-- Asegúrate de tener un archivo CSS -->
+</head>
+<body>
+    <nav class="custom-navbar">
+        <!-- Aquí va tu código de la barra de navegación -->
+    </nav>
+
+    <div class="container">
+        <h1>Obras de Arte</h1>
+        <div id="galeria" class="gallery"></div>
+    </div>
+
+    <footer>
+        <!-- Aquí va tu código del footer -->
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            try {
+                const responseObras = await fetch("../../obras.json");
+                const obras = await responseObras.json();
+
+                const galeria = document.getElementById("galeria");
+                galeria.innerHTML = ""; // Limpia el contenido previo
+
+                obras.forEach(obra => {
+                    const divObra = document.createElement("div");
+                    divObra.className = "artwork";
+                    divObra.onclick = () => {
+                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                    };
+                    divObra.innerHTML = `
+                        <img src="${obra.img[0]}" alt="${obra.titulo}">
+                        <h2>${obra.titulo}</h2>
+                        <p>Autor: ${obra.autor}</p>
+                        <p>Precio: ${obra.precio} Bs.</p>
+                    `;
+                    galeria.appendChild(divObra);
+                });
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+                document.body.innerHTML = "<h2>Error al cargar las obras</h2>";
+            }
+        });
+    </script>
+
+    
+<script src="/assets/js/navbar.js"></script>
+<script src="/assets/js/footer.js"></script>
+</body>
+</html>
