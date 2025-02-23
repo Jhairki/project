@@ -1,50 +1,108 @@
-/* Contenedor general */
-.form-container {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    align-content: center;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.section-1 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Título */
+.section-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    text-align: right;
+    z-index: 10;
+}
+
+.text-overlay h1 {
+    margin: 0;
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 5px 5px 15px rgba(169, 169, 169, 0.7);
+}
+
+.form-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+.form-container-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/assets/images/general web/obra marca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+    padding: 50px 0;
+}
+
+.form-container-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.form-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
 .form-container h1 {
     text-align: center;
     font-size: 28px;
     margin-bottom: 10px;
+    color: #fff;
 }
 
-/* Subtítulo */
 .form-container p {
     text-align: center;
     font-size: 16px;
-    width: 40%;
+    width: 100%;
     margin-bottom: 30px;
+    color: #fff;
 }
 
-/* Contenedor del formulario */
 .form-wrapper form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 50%;
+    width: 100%;
 }
 
-/* Fila del formulario */
 .form-row {
     display: flex;
     gap: 15px;
     width: 100%;
 }
 
-/* Campo de formulario */
 .form-field {
-    width: 100%;
+    flex: 1;
 }
 
-/* Campos más anchos y estrechos */
 .form-field.wide {
     flex: 2;
 }
@@ -57,34 +115,82 @@
     width: 100%;
 }
 
-/* Estilos de inputs y textarea */
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #615757;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
 }
 
 textarea {
     resize: vertical;
+    min-height: 100px;
 }
 
-/* Botón */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    width: 100%;
+}
+
 button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+    padding: 12px 30px;
+    background: linear-gradient(to bottom, #a74660, #c10d43);
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(to bottom, #d80000, #a00000);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-field.wide,
+    .form-field.narrow {
+        flex: none;
+        width: 100%;
+    }
+
+    .text-overlay h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h1 {
+        font-size: 20px;
+    }
+
+    .form-container p {
+        font-size: 14px;
+    }
+
+    .text-overlay h1 {
+        font-size: 3rem;
+    }
 }

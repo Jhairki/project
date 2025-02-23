@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Mi Proyecto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte-Bolivia</title>
 
-  <!-- Estilos específicos del navbar y footer -->
-  <link rel="stylesheet" href="/assets/css/navbar.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Tipografía Gelasio -->
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <div id="navbar-container"></div>
-    
-    <div>
-        <img src="/assets/images/general web/galeria-arte.jpg" alt="" style="width: 60%;">
-        <h1>OBRAS</h1>
+
+    <div class="section-1">
+        <img src="/assets/images/general web/galeria-arte.jpg">
+        <div class="text-overlay">
+            <h1>OBRAS</h1>
+        </div>
     </div>
-    <div class="obras">
+    <div class="section-2">
         <div class="columnas">
             <div class="categoria-column">
-                <!-- PINTURA -->
                 <div class="categoria">
                     <div class="categoria-header">
                         <h3>PINTURA</h3>
@@ -40,8 +42,7 @@
                         </ul>
                     </div>
                 </div>
-        
-                <!-- DIBUJO -->
+
                 <div class="categoria">
                     <div class="categoria-header">
                         <h3>DIBUJO</h3>
@@ -58,8 +59,7 @@
                         </ul>
                     </div>
                 </div>
-        
-                <!-- ESCULTURA -->
+
                 <div class="categoria">
                     <div class="categoria-header">
                         <h3>ESCULTURA</h3>
@@ -74,8 +74,7 @@
                         </ul>
                     </div>
                 </div>
-        
-                <!-- GRABADO -->
+
                 <div class="categoria">
                     <div class="categoria-header">
                         <h3>GRABADO</h3>
@@ -89,8 +88,7 @@
                         </ul>
                     </div>
                 </div>
-        
-                <!-- CERAMICA -->
+
                 <div class="categoria">
                     <div class="categoria-header">
                         <h3>CERAMICA</h3>
@@ -104,48 +102,78 @@
                     </div>
                 </div>
             </div>
-        
 
-            <!-- Columna de imágenes con título y descripción -->
             <div class="imagen-column">
                 <div class="imagen-cuadro">
-                    <img src="/assets/images/obras/natalia montes/5035071095920766386.jpg" alt="Imagen 1">
+                    <div class="imagen-container">
+                        <a href="../../components/detalle.html?id=img18">
+                            <img src="/assets/images/obras/natalia montes/5035071095920766386.jpg" alt="Imagen 1">
+                            <div class="overlay">
+                                <p>Más acerca de la obra</p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="texto-cuadro">
-                        <h4>"URBE EN MOVIMIERNTO"</h4>
-                        <h6>Natalia Montes Davalos</h6>
+                        <h4>"URBE EN MOVIMIENTO"</h4>
+                        <h6>Natalia Montes Dávalos</h6>
                         <p>Pintura - 150 x 150 cm.</p>
                         <p>Disponible</p>
                         <h3>2000 Bs.</h3>
                     </div>
                     <div class="signo-plus">+</div>
                 </div>
+
                 <div class="imagen-cuadro">
-                    <img src="/assets/images/obras/natalia montes/5035071095920766388.jpg" alt="Imagen 2">
+                    <div class="imagen-container">
+                        <a href="../../components/detalle.html?id=img19">
+                            <img src="/assets/images/obras/natalia montes/5035071095920766388.jpg" alt="Imagen 2">
+                            <div class="overlay">
+                                <p>Más acerca de la obra</p>
+                            </div>
+                        </a>
+                    </div>
+
                     <div class="texto-cuadro">
                         <h4>"LEVITAR"</h4>
-                        <h6>Natalia Montes Davalos</h6>
+                        <h6>Natalia Montes Dávalos</h6>
                         <p>Pintura - 120 x 120 cm.</p>
                         <p>Disponible</p>
                         <h3>2800 Bs.</h3>
                     </div>
                     <div class="signo-plus">+</div>
                 </div>
+
                 <div class="imagen-cuadro">
-                    <img src="/assets/images/obras/natalia montes/detalle 2.jpg" alt="Imagen 3">
+                    <div class="imagen-container">
+                        <a href="../../components/detalle.html?id=img17">
+                            <img src="/assets/images/obras/natalia montes/detalle 2.jpg" alt="Imagen 3">
+                            <div class="overlay">
+                                <p>Más acerca de la obra</p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="texto-cuadro">
-                        <h4>SERIE "INTROVERSION"</h4>
-                        <h6>Natalia Montes Davalos</h6>
+                        <h4>SERIE "INTROVERSIÓN"</h4>
+                        <h6>Natalia Montes Dávalos</h6>
                         <p>Pintura - 40 x 30 cm.</p>
                         <p>Disponible</p>
                         <h3>700 Bs.</h3>
                     </div>
                     <div class="signo-plus">+</div>
                 </div>
+
                 <div class="imagen-cuadro">
-                    <img src="/assets/images/obras/natalia montes/5032819296107081290.jpg" alt="Imagen 4">
+                    <div class="imagen-container">
+                        <a href="../../components/detalle.html?id=img20">
+                            <img src="/assets/images/obras/natalia montes/5032819296107081290.jpg" alt="Imagen 4">
+                            <div class="overlay">
+                                <p>Más acerca de la obra</p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="texto-cuadro">
-                        <h4>"SOLEDAD Y VITILIGIO"</h4>
-                        <h6>Natalia Montes Davalos</h6>
+                        <h4>"SOLEDAD Y VITILIGO"</h4>
+                        <h6>Natalia Montes Dávalos</h6>
                         <p>Pintura - 120 x 120 cm.</p>
                         <p>Disponible</p>
                         <h3>2600 Bs.</h3>
@@ -153,11 +181,14 @@
                     <div class="signo-plus">+</div>
                 </div>
             </div>
+
+
         </div>
     </div>
-      
+
     <div id="footer-container"></div>
 
-  <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
+
 </html>

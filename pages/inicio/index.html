@@ -1,129 +1,210 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio - Mi Proyecto</title>
 
-  <!-- Estilos específicos del navbar y footer -->
   <link rel="stylesheet" href="/assets/css/navbar.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
-
+  <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="styles.css">
 
-
-  <!-- Tipografía Gelasio -->
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Navbar (se cargará dinámicamente) -->
-    <div id="navbar-container"></div>
+  <div id="navbar-container"></div>
 
-    <div>
-      <img src="/assets/images/general web/obra marca.jpg" alt="">
-      <div>
-        <img src="/assets/images/general web/obra marca.jpg" alt="">
-        <img src="/assets/images/obras/carol bitre/Descubriendo_el_color.DamarBitre.jpg" alt="">
-        <img src="/assets/images/obras/natalia montes/5035071095920766388.jpg" alt="">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/assets/images/general web/obra marca.jpg" alt="Obra 1"></div>
+      <div class="swiper-slide"><img src="/assets/images/obras/carol bitre/Descubriendo_el_color.DamarBitre.jpg"
+          alt="Obra 2"></div>
+      <div class="swiper-slide"><img src="/assets/images/obras/natalia montes/5035071095920766388.jpg" alt="Obra 3">
       </div>
-      <img src="" alt="">
-      
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
 
+
+
+  <div class="section-2">
     <div class="container">
-        <div class="content-section">
+      <div class="content-section">
+        <div class="text-column">
           <div class="border-container">
             <div class="number">01</div>
             <div class="title-box">
               <h1 class="title">BIENVENIDO</h1>
             </div>
             <p class="description">
-              Nos complace abrir este espacio digital dedicado a la exhibición e información del arte boliviano. Aquí, conectamos a talentosos artistas de nuestro país con una audiencia global, brindando una plataforma accesible donde la creatividad y la identidad cultural de Bolivia se expresan sin fronteras.
+              Nos complace abrir este espacio digital dedicado a la exhibición e información del arte boliviano. Aquí,
+              conectamos a talentosos artistas de nuestro país con una audiencia global, brindando una plataforma
+              accesible
+              donde la creatividad y la identidad cultural de Bolivia se expresan sin fronteras.
 
-Descubre obras que inspiran, conmueven y celebran la riqueza de nuestra diversidad artística, desde las montañas hasta las llanuras, desde las tradiciones ancestrales hasta las voces contemporáneas. Gracias por ser parte de esta experiencia única. ¡Explora, disfruta y déjate llevar por el arte boliviano!
+              Descubre obras que inspiran, conmueven y celebran la riqueza de nuestra diversidad artística, desde las
+              montañas hasta las llanuras, desde las tradiciones ancestrales hasta las voces contemporáneas. Gracias por
+              ser
+              parte de esta experiencia única. ¡Explora, disfruta y déjate llevar por el arte boliviano!
             </p>
           </div>
         </div>
-        <div class="image-section">
-          <img src="/assets/images/general web/ronald candia edit 1.jpg" alt="Galería de arte vista a través de un teléfono móvil" />
+        <div class="image-column">
+          <img src="/assets/images/general web/ronald candia edit 1.jpg"
+            alt="Galería de arte vista a través de un teléfono móvil" />
         </div>
       </div>
+    </div>
+  </div>
 
 
-      <div>
-        <div class="grid-container">
-          <div class="grid-item item-1-2">1-2</div>
-          <div class="grid-item item-3">3</div>
-          <div class="grid-item item-4">4</div>
-          <div class="grid-item item-5-6-8-9">5-6-8-9</div>
-          <div class="grid-item item-7">7</div>
+  <div>
+    <div class="grid-container">
+      <div class="grid-item item-1-2"><img src="/assets/images/obras/guido quispe/GUIDO 2.jpg" alt="Image 1"></div>
+      <div class="grid-item item-3"><img
+          src="/assets/images/obras/laura mollinedo/6. Hipocresía y poder. Punta Seca. Laura Mollinedo Aruni.jpg"
+          alt="Image 2"></div>
+      <div class="grid-item item-4"><img src="/assets/images/obras/paola aliaga/5125609809679330545.jpg" alt="Image 3">
+      </div>
+      <div class="grid-item item-5-6-8-9"><img src="/assets/images/obras/guido quispe/IMG_20240611_152809_667 (1).jpg"
+          alt="Image 4"></div>
+      <div class="grid-item item-7"><img src="/assets/images/obras/abdel pomacusi/IMG_20241224_141725.jpg"
+          alt="Image 5"></div>
+    </div>
+
+    <div class="container">
+      <div class="content-section">
+        <div class="border-container">
+          <div class="number">02</div>
+          <div class="title-box">
+            <h1 class="title">GALERIA</h1>
+          </div>
+          <p class="description">
+            Explora nuestra colección de obras de arte únicas creadas por artistas bolivianos. Cada pieza refleja la
+            riqueza cultural, histórica y contemporánea de Bolivia, capturando la esencia de nuestra tierra a través de
+            diversas técnicas y estilos. Desde dibujos y pinturas hasta esculturas, esta galería es un espacio vibrante
+            donde la creatividad y la identidad boliviana se encuentran.
+
+            Sumérgete en el talento de nuestros artistas y descubre las historias que cada obra tiene para conta
+          </p>
         </div>
-        <div class="container">
-          <div class="content-section">
-            <div class="border-container">
-              <div class="number">02</div>
-              <div class="title-box">
-                <h1 class="title">GALERIA</h1>
-              </div>
-              <p class="description">
-Explora nuestra colección de obras de arte únicas creadas por artistas bolivianos. Cada pieza refleja la riqueza cultural, histórica y contemporánea de Bolivia, capturando la esencia de nuestra tierra a través de diversas técnicas y estilos. Desde dibujos y pinturas hasta esculturas, esta galería es un espacio vibrante donde la creatividad y la identidad boliviana se encuentran.
+      </div>
+    </div>
 
-Sumérgete en el talento de nuestros artistas y descubre las historias que cada obra tiene para conta  
-              </p>
-            </div>
+  </div>
+
+
+  <div class="border-container">
+    <div class="number">03</div>
+    <div class="title-box">
+      <h1 class="title">ARTISTAS</h1>
+    </div>
+    <p class="description">
+      Conoce a los talentosos artistas de diversas regiones de Bolivia que forman parte de nuestra galería,
+      representando una amplia gama de estilos, técnicas y visiones. Explora sus perfiles, descubre sus trayectorias
+      y sumérgete en su creación. Aquí, el arte boliviano cobra vida a través de las manos de quienes lo crean.
+    </p>
+
+    <div id="artists-container" class="artists-container">
+    </div>
+  </div>
+
+  <script>
+    fetch('../../artist.json')
+      .then(response => response.json())
+      .then(data => {
+        const artistsContainer = document.getElementById('artists-container');
+
+        data.forEach(artist => {
+          const secondImage = artist.imags[1];
+
+          const artistImageDiv = document.createElement('div');
+          artistImageDiv.classList.add('artist-image');
+
+          const imgElement = document.createElement('img');
+          imgElement.src = secondImage;
+          imgElement.alt = `Image of ${artist.name} ${artist.surname}`;
+          imgElement.classList.add('b&w-image');
+
+          artistImageDiv.appendChild(imgElement);
+          artistsContainer.appendChild(artistImageDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading the JSON:', error);
+      });
+  </script>
+
+
+  <div class="container">
+    <div class="content-section">
+      <div class="text-column">
+        <div class="border-container">
+          <div class="number">04</div>
+          <div class="title-box">
+            <h1 class="title">OFERTAS</h1>
+          </div>
+          <div class="description">
+            <h4>Réplica bodegón</h4>
+            <h3>PRECIO: 350 Bs.</h3>
+            <p>Detalles:</p>
+            <ul>
+              <li>Estado de la obra: Disponible</li>
+              <li>Autor: Jesenya Belen Cori</li>
+              <li>Tecnica: Óleo lienzo</li>
+              <li>Dimenciones: 60 x 50 cm.</li>
+              <li>Ubicación de la obra: La Paz</li>
+              <li>Contacta con el artista</li>
+            </ul>
           </div>
         </div>
-  
       </div>
+    </div>
+  </div>
 
 
-      <div class="border-container">
-        <div class="number">03</div>
-        <div class="title-box">
-          <h1 class="title">ARTISTAS</h1>
-        </div>
-        <p class="description">
-          Conoce a lim talentosos artisans de diversas regiones de Bolivia que forman parte de muestra galeria, representando una amplia gama de estôm, técnicas y visiones.
-          Explors as perfiles, kurubre cas trayectorias y sumérgete en on sahrerse creathn. Aquí, el arte boliviano robes vida a través de las manos de quienes lo crean
+  <div id="footer-container"></div>
 
-          Más que un espacio de exhibición, esta paferir es un viaje por lan vislones y emociones de quienes courierten sus experiencias em arte. Descubre sus trayectorias, Inspira tas sentidos у спекта con la esencia de cada creador que transforma el arte en experiencia única y personal Conoce a los artistas deixás de cada obra de nuestra galeria
-
-          Ver mas
-        </p>
-      </div>
-
-
-      <div class="container">
-        <div class="content-section">
-          <div class="border-container">
-            <div class="number">04</div>
-            <div class="title-box">
-              <h1 class="title">OFERTAS</h1>
-            </div>
-            <div class="description">
-              <h4>Réplica bodegón</h4>
-              <h3>PRECIO: 350 Bs.</h3>
-              <p>Detalles:</p>
-              <ul>
-                <li>Estado de la obra: Disponible</li>
-                <li>Autor: Jesenya Belen Cori</li>
-                <li>Tecnica: Óleo lienzo</li>
-                <li>Dimenciones: 60 x 50 cm.</li>
-                <li>Ubicación de la obra: La Paz</li>
-                <li>Contacta con el artista</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+    });
 
 
+  </script>
 
-    <!-- Footer (se cargará dinámicamente) -->
-    <div id="footer-container"></div>
-
-  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+    });
+  </script>
   <script src="/assets/js/main.js"></script>
 </body>
+
 </html>

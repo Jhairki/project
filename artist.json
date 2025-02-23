@@ -1,6 +1,6 @@
 [
     {
-      "id": "1",
+      "id": 1,
       "type": "GRAVADORA",
       "name": "LAURA",
       "surname":"Mollinedo Aruni",
@@ -22,7 +22,7 @@
       "obras": ["img1","img2","img3", "img4"]
     },
     {
-      "id": "2",
+      "id": 2,
       "type": "PINTORA",
       "name": "CAROL",
       "surname":"Bitre Mamani",
@@ -45,11 +45,11 @@
     },
 
     {
-      "id": "3",
+      "id": 3,
       "type": "PINTOR",
       "name": "ABDEL",
       "surname":"Pomacusi Choque",
-      "location": "La Paz",
+      "location": "Cochabamba",
       "imags": [
         "/assets/images/artistas/IMG_20241224_152808.jpg",
         "/assets/images/artistas/IMG_20240915_230551.jpg",
@@ -66,21 +66,21 @@
         "2020 Primera mención en el concurso Octubre negro \"Museo Antonio Paredes Candia\"",
         "2019 Primera lugar en el Concurso Octubre negro \"Museo Antonio Paredes Cándia\""
       ],
-      "descripcion" : "Nació en La Paz Bolivia, culminando estudios en la EMDA y en la ANBA. En su trayectoria hizo exposiciones nacionales, en distintos espacios culturales del país e Internacionales también, entre los cuales destacan: \"gra Bienal internacional de acuarela, Kipus Bolivia 2022\", \"4ta Bienal Internacional de acuarela, Kipus Bolivia 2024\", \"Acuarela Contemporánea\", \"2do y 3er Encuentro Nacional de Dibujo\", \"Do you speak watercolor 2023\", \"IWS Ecuador, Diálogos entre acuarela y tinta\", entre otros. Participó en concursos, obteniendo menciones y premios. Actualmente trabaja como artista radicando en la ciudad de La Paz. <\br>La obra de arte radica en un diálogo entre la pieza artística ayel y el observador, pero este acto es mucho mas profundo ya que el artista se enfrenta hacia un soporte en blanco, del cual comienza el desafio de una obra. En este proceso el artista dialoga consigo mismo, con su entorno en el cual se generan conflictos y aciertos.",
+      "descripcion" : "Nació en Cochabamba Bolivia, culminando estudios en la EMDA y en la ANBA. En su trayectoria hizo exposiciones nacionales, en distintos espacios culturales del país e Internacionales también, entre los cuales destacan: \"gra Bienal internacional de acuarela, Kipus Bolivia 2022\", \"4ta Bienal Internacional de acuarela, Kipus Bolivia 2024\", \"Acuarela Contemporánea\", \"2do y 3er Encuentro Nacional de Dibujo\", \"Do you speak watercolor 2023\", \"IWS Ecuador, Diálogos entre acuarela y tinta\", entre otros. Participó en concursos, obteniendo menciones y premios. Actualmente trabaja como artista radicando en la ciudad de La Paz. <\br>La obra de arte radica en un diálogo entre la pieza artística ayel y el observador, pero este acto es mucho mas profundo ya que el artista se enfrenta hacia un soporte en blanco, del cual comienza el desafio de una obra. En este proceso el artista dialoga consigo mismo, con su entorno en el cual se generan conflictos y aciertos.",
       "obras": ["img9","img10","img11", "img12"]
     },
 
     {
-      "id": "4",
+      "id": 4,
       "type": "DIBUJANTE",
       "name": "PAOLA",
       "surname":"Aliaga Villalba",
       "location": "La Paz",
       "imags": [
 
-        "assets/images/artistas/IMG-20200620-WA0006.jpeg",
-        "assets/images/artistas/292881254_5303966616358698_4325510538678364647_n-transformed.jpeg",
-        "assets/images/artistas/251362596_4230820967029837_1983547078308499433_n.jpg"
+        "/assets/images/artistas/IMG-20200620-WA0006.jpeg",
+        "/assets/images/artistas/292881254_5303966616358698_4325510538678364647_n-transformed.jpeg",
+        "/assets/images/artistas/251362596_4230820967029837_1983547078308499433_n.jpg"
 
       ],
       "destacado" : "2021-Exposición en el Salon de laa era de Artes de la Universidad Mayor de San Andres",
@@ -97,7 +97,7 @@
     },
 
     {
-      "id": "5",
+      "id": 5,
       "type": "PINTORA",
       "name": "NATALIA",
       "surname":"Montes Dávalos",
@@ -123,11 +123,11 @@
     },
 
     {
-      "id": "6",
+      "id": 6,
       "type": "PINTOR",
       "name": "GUIDO",
       "surname":"Quispe Pillco",
-      "location": "La Paz",
+      "location": "Santa Cruz",
       "imags": [
         "/assets/images/artistas/IMG_20240810_155621_811_122840.jpg",
         "/assets/images/artistas/IMG_20240810_152226_833_122906.jpg",
@@ -138,7 +138,7 @@
         "2020 Ganador de la beca René Noriegs en artes plásticas, etorgado por la fundación THAYAS de EEUU",
         "2021 Pramer lugar en el concurso Nacional de piacura al stre libre SAN LUCAS-ORURO",
         "2022 Mención de honar en pintaru al aire libre el el marco de la BIENAL INTERNACIONAL IWS BOLIVIA, Taraa-Cochabaraba",
-        "2022 Primer lugar en pintura categoría Nacional en el marco de la BIENAL INTERNACIONAL TWS BOLIVIA, el Alto-La Pas",
+        "2022 Primer lugar en pintura categoría Nacional en el marco de la BIENAL INTERNACIONAL TWS BOLIVIA, el Alto-La Paz",
         "2013 Reconocimiento especial en la categoría de photura por la fundación cultural del banco centrai, en el marco del evento Artistas eroergemes",
         "2024 Mención honorifica en el concurso \"el valor del dibujo, Fernsado Montes Peñarında\""
       ],

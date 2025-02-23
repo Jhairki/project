@@ -1,41 +1,24 @@
-/* Navbar Styles */
 .custom-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 160px;
     background-color: #282a36;
-  }
-  
-  .custom-navbar .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .custom-navbar .logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .custom-navbar .logo h1 {
-    font-size: 18px;
-    line-height: 1.2;
-    margin: 0;
-  }
-  
-  .custom-navbar .logo h1 span {
-    display: block;
-    font-size: 14px;
-    font-weight: normal;
-  }
-  
-  .custom-navbar .menu {
+}
+
+/* Ajuste del tamaño del logo sin distorsión */
+.logo img {
+    max-height: 70px;
+    width: auto;
+}
+
+/* Menú principal */
+.menu {
     display: flex;
     gap: 10px;
-  }
-  
-  .custom-navbar .menu a {
+}
+
+.nav-item {
     text-decoration: none;
     color: #fff;
     padding: 10px 15px;
@@ -43,39 +26,68 @@
     border: 1px solid #3a3a3a;
     border-radius: 5px;
     transition: 0.3s;
-  }
-  
-  .custom-navbar .menu a:hover {
-    background-color: #444;
-  }
-  
-  .custom-navbar .search {
+}
+
+/* Cambio de color al hacer clic */
+.nav-item:focus,
+.nav-item:active {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+}
+
+/* Sección de búsqueda */
+.search {
     display: flex;
     align-items: center;
     gap: 5px;
-  }
-  
-  .custom-navbar .search input {
-    padding: 8px 12px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search input {
+    padding: 10px 15px;
     border: 1px solid #3a3a3a;
     border-radius: 20px;
     background-color: #1d1d1f;
     color: #fff;
     outline: none;
-  }
-  
-  .custom-navbar .search input::placeholder {
+}
+
+.search input::placeholder {
     color: #aaa;
-  }
-  
-  .custom-navbar .search button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .custom-navbar .search button:hover {
-    color: #e63946;
-  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px; /* Reduce el padding en móviles */
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%; /* Los botones ocupan todo el ancho */
+        text-align: center;
+        padding: 15px 0; /* Espaciado uniforme */
+    }
+
+    .search {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search input {
+        width: 80%;
+    }
+}

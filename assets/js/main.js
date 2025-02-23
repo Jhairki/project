@@ -1,5 +1,4 @@
-// Cargar el navbar
-console.log('jholhhh')
+
 
 fetch('../../components/navbar.html')
     .then(response => response.text())
@@ -8,7 +7,6 @@ fetch('../../components/navbar.html')
     })
     .catch(error => console.error('Error al cargar el navbar:', error));
 
-// Cargar el footer
 fetch('../../components/footer.html')
     .then(response => response.text())
     .then(data => {
@@ -18,16 +16,16 @@ fetch('../../components/footer.html')
 
 
 function toggleContent(id, btn) {
-        var content = document.getElementById(id);
-        var isOpen = content.classList.contains('show');
-        
-        if (isOpen) {
-            content.classList.remove('show');
-            btn.textContent = "+";  // Cambiar el signo a +
-        } else {
-            content.classList.add('show');
-            btn.textContent = "-";  // Cambiar el signo a -
-        }
+    var content = document.getElementById(id);
+    var isOpen = content.classList.contains('show');
+
+    if (isOpen) {
+        content.classList.remove('show');
+        btn.textContent = "+";
+    } else {
+        content.classList.add('show');
+        btn.textContent = "-";
     }
-    
-    
+}
+
+

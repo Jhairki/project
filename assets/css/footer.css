@@ -1,4 +1,4 @@
-/* Aseguramos que el contenido principal ocupe al menos la altura de la ventana */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,18 +10,18 @@ body {
   main {
     flex: 1;
   }
-  
-  /* Estilos para el footer */
+
+
   .custom-footer {
     background-color: #000000;
     padding: 40px 0;
     width: 100%;
     margin: 0;
     color: white;
-    border-top: 65px solid #ff0000; /* Línea roja superior */
+    border-top: 65px solid #c4063c; 
   }
   
-  /* Contenedor para el contenido del footer */
+
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,12 +31,11 @@ body {
     gap: 20px;
   }
   
-  /* Secciones del footer */
+  
   .section {
     padding: 20px 0;
   }
   
-  /* Estilos para la sección del logo */
   .logo img {
     width: 50px;
     margin-bottom: 10px;
@@ -48,7 +47,6 @@ body {
     color: white;
   }
   
-  /* Estilos para los enlaces de contacto */
   .contacts a {
     display: block;
     margin-bottom: 10px;
@@ -85,14 +83,13 @@ body {
   }
   
   .menu a:hover {
-    color: #f75a5a;
+    color: #c4063c;
   }
   
   .menu h3 {
     color: white;
   }
   
-  /* Estilos para la sección de CTA */
   .cta {
     color: white;
   }
@@ -111,10 +108,9 @@ body {
   }
   
   .cta a:hover {
-    background-color: #f05a5a;
+    background-color: #c4063c;
   }
   
-  /* Estilos para el texto final del footer */
   .footer {
     color: white;
     text-align: center;

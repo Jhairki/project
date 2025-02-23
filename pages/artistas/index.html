@@ -1,271 +1,536 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Mi Proyecto</title>
+  <title>Arte-Bolivia</title>
 
-  <!-- Estilos específicos del navbar y footer -->
   <link rel="stylesheet" href="/assets/css/navbar.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
-
-
+  <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Tipografía Gelasio -->
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Navbar (se cargará dinámicamente) -->
-    <div id="navbar-container"></div>
+  <div id="navbar-container"></div>
 
-    <div>
-      <img src="/assets/images/general web/banner bolivia 1.png" alt="" style="width: 100%;">
+  <div class="section-1">
+    <img src="/assets/images/general web/banner bolivia 1.png" alt="" style="width: 100%;">
+    <div class="text-overlay">
       <h1>ARTISTAS</h1>
       <h3>Bolivianos</h3>
     </div>
+  </div>
 
-    <div>
-      <div>
-        <div>01</div>
-        <h1>REGIONES</h1>
-      </div>
-      <div>
-        <p>
-          En el corazon vibrante de Sudameica nuestra galeria se enorgillece de ofrecer una vnetana unica al mundo del arte boliviano. Aqui , celebramos la rica diversidad cultural y creativa de los artistas de este pais, cuyas obras reflejan la esencia y la identidad de nuestra vibrante comunidad. 
-        </p>
-      </div>
-
-    </div>
-
-
-  <div class="grid-container">
-    <div class="top-section">
-      <div class="occidental">OCCIDENTE</div>
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
-          <h2 class="city-name">La Paz</h2>
+  <div class="section-2">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <div class="content-section">
+            <div class="number-container">
+              <div class="border-line"></div>
+              <div class="number">01</div>
+              <div class="border-line"></div>
+            </div>
+            <div class="title-box">
+              <h1 class="title">REGIONES</h1>
+            </div>
+          </div>
         </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE LA PAZ</h3>
-          <p class="city-description">
-            En el corazón vibrante de La Paz, nuestra galería se enorgullece de ofrecer una ventana única al mundo del arte paceño. Aquí, celebramos la rica diversidad cultural y creativa de los artistas de esta ciudad maravillosa, cuyas obras reflejan la esencia y la identidad de nuestra vibrante comunidad.
+
+        <div class="column">
+          <p>
+            En el corazón vibrante de Sudamérica, nuestra galería se enorgullece de ofrecer una ventana única al
+            mundo del arte boliviano. Aquí celebramos la rica diversidad cultural y creativa de los artistas de
+            este país, cuyas obras reflejan la esencia y la identidad de nuestra vibrante comunidad.
           </p>
+          <p>Bolivia se caracteriza po restar dividido en 3 regiones:</p>
+          <div class="region-container">
+            <div class="region-column">OCCIDENTE</div>
+            <div class="region-column">CENTRAL</div>
+            <div class="region-column">ORIENTE</div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="bottom-cities">
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
-          <h2 class="city-name">Oruro</h2>
-        </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE ORURO</h3>
-          <p class="city-description">
-            Oruro, famoso por su carnaval, también es conocido por sus artistas como la pintora y muralista Susana Patiño, cuyas obras reflejan la riqueza cultural del festival, y el escultor Juan Carlos Paz, que trabaja con materiales tradicionales para expresar la identidad orureña.
-          </p>
+  <div class="section-3">
+    <div class="grid-container">
+      <div class="top-section">
+        <div class="occidental">OCCIDENTE</div>
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">La Paz</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE LA PAZ</h3>
+            <p class="city-description">
+              En el corazón vibrante de La Paz, nuestra galería se enorgullece de ofrecer una ventana única al mundo del
+              arte paceño. Aquí, celebramos la rica diversidad cultural y creativa de los artistas de esta ciudad
+              maravillosa, cuyas obras reflejan la esencia y la identidad de nuestra vibrante comunidad.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #FFFFFF);"></div>
-          <h2 class="city-name">Potosí</h2>
+      <div class="bottom-cities">
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Oruro</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE ORURO</h3>
+            <p class="city-description">
+              Oruro, famoso por su carnaval, también es conocido por sus artistas como la pintora y muralista Susana
+              Patiño, cuyas obras reflejan la riqueza cultural del festival, y el escultor Juan Carlos Paz, que trabaja
+              con materiales tradicionales para expresar la identidad orureña.
+            </p>
+          </div>
         </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE POTOSI</h3>
-          <p class="city-description">
-            Potosí, con su historia minera, inspira a artistas como el pintor y grabador Félix Sánchez, cuyas obras exploran el impacto histórico y social de la minería, y la artista Teresa Calvo, que utiliza técnicas ancestrales para crear piezas únicas que narran historias locales.
-          </p>
+
+
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Potosí</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE POTOSI</h3>
+            <p class="city-description">
+              Potosí, con su historia minera, inspira a artistas como el pintor y grabador Félix Sánchez, cuyas obras
+              exploran el impacto histórico y social de la minería, y la artista Teresa Calvo, que utiliza técnicas
+              ancestrales para crear piezas únicas que narran historias locales.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 
-  <div class="grid-container">
-    <div class="top-section">
-      <div class="occidental">CENTRAL</div>
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
-          <h2 class="city-name">Cochabamba</h2>
-        </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE COCHABAMBA</h3>
-          <p class="city-description">
-            Cochabamba es el escenario de una vibarnte escea artistica con figuras como el pintor y muralista Juan de la Cruz, cuyas obras evocan el paisaje y la cultura local, y el escritor Alvaro Eyzaguirre, cuyas piezas en metal y piedra capturan la esencia de la tierra cochabambina.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="bottom-cities">
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
-          <h2 class="city-name">Chuquisaca</h2>
-        </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE CHUQUISACA</h3>
-          <p class="city-description">
-            Chuquisaca, cuna de la independencia boliviana, es hogar de artistas como el pintor y escultor Ricardo Pérez Alcalá, que Integra elementos históricos y culturales en sas obras, y la artista multimedia Yolanda Salazar, que explora la relación entre tradición y modernidad.
-          </p>
+  <div class="section-3">
+    <div class="grid-container">
+      <div class="top-section">
+        <div class="occidental">CENTRAL</div>
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final cochabamaba 2.png" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Cochabamba</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE COCHABAMBA</h3>
+            <p class="city-description">
+              Cochabamba es el escenario de una vibarnte escea artistica con figuras como el pintor y muralista Juan de
+              la Cruz, cuyas obras evocan el paisaje y la cultura local, y el escritor Alvaro Eyzaguirre, cuyas piezas
+              en metal y piedra capturan la esencia de la tierra cochabambina.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #FFFFFF);"></div>
-          <h2 class="city-name">Tarija</h2>
+      <div class="bottom-cities">
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final sucre 1.png" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Chuquisaca</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE CHUQUISACA</h3>
+            <p class="city-description">
+              Chuquisaca, cuna de la independencia boliviana, es hogar de artistas como el pintor y escultor Ricardo
+              Pérez Alcalá, que Integra elementos históricos y culturales en sas obras, y la artista multimedia Yolanda
+              Salazar, que explora la relación entre tradición y modernidad.
+            </p>
+          </div>
         </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE TARIJA</h3>
-          <p class="city-description">
-            En Tarija, conocida por sa vino y paisajes, encontramos a artistas como el pintor José Antonio Ramos, cuyas obras capturan la belleza dei valle y la vida cotidiana, y la ceramista Lourdes Vaca, cuyos trabajos en cerámica reflejan la rica tradición artesanal de la región
-          </p>
+
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final tarija 1.png" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Tarija</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE TARIJA</h3>
+            <p class="city-description">
+              En Tarija, conocida por sa vino y paisajes, encontramos a artistas como el pintor José Antonio Ramos,
+              cuyas obras capturan la belleza dei valle y la vida cotidiana, y la ceramista Lourdes Vaca, cuyos trabajos
+              en cerámica reflejan la rica tradición artesanal de la región
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div> 
-  
+  </div>
 
-  <div class="grid-container">
-    <div class="top-section">
-      <div class="occidental">ORIENTE</div>
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
-          <h2 class="city-name">Santa Cruz</h2>
+  <div class="section-3">
+    <div class="grid-container">
+      <div class="top-section">
+        <div class="occidental">ORIENTE</div>
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final santa cruz 1.png" alt="La Paz" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Santa Cruz</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE SANTA CRUZ</h3>
+            <p class="city-description">
+              Santa Cruz, con su rápido crecimiento arbario y diversidad cultural, es hogar de artistas como Beatriz
+              Uceda, que fasiona elementos tradicionales con técnicas modernas, y Carios Crespo, conocido por sus
+              impactantes instalaciones y murales que reflejan la vida cruceña.
+            </p>
+          </div>
         </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE SANTA CRUZ</h3>
-          <p class="city-description">
-            Santa Cruz, con su rápido crecimiento arbario y diversidad cultural, es hogar de artistas como Beatriz Uceda, que fasiona elementos tradicionales con técnicas modernas, y Carios Crespo, conocido por sus impactantes instalaciones y murales que reflejan la vida cruceña.
-          </p>
+      </div>
+      <div class="bottom-cities">
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final pando.png" alt="Oruro" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Pando</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE PANDO</h3>
+            <p class="city-description">
+              En Pando, la selva y los ríos son la fuente de Inspiración para artistas como el pimor y muralista Hugo
+              Flores, cuyas obras evocan el paisaje tropical y la vida silvestre, y la artista plástica Juana Martínez,
+              que trabaja con materiales naturales para expresar la esencia de la región amazónica.
+            </p>
+          </div>
+        </div>
+
+        <div class="city-card">
+          <div class="image-container">
+            <img src="/assets/images/general web/2.final beni.png" alt="Potosi" class="city-image">
+            <div class="flag-overlay"></div>
+            <h2 class="city-name">Beni</h2>
+          </div>
+          <div class="city-info">
+            <h3 class="city-title">ARTISTAS DE BENI</h3>
+            <p class="city-description">
+              Beni, con su riquem nataral y diversidad, inspira a artistas como el pintor y escultor Luis Gómez, que
+              explera la fauna y flora amazónica en sus obras, y la artista de arte textil Ana María Calliznys, que cres
+              piezas que celebran la herencia indigena y la vida en la selva.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="bottom-cities">
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #008000);"></div>
-          <h2 class="city-name">Pando</h2>
-        </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE PANDO</h3>
-          <p class="city-description">
-            En Pando, la selva y los ríos son la fuente de Inspiración para artistas como el pimor y muralista Hugo Flores, cuyas obras evocan el paisaje tropical y la vida silvestre, y la artista plástica Juana Martínez, que trabaja con materiales naturales para expresar la esencia de la región amazónica.
-          </p>
-        </div>
+
+  <div class="section-4" id="occidental">
+    <div class="region-title">
+      <h1>Región</h1>
+      <h1>OCCIDENTE</h1>
+    </div>
+
+    <div class="location" id="artistLocationOccidental"></div>
+
+    <div class="container-3">
+      <div class="left-bar"></div>
+
+      <div class="carousel" id="carouselOccidental">
       </div>
 
-      <div class="city-card">
-        <div class="image-container">
-          <img src="/assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
-          <div class="flag-overlay" style="background: linear-gradient(45deg, #EE0000, #FFFFFF);"></div>
-          <h2 class="city-name">Beni</h2>
-        </div>
-        <div class="city-info">
-          <h3 class="city-title">ARTISTAS DE BENI</h3>
-          <p class="city-description">
-            Beni, con su riquem nataral y diversidad, inspira a artistas como el pintor y escultor Luis Gómez, que explera la fauna y flora amazónica en sus obras, y la artista de arte textil Ana María Calliznys, que cres piezas que celebran la herencia indigena y la vida en la selva.
-          </p>
-        </div>
+      <div class="info-box">
+        <h1 class="artist-name" id="artistNameOccidental"></h1>
+        <h2 class="artist-surname" id="artistSurnameOccidental"></h2>
+        <div class="artist-description" id="artistDescriptionOccidental"></div>
+      </div>
+
+      <div class="main-image">
+        <img id="mainImageOccidental" src="" alt="Main artist photo">
       </div>
     </div>
-  </div> 
-  
 
-  <div class="container">
-    <!-- Carrusel de imágenes de todos los artistas -->
-    <div class="carousel" id="imageCarousel">
-        <!-- Las imágenes se insertarán aquí con JS -->
+    <button class="action-button">Más del artista</button>
+  </div>
+
+
+  <div class="section-4" id="central">
+    <div class="region-title">
+      <h1>Region</h1>
+      <h1>CENTRAL</h1>
+    </div>
+    <div class="location" id="artistLocationCentral"></div>
+    <div class="container-3">
+      <div class="left-bar"></div>
+
+      <div class="carousel" id="carouselCentral"> </div>
+      <div class="info-box">
+        <h1 class="artist-name" id="artistNameCentral"></h1>
+        <h3 class="artist-surname" id="artistSurnameCentral"></h3>
+        <div class="artist-description" id="artistDescriptionCentral"></div>
+      </div>
+      <div class="main-image">
+        <img id="mainImageCentral" src="" alt="Foto principal">
+      </div>
     </div>
 
-    <!-- Información del artista seleccionado -->
-    <div class="info-box">
-        <h1 id="artistName"></h1>
-        <h3 id="artistSurname"></h3>
-        <p id="artistDescription"></p>
+    <button class="action-button">Más del artista</button>
+  </div>
+
+  <div class="section-4" id="oriental">
+    <div class="region-title">
+      <h1>Region</h1>
+      <h1>ORIENTE</h1>
     </div>
 
-    <!-- Imagen Principal (tercera columna) -->
-    <div class="main-image">
-        <img id="mainImage" src="" alt="Foto principal">
+    <div class="location" id="artistLocationOriental"></div>
+    <div class="container-3">
+      <div class="left-bar"></div>
+      <div class="carousel" id="carouselOriental"></div>
+      <div class="info-box">
+        <h1 class="artist-name" id="artistNameOriental"></h1>
+        <h3 class="artist-surname" id="artistSurnameOriental"></h3>
+        <div class="artist-description" id="artistDescriptionOriental"> </div>
+      </div>
+      <div class="main-image">
+        <img id="mainImageOriental" src="" alt="Foto principal">
+      </div>
     </div>
-</div>
+    <button class="action-button">Más del artista</button>
+  </div>
 
-<script>
-  fetch("../../artist.json")
-    .then(response => response.json())
-    .then(artistas => {
+  <script>
+    fetch("../../artist.json")
+      .then(response => response.json())
+      .then(artistas => {
         if (!Array.isArray(artistas) || artistas.length === 0) {
-            console.error("El JSON no contiene artistas o está vacío:", artistas);
+          console.error("El JSON no contiene artistas o está vacío:", artistas);
+          return;
+        }
+
+        const departamentosOccidente = ["La Paz", "Potosi", "Oruro"];
+        const departamentosOriente = ["Santa Cruz", "Beni", "Pando"];
+
+        const regiones = {
+          Occidental: {
+            carousel: document.getElementById("carouselOccidental"),
+            mainImage: document.getElementById("mainImageOccidental"),
+            artistName: document.getElementById("artistNameOccidental"),
+            artistSurname: document.getElementById("artistSurnameOccidental"),
+            artistLocation: document.getElementById("artistLocationOccidental"),
+            artistDescription: document.getElementById("artistDescriptionOccidental"),
+          },
+          Central: {
+            carousel: document.getElementById("carouselCentral"),
+            mainImage: document.getElementById("mainImageCentral"),
+            artistName: document.getElementById("artistNameCentral"),
+            artistSurname: document.getElementById("artistSurnameCentral"),
+            artistLocation: document.getElementById("artistLocationCentral"),
+            artistDescription: document.getElementById("artistDescriptionCentral"),
+          },
+          Oriental: {
+            carousel: document.getElementById("carouselOriental"),
+            mainImage: document.getElementById("mainImageOriental"),
+            artistName: document.getElementById("artistNameOriental"),
+            artistSurname: document.getElementById("artistSurnameOriental"),
+            artistLocation: document.getElementById("artistLocationOriental"),
+            artistDescription: document.getElementById("artistDescriptionOriental"),
+          }
+        };
+
+        function getRegion(location) {
+          if (departamentosOccidente.includes(location)) return "Occidental";
+          if (departamentosOriente.includes(location)) return "Oriental";
+          return "Central";
+        }
+
+        function actualizarArtista(artista, region) {
+          if (!artista.imags || artista.imags.length < 2) {
+            console.error("El artista no tiene suficientes imágenes:", artista);
             return;
+          }
+
+          region.mainImage.src = artista.imags[1];
+          region.artistName.textContent = artista.name;
+          region.artistSurname.textContent = artista.surname;
+          region.artistLocation.textContent = artista.location;
+          region.artistDescription.innerHTML = artista.descripcion;
         }
 
-        const imageCarousel = document.getElementById("imageCarousel");
-        const mainImage = document.getElementById("mainImage");
-        const artistName = document.getElementById("artistName");
-        const artistSurname = document.getElementById("artistSurname");
-        const artistDescription = document.getElementById("artistDescription");
-
-        // Función para actualizar la información de un artista
-        function actualizarArtista(artista) {
-            if (!artista.imags || !Array.isArray(artista.imags) || artista.imags.length < 2) {
-                console.error("El artista no tiene suficientes imágenes:", artista);
-                return;
-            }
-
-            // Mostrar la segunda imagen como la principal y en la tercera columna
-            mainImage.src = artista.imags[1];
-
-            // Actualizar los datos del artista
-            artistName.textContent = artista.name;
-            artistSurname.textContent = artista.surname;
-            artistDescription.innerHTML = artista.descripcion;
-        }
-
-        // Llenar el carrusel con la SEGUNDA imagen de cada artista
         artistas.forEach(artista => {
-            if (!artista.imags || artista.imags.length < 2) return; // Si no tiene al menos 2 imágenes, lo omitimos
+          const regionKey = getRegion(artista.location);
+          const region = regiones[regionKey];
+          if (!region || !artista.imags || artista.imags.length < 2) return;
 
-            const imgElement = document.createElement("img");
-            imgElement.src = artista.imags[1]; // Usamos la segunda imagen del artista
-            imgElement.alt = `Imagen de ${artista.name}`;
+          const imgElement = document.createElement("img");
+          imgElement.src = artista.imags[1];
+          imgElement.alt = `Imagen de ${artista.name}`;
+          imgElement.classList.add("carousel-image");
 
-            // Evento para cambiar al artista seleccionado
-            imgElement.addEventListener("click", () => {
-                actualizarArtista(artista);
-            });
+          imgElement.addEventListener("click", () => {
+            actualizarArtista(artista, region);
+          });
 
-            imageCarousel.appendChild(imgElement);
+          region.carousel.appendChild(imgElement);
         });
 
-        // Mostrar el primer artista por defecto
-        actualizarArtista(artistas[0]);
-    })
-    .catch(error => console.error("Error al cargar el JSON:", error));
-</script>
+        for (const key in regiones) {
+          const region = regiones[key];
+          const artistasRegion = artistas.filter(a => getRegion(a.location) === key);
+          if (artistasRegion.length > 0) {
+            actualizarArtista(artistasRegion[0], region);
+          }
+        }
+      })
+      .catch(error => console.error("Error al cargar el JSON:", error));
+  </script>
 
-  
-  
+
   <div id="footer-container"></div>
 
-<!-- Scripts -->
-<script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function setupRegionNavigation() {
+        const regionTitleMappings = {
+          'OCCIDENTE': '#occidental',
+          'CENTRAL': '#central',
+          'ORIENTE': '#oriental'
+        };
+
+        document.querySelectorAll('.region-title').forEach(title => {
+          title.addEventListener('click', function () {
+            const regionText = this.querySelector('h1:last-child').textContent.trim();
+            const targetId = regionTitleMappings[regionText];
+            if (targetId) {
+              const targetSection = document.querySelector(targetId);
+              if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+          });
+        });
+
+        document.querySelectorAll('.occidental').forEach(title => {
+          title.addEventListener('click', function () {
+            const regionText = this.textContent.trim();
+            let targetSection;
+
+            switch (regionText) {
+              case 'OCCIDENTE':
+                targetSection = document.querySelector('.section-3 .grid-container:first-of-type');
+                break;
+              case 'CENTRAL':
+                targetSection = document.querySelector('.section-3 .grid-container:nth-of-type(2)');
+                break;
+              case 'ORIENTE':
+                targetSection = document.querySelector('.section-3 .grid-container:last-of-type');
+                break;
+            }
+
+            if (targetSection) {
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        });
+      }
+
+      fetch("../../artist.json")
+        .then(response => response.json())
+        .then(artistas => {
+          if (!Array.isArray(artistas) || artistas.length === 0) {
+            console.error("El JSON no contiene artistas o está vacío:", artistas);
+            return;
+          }
+
+          const departamentosOccidente = ["La Paz", "Potosi", "Oruro"];
+          const departamentosOriente = ["Santa Cruz", "Beni", "Pando"];
+
+          const regiones = {
+            Occidental: {
+              carousel: document.getElementById("carouselOccidental"),
+              mainImage: document.getElementById("mainImageOccidental"),
+              artistName: document.getElementById("artistNameOccidental"),
+              artistSurname: document.getElementById("artistSurnameOccidental"),
+              artistLocation: document.getElementById("artistLocationOccidental"),
+              artistDescription: document.getElementById("artistDescriptionOccidental"),
+            },
+            Central: {
+              carousel: document.getElementById("carouselCentral"),
+              mainImage: document.getElementById("mainImageCentral"),
+              artistName: document.getElementById("artistNameCentral"),
+              artistSurname: document.getElementById("artistSurnameCentral"),
+              artistLocation: document.getElementById("artistLocationCentral"),
+              artistDescription: document.getElementById("artistDescriptionCentral"),
+            },
+            Oriental: {
+              carousel: document.getElementById("carouselOriental"),
+              mainImage: document.getElementById("mainImageOriental"),
+              artistName: document.getElementById("artistNameOriental"),
+              artistSurname: document.getElementById("artistSurnameOriental"),
+              artistLocation: document.getElementById("artistLocationOriental"),
+              artistDescription: document.getElementById("artistDescriptionOriental"),
+            }
+          };
+
+          function getRegion(location) {
+            if (departamentosOccidente.includes(location)) return "Occidental";
+            if (departamentosOriente.includes(location)) return "Oriental";
+            return "Central";
+          }
+
+          function actualizarArtista(artista, region) {
+            if (!artista.imags || artista.imags.length < 2) {
+              console.error("El artista no tiene suficientes imágenes:", artista);
+              return;
+            }
+
+            region.mainImage.src = artista.imags[1];
+            region.artistName.textContent = artista.name;
+            region.artistSurname.textContent = artista.surname;
+            region.artistLocation.textContent = artista.location;
+            region.artistDescription.innerHTML = artista.descripcion;
+          }
+
+          artistas.forEach(artista => {
+            const regionKey = getRegion(artista.location);
+            const region = regiones[regionKey];
+            if (!region || !artista.imags || artista.imags.length < 2) return;
+
+            const imgElement = document.createElement("img");
+            imgElement.src = artista.imags[1];
+            imgElement.alt = `Imagen de ${artista.name}`;
+            imgElement.classList.add("carousel-image");
+
+            imgElement.addEventListener("click", () => {
+              actualizarArtista(artista, region);
+            });
+
+            region.carousel.appendChild(imgElement);
+          });
+
+          for (const key in regiones) {
+            const region = regiones[key];
+            const artistasRegion = artistas.filter(a => getRegion(a.location) === key);
+            if (artistasRegion.length > 0) {
+              actualizarArtista(artistasRegion[0], region);
+            }
+          }
+        })
+        .catch(error => console.error("Error al cargar el JSON:", error));
+
+      setupRegionNavigation();
+    });
+  </script>
+
+  <script src="/assets/js/main.js"></script>
 </body>
+
 </html>

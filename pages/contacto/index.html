@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Mi Proyecto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi Proyecto</title>
 
-  <!-- Estilos específicos del navbar y footer -->
-  <link rel="stylesheet" href="/assets/css/navbar.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
 
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Tipografía Gelasio -->
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
-<body>
 
-  <!-- Navbar (se cargará dinámicamente) -->
+<body>
     <div id="navbar-container"></div>
 
-    <div>
+    <div class="section-1">
         <img src="/assets/images/general web/6466 1.png" alt="">
+        <div class="text-overlay">
+            <h1>CONTACTOS</h1>
+        </div>
     </div>
+
     <div class="form-container">
         <h1>TIENES ALGO QUE DECIRNOS</h1>
         <div class="form-wrapper">
-            <p>Para cualquier consulta o duda, puedes dirigirme a nuestro correo gab.bolivian@gmail.com y responderemos lo más pronto posible.</p>
-        
+            <p>Para cualquier consulta o duda, puedes dirigirme a nuestro correo gab.bolivian@gmail.com y responderemos
+                lo más pronto posible.</p>
+
             <form>
-                <!-- Fila 1: Nombre y Apellido -->
                 <div class="form-row">
                     <div class="form-field wide">
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido">
                     </div>
                 </div>
-    
+
                 <div class="form-row">
                     <div class="form-field wide">
                         <input type="email" id="gmail" name="gmail" placeholder="Gmail">
@@ -44,15 +47,15 @@
                         <input type="text" id="celular" name="celular" placeholder="Celular">
                     </div>
                 </div>
-    
+
                 <div class="form-row">
                     <div class="form-field full">
                         <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
                     </div>
                 </div>
-    
+
                 <div class="form-row">
-                    <div class="form-field">
+                    <div class="form-actions">
                         <button type="submit">Enviar</button>
                     </div>
                 </div>
@@ -60,56 +63,55 @@
         </div>
     </div>
 
-    
-    <div class="form-container">
-        <img src="/assets/images/general web/obra marca.jpg" alt="">
-        <h1>QUIERES ENSENAR TU TRABAJO?</h1>
-        <p> GALERIA DE ARTE BOLIVIANO es un espacio que busca democratizar el acceso al arte , ofreciendo a los artistas un lugar para desarrollarse y conectar con coleccionistas y amantes del arte</p>
-        <div class="form-wrapper">
-            <!-- Formulario -->
-            <form>
-                <!-- Fila 1: Nombre y Apellido -->
-                <div class="form-row">
-                    <div class="form-field wide">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+    <div class="form-container-wrapper">
+        <div class="form-container">
+            <h1>QUIERES ENSENAR TU TRABAJO?</h1>
+            <p>GALERIA DE ARTE BOLIVIANO es un espacio que busca democratizar el acceso al arte, ofreciendo a los
+                artistas un lugar para desarrollarse y conectar con coleccionistas y amantes del arte</p>
+            <div class="form-wrapper">
+                <form>
+                    <div class="form-row">
+                        <div class="form-field wide">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+                        </div>
                     </div>
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-field wide">
-                        <input type="email" id="gmail" name="gmail" placeholder="Gmail">
-                    </div>
-                    <div class="form-field narrow">
-                        <input type="text" id="celular" name="celular" placeholder="Celular">
-                    </div>
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-field full">
-                        <input type="text" name="text" rows="4" placeholder="La URL de un sitio web donde podamos ver su trabajo">
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-field full">
-                        <textarea id="description" name="description" rows="4" placeholder="Describe tu arte"></textarea>
+                    <div class="form-row">
+                        <div class="form-field wide">
+                            <input type="email" id="gmail" name="gmail" placeholder="Gmail">
+                        </div>
+                        <div class="form-field narrow">
+                            <input type="text" id="celular" name="celular" placeholder="Celular">
+                        </div>
                     </div>
-                </div>
-    
-                <div class="form-row">
-                    <div class="form-field">
-                        <button type="submit">Enviar</button>
+
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <input type="text" name="text" rows="4"
+                                placeholder="La URL de un sitio web donde podamos ver su trabajo">
+                        </div>
                     </div>
-                </div>
-            </form>
+
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <textarea id="description" name="description" rows="4"
+                                placeholder="Describe tu arte"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-actions">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    
 
-    <!-- Footer (se cargará dinámicamente) -->
     <div id="footer-container"></div>
 
-  <!-- Scripts -->
-  <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
