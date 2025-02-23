@@ -4,15 +4,17 @@
     justify-content: space-between;
     padding: 10px 160px;
     background-color: #282a36;
+    position: relative;
 }
 
-/* Ajuste del tamaño del logo sin distorsión */
-.logo img {
-    max-height: 70px;
-    width: auto;
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
-/* Menú principal */
 .menu {
     display: flex;
     gap: 10px;
@@ -28,7 +30,6 @@
     transition: 0.3s;
 }
 
-/* Cambio de color al hacer clic */
 .nav-item:focus,
 .nav-item:active {
     color: black;
@@ -36,7 +37,6 @@
     background-color: white;
 }
 
-/* Sección de búsqueda */
 .search {
     display: flex;
     align-items: center;
@@ -62,24 +62,38 @@
     color: #aaa;
 }
 
-/* Responsividad */
+.menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #282a36;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu.active {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     .custom-navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px; /* Reduce el padding en móviles */
+        padding: 10px 20px;
     }
 
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+    .hamburger {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
     }
 
     .nav-item {
-        width: 100%; /* Los botones ocupan todo el ancho */
+        width: 100%;
         text-align: center;
-        padding: 15px 0; /* Espaciado uniforme */
+        padding: 15px 0;
     }
 
     .search {
@@ -90,4 +104,8 @@
     .search input {
         width: 80%;
     }
+}
+
+.hamburger:hover {
+    opacity: 0.8;
 }

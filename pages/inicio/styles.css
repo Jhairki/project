@@ -1,20 +1,31 @@
-.swiper {
-    width: 100%;
-    height: 300px;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
 .section-2 {
-    background-color: #3498db;
-    padding: 40px 0;
+    padding: 40px 0; /* Espaciado vertical para la sección */
 }
 
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrando el contenedor */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+.content-section {
+    display: flex; /* Usando flexbox para el diseño en fila */
+    justify-content: center; /* Centrando las columnas horizontalmente */
+    align-items: center; /* Centrando las columnas verticalmente */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+
+
+.image-column {
+    flex: 1; /* Permitir que esta columna ocupe el espacio disponible */
+}
+
+.image-column img {
+    max-width: 100%; /* Asegurando que la imagen no exceda el ancho de la columna */
+    height: auto; /* Manteniendo la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
 
 
 
@@ -200,25 +211,26 @@ button:hover {
 
 .number {
     position: absolute;
-    top: -70px; 
+    top: -120px; 
     left: 50%; 
     transform: translateX(-50%); 
     color: #fa7582; 
     padding: 5px 10px;
-    font-size: 100px; 
+    font-size: 160px; 
     z-index: 1; /* Asegura que el número esté sobre otros elementos */
 }
 
 .title-box {
     text-align: center;
     position: relative; /* Permite posicionar el título en relación a este contenedor */
-    z-index: 2; /* Asegura que el título esté encima del número */
+    z-index: 2; 
+    padding: 5px 10px;
 }
 
 .title {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    background-color: rgba(78, 74, 74, 0.7); /* Fondo negro transparente */
     color: white; /* Color del texto del título */
-    padding: 10px; /* Espaciado alrededor del texto */
+    padding: 10px; 
     border-radius: 5px; /* Esquinas redondeadas para el título */
 }
 
@@ -241,11 +253,130 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #e74c3c, #fa7582); /* Inversión del degradado al pasar el mouse */
+    background:#fa7582; 
 }
 
 
 /*==========*/
+
+
+
+
+.artistas-section {
+    display: flex; /* Cambiado a flex para permitir centrar elementos */
+    flex-direction: column;
+    align-items: center; /* Centrar elementos en el eje horizontal */
+    margin: 50px; 
+}
+
+.header {
+    display: flex;
+}
+
+
+
+.title-box {
+    text-align: left; /* Alinear el título a la izquierda */
+}
+
+.columns {
+    display: flex; /* Usa flex para crear dos columnas */
+    justify-content: center; /* Centrar las columnas horizontalmente */
+    margin-top: 20px; /* Espacio entre el header y las columnas */
+}
+
+.column {
+    width: 48%; /* Ancho de cada columna */
+    text-align: left; /* Alinear texto a la izquierda dentro de las columnas */
+}
+
+button {
+    margin-top: 10px; /* Espacio encima del botón */
+    background-color: #fa7582; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #e74c3c; /* Color al pasar el mouse */
+}
+
+
+
+
+
+
+.container {
+    display: flex; /* Usa flex para organizar las columnas */
+    margin: 20px; 
+    padding: 50px;
+}
+
+.content-section {
+    display: flex;
+    width: 100%;
+}
+
+.image-column {
+    flex: 1; /* Toma el 50% del espacio */
+    position: relative; /* Para posicionar la imagen */
+    overflow: hidden; /* Ocultar la parte de la imagen que sobresale */
+}
+
+.main-image {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    transition: transform 0.5s ease; /* Transición suave al cambiar de imagen */
+}
+
+.text-column {
+    flex: 1; /* Toma el 50% del espacio */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+}
+
+.border-container {
+    background-color: transparent; 
+    padding: 15px; 
+    border-left: 2px solid #fa7582; 
+    border-right: 2px solid #fa7582; 
+    border-bottom: 2px solid #fa7582; 
+}
+
+.content-columns {
+    display: flex; /* Usa flex para dividir el contenido en dos columnas */
+    margin-top: 20px; /* Espacio entre el título y las columnas */
+}
+
+.description-column {
+    flex: 1; /* Toma el 50% del espacio */
+    padding-right: 50px; /* Espacio entre columnas */
+}
+
+.images-column {
+    flex: 1; /* Toma el 50% del espacio */
+    display: grid; /* Usa grid para organizar imágenes */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px; /* Espacio entre imágenes */
+}
+
+.images-column img {
+    width: 100%; /* Ancho completo de cada cuadrado */
+    height: 100px; /* Altura fija para los cuadros de las imágenes */
+    object-fit: cover; /* Mantener la proporción */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre la imagen */
+    transition: transform 0.3s; /* Transición suave al hacer hover */
+}
+
+.images-column img:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse sobre la imagen */
+}
+
+
 /* 
 
 @media (max-width: 1024px) {
