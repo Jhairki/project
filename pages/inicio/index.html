@@ -12,28 +12,17 @@
   <link rel="stylesheet" href="styles.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
+
 </head>
 
 <body>
 
-  <div id="navbar-container"></div>
-
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="/assets/images/general web/obra marca.jpg" alt="Obra 1"></div>
-      <div class="swiper-slide"><img src="/assets/images/obras/carol bitre/Descubriendo_el_color.DamarBitre.jpg"
-          alt="Obra 2"></div>
-      <div class="swiper-slide"><img src="/assets/images/obras/natalia montes/5035071095920766388.jpg" alt="Obra 3">
-      </div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+  <div class="carrusel-principal">
   </div>
-
-
 
   <div class="section-2">
     <div class="container">
@@ -66,38 +55,44 @@
   </div>
 
 
-  <div>
+  <div class="section-3">
     <div class="grid-container">
-      <div class="grid-item item-1-2"><img src="/assets/images/obras/guido quispe/GUIDO 2.jpg" alt="Image 1"></div>
-      <div class="grid-item item-3"><img
-          src="/assets/images/obras/laura mollinedo/6. Hipocresía y poder. Punta Seca. Laura Mollinedo Aruni.jpg"
-          alt="Image 2"></div>
-      <div class="grid-item item-4"><img src="/assets/images/obras/paola aliaga/5125609809679330545.jpg" alt="Image 3">
+      <div class="grid-item item-1-2">
+        <img src="/assets/images/obras/abdel pomacusi/IMG_20241008_104016_343.jpg" alt="Image 1">
       </div>
-      <div class="grid-item item-5-6-8-9"><img src="/assets/images/obras/guido quispe/IMG_20240611_152809_667 (1).jpg"
-          alt="Image 4"></div>
-      <div class="grid-item item-7"><img src="/assets/images/obras/abdel pomacusi/IMG_20241224_141725.jpg"
-          alt="Image 5"></div>
+      <div class="grid-item item-3">
+        <img src="/assets/images/obras/carol bitre/Descubriendo_el_color.DamarBitre.jpg" alt="Image 2">
+      </div>
+      <div class="grid-item item-4">
+        <img src="/assets/images/obras/abdel pomacusi/IMG_20241117_192303.jpg" alt="Image 5">
+      </div>
+      <div class="grid-item item-5-6-8-9">
+        <img src="/assets/images/obras/carol bitre/obra 3.jpg" alt="">
+      </div>
+      <div class="grid-item item-7">
+        <img src="/assets/images/obras/guido quispe/IMG_20240413_233604_600.jpg" alt="Image 4">
+      </div> 
     </div>
 
     <div class="container">
-      <div class="content-section">
-        <div class="border-container">
+      <div class="border-container">
           <div class="number">02</div>
           <div class="title-box">
-            <h1 class="title">GALERIA</h1>
+              <h1 class="title">GALERIA</h1>
           </div>
           <p class="description">
-            Explora nuestra colección de obras de arte únicas creadas por artistas bolivianos. Cada pieza refleja la
-            riqueza cultural, histórica y contemporánea de Bolivia, capturando la esencia de nuestra tierra a través de
-            diversas técnicas y estilos. Desde dibujos y pinturas hasta esculturas, esta galería es un espacio vibrante
-            donde la creatividad y la identidad boliviana se encuentran.
-
-            Sumérgete en el talento de nuestros artistas y descubre las historias que cada obra tiene para conta
+              Explora nuestra colección de obras de arte únicas creadas por artistas bolivianos. Cada pieza refleja la
+              riqueza cultural, histórica y contemporánea de Bolivia, capturando la esencia de nuestra tierra a través de
+              diversas técnicas y estilos. Desde dibujos y pinturas hasta esculturas, esta galería es un espacio vibrante
+              donde la creatividad y la identidad boliviana se encuentran.
+  
+              Sumérgete en el talento de nuestros artistas y descubre las historias que cada obra tiene para contar.
           </p>
-        </div>
+          <a href="../galeria/index.html">
+            <button>Ver más</button>
+          </a>
       </div>
-    </div>
+  </div>
 
   </div>
 
@@ -171,40 +166,10 @@
   </div>
 
 
-  <div id="footer-container"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loop: true,
-    });
-
-
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loop: true,
-    });
-  </script>
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/footer.js"></script>
+
 </body>
 
 </html>

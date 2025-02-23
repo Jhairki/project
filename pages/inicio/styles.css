@@ -15,23 +15,35 @@
     padding: 40px 0;
 }
 
+
+
+
+
+/*=======*/
+
+.section-3 {
+    display: flex; 
+    align-items: center; 
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .grid-item {
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-family: Arial, sans-serif;
     overflow: hidden;
+    border: 0.01px solid white; 
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .grid-item img {
@@ -39,13 +51,13 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    padding: 30px; 
+    box-sizing: border-box; 
 }
-
 
 .item-1-2 {
     grid-column: 1 / span 2;
     grid-row: 1;
-    background-color: #e74c3c;
 }
 
 .item-3 {
@@ -61,7 +73,6 @@
 .item-5-6-8-9 {
     grid-column: 2 / span 2;
     grid-row: 2 / span 2;
-    background-color: #2ecc71;
 }
 
 .item-7 {
@@ -69,10 +80,173 @@
     grid-row: 3;
 }
 
-
 .grid-item img:hover {
     transform: scale(1.1);
 }
+
+.container {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar el contenido */
+    align-items: center; 
+    justify-content: center; 
+    height: auto; 
+    margin: 0;
+    position: relative; /* Para permitir posicionar elementos en relación a este contenedor */
+}
+
+.border-container {
+    position: relative; 
+    background-color: transparent; 
+    margin: -2px 0 0 0;
+    padding: 15px; 
+    border-left: 4px solid #fa7582; /* Borde izquierdo más grueso */
+    border-right: 4px solid #fa7582; /* Borde derecho más grueso */
+    border-bottom: 4px solid #fa7582; /* Borde inferior más grueso */
+}
+
+.border-container::before {
+    content: "";
+    position: absolute;
+    top: -2px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Ajusta el ancho del corte */
+    height: 10px; /* Altura del corte */
+    background-color: transparent; /* Color de fondo */
+    border-top: 4px solid #fa7582; /* Color del borde que se verá más grueso */
+    z-index: 0; /* Debe estar detrás de otros elementos */
+}
+
+.number {
+    position: absolute;
+    top: -70px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #fa7582; 
+    padding: 5px 10px;
+    font-size: 100px; 
+    z-index: 1; /* Asegura que el número esté sobre otros elementos */
+}
+
+.title-box {
+    text-align: center;
+    position: relative; /* Permite posicionar el título en relación a este contenedor */
+    z-index: 2; /* Asegura que el título esté encima del número */
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    color: white; /* Color del texto del título */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas para el título */
+}
+
+.description {
+    margin-top: 10px; 
+    color: white;
+}
+
+button {
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid #e74c3c; /* Borde */
+    color: #e74c3c; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-family: 'Gelasio', serif; /* Fuente */
+    font-style: italic; /* Estilo en cursiva */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave */
+    margin-top: 20px; /* Espacio por encima del botón */
+}
+
+button:hover {
+    background-color: #fa7582; /* Color al pasar el mouse */
+    color: white; /* Color del texto al pasar el mouse */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar el contenido */
+    align-items: flex-end; /* Alinea todo al lado derecho */
+    justify-content: center; 
+    height: auto; 
+    margin: 0;
+    position: relative; /* Para permitir posicionar elementos en relación a este contenedor */
+}
+
+.border-container {
+    position: relative; 
+    background-color: transparent; 
+    margin: -2px 0 0 0;
+    padding: 15px; 
+    border-left: 4px solid #fa7582; /* Borde izquierdo más grueso */
+    border-right: 4px solid #fa7582; /* Borde derecho más grueso */
+    border-bottom: 4px solid #fa7582; /* Borde inferior más grueso */
+}
+
+.border-container::before {
+    content: "";
+    position: absolute;
+    top: -2px; /* Ajusta según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Ajusta el ancho del corte */
+    height: 10px; /* Altura del corte */
+    background-color: transparent; /* Color de fondo */
+    border-top: 4px solid #fa7582; /* Color del borde que se verá más grueso */
+    z-index: 0; /* Debe estar detrás de otros elementos */
+}
+
+.number {
+    position: absolute;
+    top: -70px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    color: #fa7582; 
+    padding: 5px 10px;
+    font-size: 100px; 
+    z-index: 1; /* Asegura que el número esté sobre otros elementos */
+}
+
+.title-box {
+    text-align: center;
+    position: relative; /* Permite posicionar el título en relación a este contenedor */
+    z-index: 2; /* Asegura que el título esté encima del número */
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro transparente */
+    color: white; /* Color del texto del título */
+    padding: 10px; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas para el título */
+}
+
+.description {
+    margin-top: 10px; 
+    color: white;
+}
+
+button {
+    background: linear-gradient(to right, #fa7582, #e74c3c); /* Degradado de rojo claro a fuerte */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-family: 'Gelasio', serif; /* Fuente */
+    font-style: italic; /* Estilo en cursiva */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave */
+    margin-top: 20px; /* Espacio por encima del botón */
+}
+
+button:hover {
+    background: linear-gradient(to right, #e74c3c, #fa7582); /* Inversión del degradado al pasar el mouse */
+}
+
+
+/*==========*/
+/* 
 
 @media (max-width: 1024px) {
     .grid-container {
@@ -286,4 +460,4 @@
 
 .description {
     padding: 10px 80px;
-}
+} */
