@@ -22,3 +22,20 @@ strong, .bold {
   font-family: 'Gelasio', serif;
   font-weight: 700; /* Peso bold */
 }
+
+
+
+.custom-button {
+    background: linear-gradient(to bottom, #c62828, #ff5252); /* Degradado rojo oscuro a claro */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Esquinas redondeadas */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background 0.3s ease; /* Transición suave */
+}
+
+.custom-button:hover {
+    background: #ff8a65; /* Color salmón al pasar el mouse */
+}
