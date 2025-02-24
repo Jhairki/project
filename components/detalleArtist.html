@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Artista</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .artist-profile {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .artist-header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .artist-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .artist-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .artist-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .artist-name {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .artist-surname {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .artist-type {
+            display: inline-block;
+            background-color: #e91e63;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .artist-location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .artist-location i {
+            margin-right: 0.5rem;
+        }
+        
+        .artist-description {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            border-bottom: 2px solid #e91e63;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        
+        .achievements {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .destacado {
+            font-weight: bold;
+            color: #e91e63;
+            margin-bottom: 1rem;
+        }
+        
+        .premios-list {
+            list-style-position: inside;
+        }
+        
+        .premios-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+        
+        .gallery {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .back-button {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .artist-header {
+                flex-direction: column;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Detalles del Artista</h1>
+    </header>
+    
+    <div class="container">
+        <a href="index.html" class="back-button">← Volver a los artistas</a>
+        
+        <div id="artistProfile" class="artist-profile">
+            <!-- El contenido se cargará dinámicamente con JavaScript -->
+            <p>Cargando información del artista...</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el ID del artista de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const artistId = urlParams.get('id');
+            
+            if (!artistId) {
+                document.getElementById('artistProfile').innerHTML = `
+                    <div class="error-message">
+                        <h2>Error: No se especificó un artista</h2>
+                        <p>Por favor, regresa a la página principal y selecciona un artista.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Cargar los datos del artista desde el JSON
+            fetch("../../artist.json")
+                .then(response => response.json())
+                .then(artistas => {
+                    // Encontrar el artista con el ID especificado
+                    const artista = artistas.find(a => a.id == artistId);
+                    
+                    if (!artista) {
+                        document.getElementById('artistProfile').innerHTML = `
+                            <div class="error-message">
+                                <h2>Error: Artista no encontrado</h2>
+                                <p>No se encontró un artista con el ID ${artistId}.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+                    
+                    // Mostrar la información del artista
+                    document.getElementById('artistProfile').innerHTML = `
+                        <div class="artist-header">
+                            <div class="artist-image">
+                                <img src="${artista.imags[1]}" alt="Foto de ${artista.name} ${artista.surname}">
+                            </div>
+                            <div class="artist-info">
+                                <h1 class="artist-name">${artista.name}</h1>
+                                <h2 class="artist-surname">${artista.surname}</h2>
+                                <div class="artist-type">${artista.type}</div>
+                                <div class="artist-location">
+                                    <i class="fas fa-map-marker-alt"></i> ${artista.location}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="artist-description">
+                            <h3 class="section-title">Biografía</h3>
+                            <div>${artista.descripcion}</div>
+                        </div>
+                        
+                        <div class="achievements">
+                            <h3 class="section-title">Logros y reconocimientos</h3>
+                            <div class="destacado">Destacado: ${artista.destacado}</div>
+                            <h4>Premios:</h4>
+                            <ul class="premios-list">
+                                ${artista.premios.map(premio => `<li>${premio}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="gallery">
+                            <h3 class="section-title">Galería de obras</h3>
+                            <div class="gallery-grid">
+                                ${artista.imags.map(img => `
+                                    <div class="gallery-item">
+                                        <img src="${img}" alt="Obra de ${artista.name} ${artista.surname}">
+                                    </div>
+                                `).join('')}
+                                ${artista.obras ? artista.obras.map(obra => `
+                                    <div class="gallery-item">
+                                        <img src="${obra}" alt="Obra de ${artista.name} ${artista.surname}">
+                                    </div>
+                                `).join('') : ''}
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Actualizar el título de la página
+                    document.title = `${artista.name} ${artista.surname} - Detalles del Artista`;
+                })
+                .catch(error => {
+                    console.error("Error al cargar los datos del artista:", error);
+                    document.getElementById('artistProfile').innerHTML = `
+                        <div class="error-message">
+                            <h2>Error al cargar los datos</h2>
+                            <p>Ocurrió un error al intentar cargar la información del artista. Por favor, intenta de nuevo más tarde.</p>
+                        </div>
+                    `;
+                });
+        });
+    </script>
+    
+    <!-- Font Awesome para iconos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

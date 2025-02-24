@@ -26,6 +26,7 @@ strong, .bold {
 
 
 .custom-button {
+  justify-self: flex-end;
     background: linear-gradient(to bottom, #c62828, #ff5252); /* Degradado rojo oscuro a claro */
     color: white; /* Color del texto */
     border: none; /* Sin borde */
@@ -39,3 +40,172 @@ strong, .bold {
 .custom-button:hover {
     background: #ff8a65; /* Color salmón al pasar el mouse */
 }
+
+
+/*titulo*/
+
+.text-overlay {
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+  text-align: right;
+}
+
+.text-overlay h1 {
+  position: relative;
+  font-size: 80px;
+  margin: 0;
+  display: inline-block;
+}
+
+.secundario {
+  position: absolute;
+  top: 1px;
+  /* Desplaza un poco hacia abajo */
+  left: 12px;
+  /* Desplaza un poco a la derecha */
+  color: rgba(92, 81, 81, 0.5);
+  /* Color plomo */
+  z-index: 0;
+  font-family: "Gelasio", serif;
+  /* Aplicar fuente Gelasio */
+  font-weight: 700;
+  /* Negrita */
+  font-style: italic;
+  /* Cursiva */
+}
+
+.primario {
+  position: relative;
+  color: white;
+  z-index: 1;
+  /* Asegura que el texto blanco esté encima */
+  font-family: "Gelasio", serif;
+  /* Aplicar fuente Gelasio */
+  font-weight: 700;
+  /* Negrita */
+  font-style: italic;
+  /* Cursiva */
+}
+
+.text-overlay h3 {
+  font-size: 40px;
+  font-family: "Gelasio", serif;
+  /* Aplicar fuente Gelasio */
+  font-weight: 700;
+  /* Negrita */
+  font-style: italic;
+  color: white;
+  /* Cursiva */
+}
+
+
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 90px 0px;
+}
+
+.text-column {
+  width: 60%;
+  position: relative;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.border-container {
+  border: 2px solid #fa7582;
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.border-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.border-top::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 2px;
+  background-color: #21252e;
+  z-index: 1;
+}
+
+.number {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fa7582;
+  padding: 5px 10px;
+  font-size: 210px;
+  z-index: 1;
+  font-family: "Gelasio", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+.title-box {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  top: 45px;
+
+}
+
+.title {
+  background-color: hsl(228, 13%, 23%, 0.8);
+  color: white;
+  padding: 10px;
+  font-family: "Gelasio", serif;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 60px;
+}
+
+.text-box {
+  color: #c62828;
+  padding: 50px;
+}
+
+
+
+
+
+/*section-1 banner*/
+.section-1 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.section-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+

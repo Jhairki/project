@@ -1,49 +1,73 @@
 // footer.js
 const footerHTML = `
-    <footer class="custom-footer">
+     <footer class="custom-footer">
         <div class="footer-container">
-            <div class="section logo">
-                <img src="https://via.placeholder.com/80" alt="Logo">
-                <h1>GALERÍA DE ARTE BOLIVIANO</h1>
+            <div class="row">
+                
+                <div class="col-md-3 section logo-section">
+                    <img src="/assets/images/general web/marca en negativo-09.png" alt="Logo Galería de Arte">
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-3 section">
+                    <h3>CONTÁCTANOS</h3>
+                    <div class="contact-links">
+                        <a href="mailto:gab.bolivian@gmail.com">
+                            <div class="icon-container">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            gab.bolivian@gmail.com
+                        </a>
+                        <a href="#">
+                            <div class="icon-container">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/>
+                                </svg>
+                            </div>
+                            gab_artbolivian
+                        </a>
+                        <a href="#">
+                            <div class="icon-container">
+                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                                </svg>
+                            </div>
+                            Galería De Arte Boliviano
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Menu Section -->
+                <div class="col-md-3 section">
+                    <h3>MENÚ</h3>
+                    <ul class="menu-links">
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Obras</a></li>
+                        <li><a href="#">Artistas</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="col-md-3 section">
+                    <h3>¿Quieres exponer en esta galería?</h3>
+                    <p>
+                        GALERÍA DE ARTE BOLIVIANO es un espacio que busca democratizar el acceso al arte,
+                        ofreciendo a los artistas un lugar para desarrollarse y conectar con coleccionistas y
+                        amantes del arte.
+                    </p>
+                    <a href="#" class="cta-button">Llena el formulario</a>
+                </div>
             </div>
 
-            <div class="section contacts">
-                <h3>CONTÁCTANOS</h3>
-                <a href="mailto:gab.bolivian@gmail.com">
-                    <i class="bi bi-envelope-fill"></i> gab.bolivian@gmail.com
-                </a>
-                <a href="https://instagram.com">
-                    <i class="bi bi-instagram"></i> gab_artbolivian
-                </a>
-                <a href="https://facebook.com">
-                    <i class="bi bi-facebook"></i> Galería De Arte Boliviano
-                </a>
+            <!-- Footer Quote -->
+            <div class="footer-quote">
+                <p>"ABRE LA PUERTA AL ARTE VIRTUAL: UN MUNDO DE INSPIRACIÓN A TU ALCANCE."</p>
             </div>
-
-            <div class="section menu">
-                <h3>MENÚ</h3>
-                <ul>
-                    <li><a href="#">Galería</a></li>
-                    <li><a href="#">Obras</a></li>
-                    <li><a href="#">Artistas</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="section cta">
-                <h3>¿Quieres exponer en esta galería?</h3>
-                <p>
-                    GALERÍA DE ARTE BOLIVIANO es un espacio que busca democratizar el acceso al arte, ofreciendo a los artistas un
-                    lugar para desarrollarse y conectar con coleccionistas y amantes del arte.
-                </p>
-                <a href="#">Llena el formulario</a>
-            </div>
-        </div>
-
-        <div class="footer">
-            <hr class="footer-line">
-            <p>"ABRE LA PUERTA AL ARTE VIRTUAL: UN MUNDO DE INSPIRACIÓN A TU ALCANCE."</p>
         </div>
     </footer>
 `;

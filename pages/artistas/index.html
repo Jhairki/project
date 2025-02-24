@@ -6,73 +6,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arte-Bolivia</title>
 
+
   <link rel="stylesheet" href="/assets/css/navbar.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="styles.css">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
-
-  <div id="navbar-container"></div>
-
   <div class="section-1">
     <img src="/assets/images/general web/banner bolivia 1.png" alt="" style="width: 100%;">
     <div class="text-overlay">
-      <h1>ARTISTAS</h1>
-      <h3>Bolivianos</h3>
+      <h1>
+        <span class="primario">ARTISTAS</span>
+        <span class="secundario">ARTISTAS</span>
+      </h1>
+      <h3 class="italic">Bolivianos</h3>
     </div>
   </div>
+
+
 
   <div class="section-2">
     <div class="container">
       <div class="row">
-        <div class="column">
+        <!-- Primera columna -->
+        <div class="column left-column">
           <div class="content-section">
-            <div class="number-container">
-              <div class="border-line"></div>
+            <div class="border-top">
               <div class="number">01</div>
-              <div class="border-line"></div>
-            </div>
-            <div class="title-box">
-              <h1 class="title">REGIONES</h1>
+              <div class="title-box">
+                <h1 class="title">REGIONES</h1>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="column">
-          <p>
+        <!-- Segunda columna -->
+        <div class="column right-column">
+          <p class="gelasio">
             En el corazón vibrante de Sudamérica, nuestra galería se enorgullece de ofrecer una ventana única al
             mundo del arte boliviano. Aquí celebramos la rica diversidad cultural y creativa de los artistas de
             este país, cuyas obras reflejan la esencia y la identidad de nuestra vibrante comunidad.
           </p>
-          <p>Bolivia se caracteriza po restar dividido en 3 regiones:</p>
+          <p class="gelasio">Bolivia se caracteriza por estar dividida en 3 regiones:</p>
           <div class="region-container">
-            <div class="region-column">OCCIDENTE</div>
-            <div class="region-column">CENTRAL</div>
-            <div class="region-column">ORIENTE</div>
+            <div class="region-column gelasio">OCCIDENTE</div>
+            <div class="region-column gelasio">CENTRAL</div>
+            <div class="region-column gelasio">ORIENTE</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section-3">
+
+  <div class="section-3" id="region-occidente">
     <div class="grid-container">
       <div class="top-section">
         <div class="occidental">OCCIDENTE</div>
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-occidente'">
             <img src="/assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">La Paz</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE LA PAZ</h3>
+            <h3 class="city-title">ARTISTAS <br> DE LA PAZ</h3>
             <p class="city-description">
               En el corazón vibrante de La Paz, nuestra galería se enorgullece de ofrecer una ventana única al mundo del
               arte paceño. Aquí, celebramos la rica diversidad cultural y creativa de los artistas de esta ciudad
@@ -84,13 +101,16 @@
 
       <div class="bottom-cities">
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-occidente'">
             <img src="/assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div>
+              <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Oruro</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE ORURO</h3>
+            <h3 class="city-title">ARTISTAS <br>DE ORURO</h3>
             <p class="city-description">
               Oruro, famoso por su carnaval, también es conocido por sus artistas como la pintora y muralista Susana
               Patiño, cuyas obras reflejan la riqueza cultural del festival, y el escultor Juan Carlos Paz, que trabaja
@@ -101,13 +121,15 @@
 
 
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-occidente'">
             <img src="/assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Potosí</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE POTOSI</h3>
+            <h3 class="city-title">ARTISTAS <br>DE POTOSI</h3>
             <p class="city-description">
               Potosí, con su historia minera, inspira a artistas como el pintor y grabador Félix Sánchez, cuyas obras
               exploran el impacto histórico y social de la minería, y la artista Teresa Calvo, que utiliza técnicas
@@ -119,18 +141,20 @@
     </div>
   </div>
 
-  <div class="section-3">
+  <div class="section-3" id="region-central">
     <div class="grid-container">
       <div class="top-section">
         <div class="occidental">CENTRAL</div>
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-central'">
             <img src="/assets/images/general web/2.final cochabamaba 2.png" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Cochabamba</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE COCHABAMBA</h3>
+            <h3 class="city-title">ARTISTAS DE <br>COCHABAMBA</h3>
             <p class="city-description">
               Cochabamba es el escenario de una vibarnte escea artistica con figuras como el pintor y muralista Juan de
               la Cruz, cuyas obras evocan el paisaje y la cultura local, y el escritor Alvaro Eyzaguirre, cuyas piezas
@@ -142,13 +166,15 @@
 
       <div class="bottom-cities">
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-central'">
             <img src="/assets/images/general web/2.final sucre 1.png" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Chuquisaca</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE CHUQUISACA</h3>
+            <h3 class="city-title">ARTISTAS DE <br>CHUQUISACA</h3>
             <p class="city-description">
               Chuquisaca, cuna de la independencia boliviana, es hogar de artistas como el pintor y escultor Ricardo
               Pérez Alcalá, que Integra elementos históricos y culturales en sas obras, y la artista multimedia Yolanda
@@ -158,13 +184,15 @@
         </div>
 
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-central'">
             <img src="/assets/images/general web/2.final tarija 1.png" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Tarija</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE TARIJA</h3>
+            <h3 class="city-title">ARTISTAS <br> DETARIJA</h3>
             <p class="city-description">
               En Tarija, conocida por sa vino y paisajes, encontramos a artistas como el pintor José Antonio Ramos,
               cuyas obras capturan la belleza dei valle y la vida cotidiana, y la ceramista Lourdes Vaca, cuyos trabajos
@@ -176,18 +204,20 @@
     </div>
   </div>
 
-  <div class="section-3">
+  <div class="section-3" id="region-oriente">
     <div class="grid-container">
       <div class="top-section">
         <div class="occidental">ORIENTE</div>
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-oriente'">
             <img src="/assets/images/general web/2.final santa cruz 1.png" alt="La Paz" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Santa Cruz</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE SANTA CRUZ</h3>
+            <h3 class="city-title">ARTISTAS DE <br> SANTA CRUZ</h3>
             <p class="city-description">
               Santa Cruz, con su rápido crecimiento arbario y diversidad cultural, es hogar de artistas como Beatriz
               Uceda, que fasiona elementos tradicionales con técnicas modernas, y Carios Crespo, conocido por sus
@@ -198,13 +228,15 @@
       </div>
       <div class="bottom-cities">
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-oriente'">
             <img src="/assets/images/general web/2.final pando.png" alt="Oruro" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Pando</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE PANDO</h3>
+            <h3 class="city-title">ARTISTAS <br>DE PANDO</h3>
             <p class="city-description">
               En Pando, la selva y los ríos son la fuente de Inspiración para artistas como el pimor y muralista Hugo
               Flores, cuyas obras evocan el paisaje tropical y la vida silvestre, y la artista plástica Juana Martínez,
@@ -214,13 +246,15 @@
         </div>
 
         <div class="city-card">
-          <div class="image-container">
+          <div class="image-container" onclick="location.href='#artistas-oriente'">
             <img src="/assets/images/general web/2.final beni.png" alt="Potosi" class="city-image">
-            <div class="flag-overlay"></div>
+            <div class="flag-overlay">
+              <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
+            </div>
             <h2 class="city-name">Beni</h2>
           </div>
           <div class="city-info">
-            <h3 class="city-title">ARTISTAS DE BENI</h3>
+            <h3 class="city-title">ARTISTAS <br>DE BENI</h3>
             <p class="city-description">
               Beni, con su riquem nataral y diversidad, inspira a artistas como el pintor y escultor Luis Gómez, que
               explera la fauna y flora amazónica en sus obras, y la artista de arte textil Ana María Calliznys, que cres
@@ -233,304 +267,332 @@
   </div>
 
 
-  <div class="section-4" id="occidental">
+  <div class="section-4" id="artistas-occidente">
     <div class="region-title">
-      <h1>Región</h1>
-      <h1>OCCIDENTE</h1>
+      <h3>Región</h3>
+      <h1 onclick="location.href='#region-occidente'">OCCIDENTE</h1>
     </div>
 
     <div class="location" id="artistLocationOccidental"></div>
-
     <div class="container-3">
       <div class="left-bar"></div>
 
-      <div class="carousel" id="carouselOccidental">
-      </div>
-
-      <div class="info-box">
-        <h1 class="artist-name" id="artistNameOccidental"></h1>
-        <h2 class="artist-surname" id="artistSurnameOccidental"></h2>
-        <div class="artist-description" id="artistDescriptionOccidental"></div>
+      <div class="carousel" id="carouselOccidental"></div>
+      <div>
+        <div class="info-box">
+          <h1 class="artist-name" id="artistNameOccidental"></h1>
+          <h2 class="artist-surname" id="artistSurnameOccidental"></h2>
+          <div class="artist-description" id="artistDescriptionOccidental"></div>
+        </div>
+        <div class="boton-artista">
+          <a href="/components/detalleArtist.html?id=${artista.id}">
+            <button class="custom-button">Más del artista</button>
+          </a>
+        </div>
       </div>
 
       <div class="main-image">
         <img id="mainImageOccidental" src="" alt="Main artist photo">
+        <div class="main-image-overlay">
+          <div class="artist-overlay-name" id="name"></div>
+          <div class="artist-overlay-type" id="tipoA"></div>
+          <div class="artist-overlay-location" id="localidad-art"></div>
+        </div>
       </div>
     </div>
-
-    <button class="action-button">Más del artista</button>
   </div>
 
 
-  <div class="section-4" id="central">
+  <div class="section-4" id="artistas-central">
     <div class="region-title">
-      <h1>Region</h1>
-      <h1>CENTRAL</h1>
+      <h3>Región</h3>
+      <h1 onclick="location.href='#region-central'">CENTRAL</h1>
     </div>
     <div class="location" id="artistLocationCentral"></div>
     <div class="container-3">
       <div class="left-bar"></div>
 
       <div class="carousel" id="carouselCentral"> </div>
-      <div class="info-box">
-        <h1 class="artist-name" id="artistNameCentral"></h1>
-        <h3 class="artist-surname" id="artistSurnameCentral"></h3>
-        <div class="artist-description" id="artistDescriptionCentral"></div>
+      <div>
+        <div class="info-box">
+          <h1 class="artist-name" id="artistNameCentral"></h1>
+          <h3 class="artist-surname" id="artistSurnameCentral"></h3>
+          <div class="artist-description" id="artistDescriptionCentral"></div>
+        </div>
+        <div class="boton-artista">
+          <a href="/components/detalleArtist.html?id=${artista.id}">
+            <button class="custom-button">Más del artista</button>
+          </a>
+        </div>
       </div>
       <div class="main-image">
         <img id="mainImageCentral" src="" alt="Foto principal">
+        <div class="main-image-overlay">
+          <div class="artist-overlay-name" id="name"></div>
+          <div class="artist-overlay-type" id="tipoA"></div>
+          <div class="artist-overlay-location" id="localidad-art"></div>
+        </div>
       </div>
     </div>
-
-    <button class="action-button">Más del artista</button>
   </div>
 
-  <div class="section-4" id="oriental">
+  <div class="section-4" id="artistas-oriente">
     <div class="region-title">
-      <h1>Region</h1>
-      <h1>ORIENTE</h1>
+      <h3>Región</h3>
+      <h1 onclick="location.href='#region-oriente'">ORIENTE</h1>
     </div>
 
     <div class="location" id="artistLocationOriental"></div>
     <div class="container-3">
       <div class="left-bar"></div>
-      <div class="carousel" id="carouselOriental"></div>
-      <div class="info-box">
-        <h1 class="artist-name" id="artistNameOriental"></h1>
-        <h3 class="artist-surname" id="artistSurnameOriental"></h3>
-        <div class="artist-description" id="artistDescriptionOriental"> </div>
+      <div class="carousel" id="carouselOriental">
+        <div class="carousel-image">
+          <div class="carousel-text">
+
+          </div>
+        </div>
       </div>
+      <div>
+        <div class="info-box">
+          <h1 class="artist-name" id="artistNameOriental"></h1>
+          <h3 class="artist-surname" id="artistSurnameOriental"></h3>
+          <div class="artist-description" id="artistDescriptionOriental"> </div>
+    
+        </div>
+        <div class="boton-artista">
+          <a href="/components/detalleArtist.html">
+            <button class="custom-button">Más del artista</button>
+          </a>
+        </div>
+      </div>
+
       <div class="main-image">
         <img id="mainImageOriental" src="" alt="Foto principal">
+        <div class="main-image-overlay">
+          <div class="artist-overlay-name" id="name"></div>
+          <div class="artist-overlay-type" id="tipoA"></div>
+          <div class="artist-overlay-location" id="localidad-art"></div>
+        </div>
       </div>
     </div>
-    <button class="action-button">Más del artista</button>
   </div>
 
   <script>
-    fetch("../../artist.json")
-      .then(response => response.json())
-      .then(artistas => {
-        if (!Array.isArray(artistas) || artistas.length === 0) {
-          console.error("El JSON no contiene artistas o está vacío:", artistas);
+    document.addEventListener('DOMContentLoaded', function () {
+  function setupRegionNavigation() {
+    const regionTitleMappings = {
+      'OCCIDENTE': '#region-occidente',
+      'CENTRAL': '#region-central',
+      'ORIENTE': '#region-oriente'
+    };
+
+    document.querySelectorAll('.region-title h1').forEach(title => {
+      title.addEventListener('click', function () {
+        const regionText = this.textContent.trim();
+        const targetId = regionTitleMappings[regionText];
+        if (targetId) {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  }
+
+  // Definir regiones y departamentos una sola vez
+  const departamentosOccidente = ["La Paz", "Potosi", "Oruro"];
+  const departamentosOriente = ["Santa Cruz", "Beni", "Pando"];
+
+  function getRegion(location) {
+    if (departamentosOccidente.includes(location)) return "Occidental";
+    if (departamentosOriente.includes(location)) return "Oriental";
+    return "Central";
+  }
+
+  // Cargar artistas desde JSON
+  fetch("../../artist.json")
+    .then(response => response.json())
+    .then(artistas => {
+      if (!Array.isArray(artistas) || artistas.length === 0) {
+        console.error("El JSON no contiene artistas o está vacío:", artistas);
+        return;
+      }
+
+      // Configurar los elementos DOM de cada región
+      const regiones = {
+        Occidental: {
+          carousel: document.getElementById("carouselOccidental"),
+          mainImage: document.getElementById("mainImageOccidental"),
+          artistName: document.getElementById("artistNameOccidental"),
+          artistSurname: document.getElementById("artistSurnameOccidental"),
+          artistLocation: document.getElementById("artistLocationOccidental"),
+          artistDescription: document.getElementById("artistDescriptionOccidental"),
+          mainImageContainer: document.querySelector("#artistas-occidente .main-image"),
+          mainImageOverlay: document.querySelector("#artistas-occidente .main-image-overlay"),
+          botonArtista: document.querySelector("#artistas-occidente .boton-artista a")
+        },
+        Central: {
+          carousel: document.getElementById("carouselCentral"),
+          mainImage: document.getElementById("mainImageCentral"),
+          artistName: document.getElementById("artistNameCentral"),
+          artistSurname: document.getElementById("artistSurnameCentral"),
+          artistLocation: document.getElementById("artistLocationCentral"),
+          artistDescription: document.getElementById("artistDescriptionCentral"),
+          mainImageContainer: document.querySelector("#artistas-central .main-image"),
+          mainImageOverlay: document.querySelector("#artistas-central .main-image-overlay"),
+          botonArtista: document.querySelector("#artistas-central .boton-artista a")
+        },
+        Oriental: {
+          carousel: document.getElementById("carouselOriental"),
+          mainImage: document.getElementById("mainImageOriental"),
+          artistName: document.getElementById("artistNameOriental"),
+          artistSurname: document.getElementById("artistSurnameOriental"),
+          artistLocation: document.getElementById("artistLocationOriental"),
+          artistDescription: document.getElementById("artistDescriptionOriental"),
+          mainImageContainer: document.querySelector("#artistas-oriente .main-image"),
+          mainImageOverlay: document.querySelector("#artistas-oriente .main-image-overlay"),
+          botonArtista: document.querySelector("#artistas-oriente .boton-artista a")
+        }
+      };
+
+      function actualizarArtista(artista, region) {
+        if (!artista.imags || artista.imags.length < 2) {
+          console.error("El artista no tiene suficientes imágenes:", artista);
           return;
         }
 
-        const departamentosOccidente = ["La Paz", "Potosi", "Oruro"];
-        const departamentosOriente = ["Santa Cruz", "Beni", "Pando"];
+        // Actualizar imagen principal y datos del artista
+        region.mainImage.src = artista.imags[1];
+        region.artistName.textContent = artista.name;
+        region.artistSurname.textContent = artista.surname;
+        region.artistLocation.textContent = artista.location;
+        region.artistDescription.innerHTML = artista.descripcion;
 
-        const regiones = {
-          Occidental: {
-            carousel: document.getElementById("carouselOccidental"),
-            mainImage: document.getElementById("mainImageOccidental"),
-            artistName: document.getElementById("artistNameOccidental"),
-            artistSurname: document.getElementById("artistSurnameOccidental"),
-            artistLocation: document.getElementById("artistLocationOccidental"),
-            artistDescription: document.getElementById("artistDescriptionOccidental"),
-          },
-          Central: {
-            carousel: document.getElementById("carouselCentral"),
-            mainImage: document.getElementById("mainImageCentral"),
-            artistName: document.getElementById("artistNameCentral"),
-            artistSurname: document.getElementById("artistSurnameCentral"),
-            artistLocation: document.getElementById("artistLocationCentral"),
-            artistDescription: document.getElementById("artistDescriptionCentral"),
-          },
-          Oriental: {
-            carousel: document.getElementById("carouselOriental"),
-            mainImage: document.getElementById("mainImageOriental"),
-            artistName: document.getElementById("artistNameOriental"),
-            artistSurname: document.getElementById("artistSurnameOriental"),
-            artistLocation: document.getElementById("artistLocationOriental"),
-            artistDescription: document.getElementById("artistDescriptionOriental"),
-          }
-        };
-
-        function getRegion(location) {
-          if (departamentosOccidente.includes(location)) return "Occidental";
-          if (departamentosOriente.includes(location)) return "Oriental";
-          return "Central";
+        // Actualizar overlay de la imagen principal
+        if (region.mainImageOverlay) {
+          // Seleccionar los elementos dentro del overlay específico para cada región
+          const nameElement = region.mainImageOverlay.querySelector(".artist-overlay-name");
+          const typeElement = region.mainImageOverlay.querySelector(".artist-overlay-type");
+          const locationElement = region.mainImageOverlay.querySelector(".artist-overlay-location");
+          
+          // Actualizar los datos en el overlay
+          if (nameElement) nameElement.textContent = (artista.name + " " + artista.surname).toUpperCase();
+          if (typeElement) typeElement.textContent = artista.type || "Artista";
+          if (locationElement) locationElement.textContent = artista.location;
         }
 
-        function actualizarArtista(artista, region) {
-          if (!artista.imags || artista.imags.length < 2) {
-            console.error("El artista no tiene suficientes imágenes:", artista);
-            return;
-          }
+        // Guardar el ID del artista actualmente mostrado
+        region.currentArtistId = artista.id;
 
-          region.mainImage.src = artista.imags[1];
-          region.artistName.textContent = artista.name;
-          region.artistSurname.textContent = artista.surname;
-          region.artistLocation.textContent = artista.location;
-          region.artistDescription.innerHTML = artista.descripcion;
+        // Configurar la redirección a la página de detalles al hacer clic en la imagen principal
+        if (region.mainImage) {
+          region.mainImage.style.cursor = "pointer";
+          region.mainImage.onclick = function() {
+            window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+          };
         }
 
-        artistas.forEach(artista => {
-          const regionKey = getRegion(artista.location);
-          const region = regiones[regionKey];
-          if (!region || !artista.imags || artista.imags.length < 2) return;
-
-          const imgElement = document.createElement("img");
-          imgElement.src = artista.imags[1];
-          imgElement.alt = `Imagen de ${artista.name}`;
-          imgElement.classList.add("carousel-image");
-
-          imgElement.addEventListener("click", () => {
-            actualizarArtista(artista, region);
-          });
-
-          region.carousel.appendChild(imgElement);
-        });
-
-        for (const key in regiones) {
-          const region = regiones[key];
-          const artistasRegion = artistas.filter(a => getRegion(a.location) === key);
-          if (artistasRegion.length > 0) {
-            actualizarArtista(artistasRegion[0], region);
-          }
+        // También configurar la redirección para todo el contenedor de la imagen principal
+        if (region.mainImageContainer) {
+          region.mainImageContainer.style.cursor = "pointer";
+          region.mainImageContainer.onclick = function() {
+            window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+          };
         }
-      })
-      .catch(error => console.error("Error al cargar el JSON:", error));
-  </script>
 
-
-  <div id="footer-container"></div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      function setupRegionNavigation() {
-        const regionTitleMappings = {
-          'OCCIDENTE': '#occidental',
-          'CENTRAL': '#central',
-          'ORIENTE': '#oriental'
-        };
-
-        document.querySelectorAll('.region-title').forEach(title => {
-          title.addEventListener('click', function () {
-            const regionText = this.querySelector('h1:last-child').textContent.trim();
-            const targetId = regionTitleMappings[regionText];
-            if (targetId) {
-              const targetSection = document.querySelector(targetId);
-              if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }
-          });
-        });
-
-        document.querySelectorAll('.occidental').forEach(title => {
-          title.addEventListener('click', function () {
-            const regionText = this.textContent.trim();
-            let targetSection;
-
-            switch (regionText) {
-              case 'OCCIDENTE':
-                targetSection = document.querySelector('.section-3 .grid-container:first-of-type');
-                break;
-              case 'CENTRAL':
-                targetSection = document.querySelector('.section-3 .grid-container:nth-of-type(2)');
-                break;
-              case 'ORIENTE':
-                targetSection = document.querySelector('.section-3 .grid-container:last-of-type');
-                break;
-            }
-
-            if (targetSection) {
-              targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-          });
-        });
+        // Actualizar el enlace del botón "Más del artista" con la misma ID
+        if (region.botonArtista) {
+          region.botonArtista.href = `/components/detalleArtist.html?id=${artista.id}`;
+        }
       }
 
-      fetch("../../artist.json")
-        .then(response => response.json())
-        .then(artistas => {
-          if (!Array.isArray(artistas) || artistas.length === 0) {
-            console.error("El JSON no contiene artistas o está vacío:", artistas);
-            return;
-          }
+      // Limpiar los carruseles antes de añadir imágenes para evitar duplicados
+      for (const key in regiones) {
+        if (regiones[key].carousel) {
+          regiones[key].carousel.innerHTML = '';
+        }
+      }
 
-          const departamentosOccidente = ["La Paz", "Potosi", "Oruro"];
-          const departamentosOriente = ["Santa Cruz", "Beni", "Pando"];
+      // Crear y añadir imágenes al carrusel para cada región
+      artistas.forEach(artista => {
+        const regionKey = getRegion(artista.location);
+        const region = regiones[regionKey];
+        
+        if (!region || !artista.imags || artista.imags.length < 2) return;
 
-          const regiones = {
-            Occidental: {
-              carousel: document.getElementById("carouselOccidental"),
-              mainImage: document.getElementById("mainImageOccidental"),
-              artistName: document.getElementById("artistNameOccidental"),
-              artistSurname: document.getElementById("artistSurnameOccidental"),
-              artistLocation: document.getElementById("artistLocationOccidental"),
-              artistDescription: document.getElementById("artistDescriptionOccidental"),
-            },
-            Central: {
-              carousel: document.getElementById("carouselCentral"),
-              mainImage: document.getElementById("mainImageCentral"),
-              artistName: document.getElementById("artistNameCentral"),
-              artistSurname: document.getElementById("artistSurnameCentral"),
-              artistLocation: document.getElementById("artistLocationCentral"),
-              artistDescription: document.getElementById("artistDescriptionCentral"),
-            },
-            Oriental: {
-              carousel: document.getElementById("carouselOriental"),
-              mainImage: document.getElementById("mainImageOriental"),
-              artistName: document.getElementById("artistNameOriental"),
-              artistSurname: document.getElementById("artistSurnameOriental"),
-              artistLocation: document.getElementById("artistLocationOriental"),
-              artistDescription: document.getElementById("artistDescriptionOriental"),
-            }
-          };
+        // Crear contenedor para la imagen y su overlay
+        const container = document.createElement("div");
+        container.className = "carousel-container";
+        
+        // Crear la imagen
+        const img = document.createElement("img");
+        img.src = artista.imags[1];
+        img.alt = `Imagen de ${artista.name}`;
+        img.className = "carousel-image";
+        
+        // Crear el overlay para el efecto hover
+        const overlay = document.createElement("div");
+        overlay.className = "carousel-overlay";
+        
+        // Añadir información del artista en el overlay
+        const nameEl = document.createElement("div");
+        nameEl.className = "artist-name-overlay";
+        nameEl.textContent = `${artista.name} ${artista.surname}`;
+        nameEl.style.fontWeight = "bold";
+        nameEl.style.fontSize = "16px";
+        nameEl.style.marginBottom = "5px";
+        
+        const typeEl = document.createElement("div");
+        typeEl.className = "artist-type-overlay";
+        typeEl.textContent = artista.type || "Artista";
+        
+        const locationEl = document.createElement("div");
+        locationEl.className = "artist-location-overlay";
+        locationEl.textContent = artista.location;
+        
+        // Añadir elementos al overlay
+        overlay.appendChild(nameEl);
+        overlay.appendChild(typeEl);
+        overlay.appendChild(locationEl);
+        
+        // Añadir imagen y overlay al contenedor
+        container.appendChild(img);
+        container.appendChild(overlay);
+        
+        // Añadir eventos
+        container.addEventListener("click", () => {
+          actualizarArtista(artista, region);
+        });
 
-          function getRegion(location) {
-            if (departamentosOccidente.includes(location)) return "Occidental";
-            if (departamentosOriente.includes(location)) return "Oriental";
-            return "Central";
-          }
+        // Doble clic para ir directamente a la página de detalles
+        container.addEventListener("dblclick", () => {
+          window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+        });
+        
+        // Añadir contenedor al carrusel
+        region.carousel.appendChild(container);
+      });
 
-          function actualizarArtista(artista, region) {
-            if (!artista.imags || artista.imags.length < 2) {
-              console.error("El artista no tiene suficientes imágenes:", artista);
-              return;
-            }
+      // Inicializar con el primer artista de cada región
+      for (const key in regiones) {
+        const region = regiones[key];
+        const artistasRegion = artistas.filter(a => getRegion(a.location) === key);
+        if (artistasRegion.length > 0) {
+          actualizarArtista(artistasRegion[0], region);
+        }
+      }
+    })
+    .catch(error => console.error("Error al cargar el JSON:", error));
 
-            region.mainImage.src = artista.imags[1];
-            region.artistName.textContent = artista.name;
-            region.artistSurname.textContent = artista.surname;
-            region.artistLocation.textContent = artista.location;
-            region.artistDescription.innerHTML = artista.descripcion;
-          }
-
-          artistas.forEach(artista => {
-            const regionKey = getRegion(artista.location);
-            const region = regiones[regionKey];
-            if (!region || !artista.imags || artista.imags.length < 2) return;
-
-            const imgElement = document.createElement("img");
-            imgElement.src = artista.imags[1];
-            imgElement.alt = `Imagen de ${artista.name}`;
-            imgElement.classList.add("carousel-image");
-
-            imgElement.addEventListener("click", () => {
-              actualizarArtista(artista, region);
-            });
-
-            region.carousel.appendChild(imgElement);
-          });
-
-          for (const key in regiones) {
-            const region = regiones[key];
-            const artistasRegion = artistas.filter(a => getRegion(a.location) === key);
-            if (artistasRegion.length > 0) {
-              actualizarArtista(artistasRegion[0], region);
-            }
-          }
-        })
-        .catch(error => console.error("Error al cargar el JSON:", error));
-
-      setupRegionNavigation();
-    });
+  setupRegionNavigation();
+});
   </script>
 
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/footer.js"></script>
+
 </body>
 
 </html>

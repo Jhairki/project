@@ -1,170 +1,10 @@
-.section-1 {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    /* Ajusta la altura según sea necesario */
-    overflow: hidden;
-}
 
-.section-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 50px;
-    right: 80px;
-    text-align: right;
-}
-
-.text-overlay h1 {
-    position: relative;
-    font-size: 80px;
-    margin: 0;
-    display: inline-block;
-}
-
-.secundario {
-    position: absolute;
-    top: 1px;
-    /* Desplaza un poco hacia abajo */
-    left: 12px;
-    /* Desplaza un poco a la derecha */
-    color: rgba(92, 81, 81, 0.5);
-    /* Color plomo */
-    z-index: 0;
-    font-family: "Gelasio", serif;
-    /* Aplicar fuente Gelasio */
-    font-weight: 700;
-    /* Negrita */
-    font-style: italic;
-    /* Cursiva */
-}
-
-.primario {
-    position: relative;
-    color: white;
-    z-index: 1;
-    /* Asegura que el texto blanco esté encima */
-    font-family: "Gelasio", serif;
-    /* Aplicar fuente Gelasio */
-    font-weight: 700;
-    /* Negrita */
-    font-style: italic;
-    /* Cursiva */
-}
-
-.text-overlay h3 {
-    font-size: 40px;
-    font-family: "Gelasio", serif;
-    /* Aplicar fuente Gelasio */
-    font-weight: 700;
-    /* Negrita */
-    font-style: italic;
-    /* Cursiva */
-}
 
 .section-2 {
     width: 100%;
     background-color: #21252e;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    /* Cambiar a flex-end para alinear el contenido hacia abajo */
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 90px 0px;
-}
-
-.text-column {
-    width: 60%;
-    position: relative;
-    padding-right: 20px;
-    display: flex;
-    /* Habilita Flexbox para alinear contenido */
-    flex-direction: column;
-    /* Apila el contenido verticalmente */
-    justify-content: flex-end;
-    /* Alinea el contenido hacia abajo */
-}
-
-.border-container {
-    border: 2px solid #fa7582;
-    /* Borde salmón visible */
-    position: relative;
-    /* Permitir posicionamiento de elementos */
-    height: auto;
-    /* La altura se ajusta al contenido */
-    display: flex;
-    flex-direction: column;
-    /* Apila el contenido verticalmente */
-}
-
-.border-top {
-    display: flex;
-    /* Habilita Flexbox */
-    flex-direction: column;
-    /* Apila los elementos en columnas */
-    align-items: center;
-    /* Centra horizontalmente */
-    justify-content: center;
-    /* Centra verticalmente */
-    position: relative;
-}
-
-.border-top::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
-    height: 2px;
-    background-color: #21252e;
-    z-index: 1;
-}
-
-.number {
-    position: absolute;
-    top: -130px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fa7582;
-    padding: 5px 10px;
-    font-size: 210px;
-    z-index: 1;
-    font-family: "Gelasio", serif;
-    /* Aplicar fuente Gelasio al número */
-    font-weight: 500;
-    /* Peso de la fuente */
-    font-style: italic;
-    /* Estilo de la fuente */
-}
-
-.title-box {
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    top: 45px;
-}
-
-.title {
-    background-color: hsl(228, 13%, 23%, 0.8);
-    color: white;
-    padding: 10px;
-    font-family: "Gelasio", serif;
-    /* Aplicar fuente Gelasio al título */
-    font-weight: 100;
-    font-style: italic;
-    font-size: 60px;
-}
 
 .image-section {
     width: 35%;
@@ -186,17 +26,9 @@
     object-fit: cover;
 }
 
-.text-box {
-    margin-top: 40px;
-    color: white;
-    padding: 90px 0px;
-    padding-left: 160px;
-    padding-right: 90px;
-}
 
 
 
-/*section 3*/
 
 .section-3 {
     position: relative;
