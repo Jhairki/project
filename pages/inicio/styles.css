@@ -1,156 +1,338 @@
 
 /*=======*/
 
-.section-3 {
-    display: flex; 
-    align-items: center; 
+
+.section-2 {
+  display: flex;
+  width: 100%;
+  height: auto;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    max-width: 1000px;
-    margin: 0;
+.container2 {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    border: 0.01px solid white; 
-    box-sizing: border-box;
-    margin: 0;
+.image-section2 {
+  flex: 0 0 30%; 
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 0;
 }
 
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    padding: 30px; 
-    box-sizing: border-box; 
+.image-section2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.item-1-2 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
+.content-section2 {
+  flex: 1; 
+  background: linear-gradient(to bottom, #646577, #1a1922);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 40px;
+  padding-right: 10%;
+  z-index: 2;
+  text-align: left; 
+  justify-content: center; 
 }
 
-.item-3 {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.item-4 {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.item-5-6-8-9 {
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 2;
-}
-
-.item-7 {
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.grid-item img:hover {
-    transform: scale(1.1);
-}
-.container {
-    display: flex;
-    flex-direction: column; /* Cambia a columna para apilar el contenido */
-    align-items: center; 
-    justify-content: center; 
-    height: auto; 
-    margin: 0;
-    position: relative; /* Para permitir posicionar elementos en relación a este contenedor */
+.content-section2 h1,
+.content-section2 p {
+  color: white; 
 }
 
 .border-container {
-    position: relative; 
-    background-color: transparent; 
-    margin: -2px 0 0 0;
-    padding: 15px; 
-    border-left: 4px solid #fa7582; /* Borde izquierdo más grueso */
-    border-right: 4px solid #fa7582; /* Borde derecho más grueso */
-    border-bottom: 4px solid #fa7582; /* Borde inferior más grueso */
+  width: 100%;
 }
 
-.border-container::before {
-    content: "";
-    position: absolute;
-    top: -2px; /* Ajusta según sea necesario */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%; /* Ajusta el ancho del corte */
-    height: 10px; /* Altura del corte */
-    background-color: transparent; /* Color de fondo */
-    border-top: 4px solid #fa7582; /* Color del borde que se verá más grueso */
-    z-index: 0; /* Debe estar detrás de otros elementos */
+.border-top {
+  display: flex;
+  align-items: center;
 }
 
-.number {
-    position: absolute;
-    top: -70px; 
+
+
+/*seccion del grid*/
+
+
+.section-3 {
+  display: flex;
+  align-items: center;
+  background-color: #646577;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 0;
+  aspect-ratio: 70/100; /* Proporción 100x70 como solicitaste */
+  gap: 10px; /* Espacio entre elementos del grid */
+}
+
+.grid-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  border: 2px solid white;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.grid-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: cover;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.item-1-2 {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.item-3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item-4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.item-5-6-8-9 {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+}
+
+.item-7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+/* Overlay rojo y texto */
+.grid-item a::before {
+  content: "Ver la obra";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.7); /* Velo rojo semi-transparente */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.grid-item a:hover::before {
+  opacity: 1;
+}
+
+.grid-item a:hover img {
+  transform: scale(1.1);
+}
+
+
+
+
+
+/*rueda de imagenes*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.left-column {
+  width: 80%;
+  overflow: hidden; /* Mantiene oculto el contenido que se desborda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 250px;
+}
+
+.right-column {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diamond-container {
+  position: absolute; 
+  width: 100px;
+  height: 100px;
+  overflow: visible;
+}
+
+.diamond {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.diamond img {
+  position: absolute;
+  width: 80px;
+  height: 120px;
+  transform-origin: center bottom;
+  padding-bottom: 50px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumbnails img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumbnails img.active {
+  border-color: blue;
+}
+
+ 
+/* 
+
+.artist-name {
+    position: absolute; 
+    top: -8%; 
     left: 50%; 
-    transform: translateX(-50%); 
-    color: #fa7582; 
-    padding: 5px 10px;
-    font-size: 100px; 
-    z-index: 1; /* Asegura que el número esté sobre otros elementos */
-}
-
-.title-box {
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
     text-align: center;
-    position: relative; /* Permite posicionar el título en relación a este contenedor */
-    z-index: 2; /* Asegura que el título esté encima del número */
-}
-
-.title {
-    background-color: rgba(128, 128, 128, 0.7); /* Fondo plomo semi-transparente */
-    color: white; /* Color del texto del título */
-    padding: 10px; /* Espaciado alrededor del texto */
-    border-radius: 5px; /* Esquinas redondeadas para el título */
-}
-
-.description {
-    margin-top: 10px; 
-    color: white;
-    text-align: center; /* Centra el texto de la descripción */
-}
-
-.image-section {
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
-    margin-top: 20px; /* Espacio entre la descripción y la imagen */
-}
-
-.image-section img {
+    font-size: 6rem;
+    white-space: nowrap;
+    background-color: #2c2f36;
+    padding-left: 50px;
+    padding-right: 150px; 
+    padding-bottom: 0;
+    font-style: italic;
+  }
+  
+  .artist-surname {
+    font-weight: normal;
+    margin: 0;
+    font-size: 3.5rem;
+    font-family: 'Gelasio', serif;
+    font-style: italic;
     width: 100%;
-    height: auto; /* Mantiene la relación de aspecto */
-}
-
-button {
-    background-color: transparent; /* Fondo transparente */
-    border: 2px solid #e74c3c; /* Borde */
-    color: #e74c3c; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 25px; /* Bordes redondeados */
-    font-family: 'Gelasio', serif; /* Fuente */
-    font-style: italic; /* Estilo en cursiva */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s; /* Transición suave */
-    margin-top: 20px; /* Espacio por encima del botón */
-}
-
-button:hover {
-    background-color: #fa7582; /* Color al pasar el mouse */
-    color: white; /* Color del texto al pasar el mouse */
-}
-
+    text-align: left;
+    padding-left: 290px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+  }
+  
+  .artist-description {
+    line-height: 1.6;
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'Gelasio', serif;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .boton-artista {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px; 
+  }
+  
+  .main-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-image {
+    position: relative;
+    width: 85%;
+    height: 900px; 
+    overflow: hidden;
+  }
+  
+  .right-column {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .right-column .icon {
+    font-size: 60px;
+    transition: opacity 0.3s;
+  }
+  
+  .right-column:hover .text {
+    display: block;
+    color: white;
+    font-family: "Gelasio", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: calc(0.8rem + 0.5vw);
+    margin-top: 10px;
+  }
+  
+  .right-column:hover .icon {
+    opacity: 0;
+  }
+  
+  .right-column:hover .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+   */

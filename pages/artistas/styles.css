@@ -16,23 +16,22 @@
   
   .section-2 .row {
       display: flex;
-      align-items: center; /* Alinea el contenido en la parte inferior */
+      align-items: center; 
       gap: 20px;
   }
   
-  /* Control del ancho de las columnas */
   .left-column {
-      flex: 0.3; /* 30% del ancho */
+      flex: 0.3; 
       display: flex;
       justify-content: center;
       text-align: center;
   }
   
   .right-column {
-      flex: 0.7; /* 70% del ancho */
+      flex: 0.7; 
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; /* Alinea el contenido en la parte inferior */
+      justify-content: flex-end; 
   }
   
   .region-container {
@@ -103,30 +102,30 @@
 }
 
 .city-card {
-  display: flex; /* Usar flexbox para el contenedor de cada tarjeta */
-  flex-direction: row; /* Organizar el contenido en fila */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center; 
   width: 800px; 
   height: 300px; 
-  border-radius: 10px; /* Bordes redondeados */
-  overflow: hidden; /* Ocultar contenido desbordante */
+  border-radius: 10px;
+  overflow: hidden; 
 }
 
 .image-container {
-  display: flex; /* Usar flexbox para centrar la imagen */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 100%; /* Altura completa del contenedor */
-  width: 35%; /* Ancho de la imagen */
-  position: relative; /* Contenedor relativo para el overlay */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%; 
+  width: 35%; 
+  position: relative;
+  cursor: pointer;  
 }
 
 
 .image-container img {
-  width: 100%; /* Asegurarse de que la imagen ocupe todo el ancho */
-  height: 100%; /* Mantener proporciones de la imagen */
+  width: 100%; 
+  height: 100%; 
 }
 
 
@@ -136,17 +135,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Overlay negro */
+  background-color: rgba(0, 0, 0, 0.7); 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  opacity: 0; /* Oculto por defecto */
-  transition: opacity 0.3s ease; /* Transición suave */
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
 }
 
 .image-container:hover .flag-overlay {
-  opacity: 1; /* Mostrar al pasar el mouse */
+  opacity: 1; 
 }
 
 .city-name {
@@ -154,17 +153,17 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
-  color: white; /* Color blanco */
-  font-size: 40px; /* Ajusta el tamaño de la fuente */
+  color: white; 
+  font-size: 40px; 
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centra el texto */
-  transition: opacity 0.3s ease; /* Transición suave */
+  transform: translate(-50%, -50%); 
+  transition: opacity 0.3s ease; 
 }
 
 .image-container:hover .city-name {
-  opacity: 0; /* Oculta el nombre de la ciudad al pasar el mouse */
+  opacity: 0; 
 }
 
 .more-artists {
@@ -172,38 +171,38 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: italic;
-  color: white; /* Color blanco */
-  font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+  color: white;
+  font-size: 1.5em; 
   opacity: 0; 
-  transition: opacity 0.3s ease; /* Transición suave */
+  transition: opacity 0.3s ease;
 }
 
 .image-container:hover .more-artists {
-  opacity: 1; /* Muestra "VER MÁS ARTISTAS" al pasar el mouse */
+  opacity: 1; 
 }
 
 
 .city-info {
-  display: flex; /* Usar flexbox para centrar contenido */
-  flex-direction: column; /* Alinear en columna */
-  justify-content: center; /* Centrar verticalmente */
-  align-items: flex-start; /* Alinear texto a la izquierda */
-  text-align: left; /* Alinear texto a la izquierda */
-  height: 100%; /* Altura completa del contenedor */
-  width: 60%; /* Ancho de la información */
-  padding: 50px; /* Espaciado interno */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: flex-start; 
+  text-align: left; 
+  height: 100%; 
+  width: 60%; 
+  padding: 50px; 
 }
 
 
 .city-title {
-  color: #fa7582; /* Color del título */
-  margin: 0; /* Quitar márgenes para mayor control */
+  color: #fa7582; 
+  margin: 0; 
 }
 
 .city-description {
   font-family: 'Gelasio', serif;
-  color: white; /* Color de la descripción */
-  margin: 0; /* Quitar márgenes para mayor control */
+  color: white; 
+  margin: 0;
 }
 
 
@@ -266,7 +265,7 @@
   padding: 0;
   position: relative;
   width: 100%;
-  min-height: 700px; /* Altura mínima aumentada para las columnas */
+  min-height: 700px; 
 }
 
 .left-bar {
@@ -290,7 +289,7 @@
   gap: 1rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 1rem 2rem 1rem 4rem; /* Espacio para la barra roja */
+  padding: 1rem 2rem 1rem 4rem; 
   box-sizing: border-box;
   z-index: 2;
   margin-left: auto;
@@ -300,7 +299,6 @@
   display: none;
 }
 
-/* Contenedor para cada imagen del carrusel */
 .carousel-image {
   width: 100%;
   height: 350px;
@@ -320,7 +318,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 77, 109, 0.7); /* Velo rojo */
+  background-color: rgba(255, 77, 109, 0.7); 
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 3;
@@ -330,7 +328,6 @@
   opacity: 1;
 }
 
-/* Contenedor de texto dentro del overlay */
 .carousel-image .carousel-text {
   position: absolute;
   top: 50%;
@@ -353,7 +350,7 @@
 
 .carousel-image:hover {
   transform: scale(1.05);
-  filter: grayscale(0%) brightness(0.7); /* Added brightness to make image darker */
+  filter: grayscale(0%) brightness(0.7); 
 }
 
 
@@ -363,7 +360,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 77, 109, 0.7); /* Red overlay */
+  background-color: rgba(255, 77, 109, 0.7); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,7 +393,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 77, 109, 0.7); /* Velo ROJO */
+  background-color: rgba(255, 77, 109, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,24 +421,23 @@
   border: 2px solid #fa7582;
   padding: 80px;
   display: flex;
-  flex-direction: column; /* Para apilar los elementos verticalmente */
-  justify-content: space-between; /* Para centrar el contenido */
-  height: 80%; /* Ajustar a 70% del alto total */
-  position: relative; /* Para el botón */
-  margin: 2rem 2rem; /* Margen lateral */
+  flex-direction: column; 
+  justify-content: space-between;
+  height: 80%; 
+  position: relative;
+  margin: 2rem 2rem;
 }
-
 .artist-name {
-  position: absolute; /* Cambiado a absoluto para posicionarlo en el borde superior */
-  top: -8%; /* Posicionar en la parte superior */
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-50%); /* Ajustar para centrar completamente */
-  margin: 0; /* Eliminar margen */
+  position: absolute; 
+  top: -8%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  margin: 0;
   z-index: 2;
-  text-align: center; /* Centrar el texto dentro del fondo */
-  font-size: 6rem; /* Tamaño del texto */
-  white-space: nowrap; /* Evitar que se divida en varias líneas */
-  background-color: #2c2f36; /* Fondo para el nombre */
+  text-align: center;
+  font-size: 6rem;
+  white-space: nowrap;
+  background-color: #2c2f36;
   padding-left: 50px;
   padding-right: 150px; 
   padding-bottom: 0;
@@ -450,57 +446,52 @@
 
 .artist-surname {
   font-weight: normal;
-  margin: 0; /* Mantenerlo en cero para eliminar espacio */
+  margin: 0;
   font-size: 3.5rem;
   font-family: 'Gelasio', serif;
   font-style: italic;
-  width: 100%; /* Asegurar que ocupe todo el ancho */
-  text-align: left; /* Alinear a la izquierda */
-  padding-left: 290px; /* Mantener el padding a la izquierda */
+  width: 100%;
+  text-align: left;
+  padding-left: 290px;
   padding-top: 5px;
-  padding-bottom: 40px; /* Mantener el padding inferior */
+  padding-bottom: 40px;
 }
 
 .artist-description {
   line-height: 1.6;
-  margin-top: 1rem; /* Ajustar el margen superior */
+  margin-top: 1rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
   font-family: 'Gelasio', serif;
-  flex: 1; /* Para que la descripción ocupe el espacio disponible */
-  overflow: hidden; /* Ocultar barra de desplazamiento */
+  flex: 1;
+  overflow: hidden;
 }
 
 .boton-artista {
-  display: flex; /* Hacer que el contenedor sea un flexbox */
-  justify-content: flex-end; /* Alinear el contenido al final */
+  display: flex;
+  justify-content: flex-end;
   margin-right: 30px; 
 }
 
-
-/* Estilos adicionales para asegurar que la imagen principal y el resto de la sección se comporten adecuadamente */
 .main-image {
-  flex: 1; /* Para que ocupe el espacio restante en la columna */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Centrar la imagen */
-  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 .main-image img {
-  width: 100%; /* Ajustar a la anchura del contenedor */
-  height: 100%; /* Ajustar a la altura del contenedor */
+  width: 100%;
+  height: 100%;
 }
 
-
-
-
-/* Imagen principal en tercera columna */
 .main-image {
   position: relative;
   width: 85%;
   height: 900px; 
   overflow: hidden;
 }
+
 
 .main-image img {
   width: 100%;
@@ -531,7 +522,7 @@
 }
 
 .main-image:hover .main-image-overlay {
-  background-color: rgba(0, 0, 0, 0.7); /* Velo NEGRO */
+  background-color: rgba(0, 0, 0, 0.7); 
   opacity: 1;
 }
 
@@ -633,7 +624,6 @@
   font-size: 14px;
 }
 
-/* Estilos adicionales para la región y los botones */
 .region-title {
   cursor: pointer;
 }

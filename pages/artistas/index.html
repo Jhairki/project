@@ -410,7 +410,6 @@
     return "Central";
   }
 
-  // Cargar artistas desde JSON
   fetch("../../artist.json")
     .then(response => response.json())
     .then(artistas => {
@@ -419,7 +418,6 @@
         return;
       }
 
-      // Configurar los elementos DOM de cada región
       const regiones = {
         Occidental: {
           carousel: document.getElementById("carouselOccidental"),
@@ -462,30 +460,24 @@
           return;
         }
 
-        // Actualizar imagen principal y datos del artista
         region.mainImage.src = artista.imags[1];
         region.artistName.textContent = artista.name;
         region.artistSurname.textContent = artista.surname;
         region.artistLocation.textContent = artista.location;
         region.artistDescription.innerHTML = artista.descripcion;
 
-        // Actualizar overlay de la imagen principal
         if (region.mainImageOverlay) {
-          // Seleccionar los elementos dentro del overlay específico para cada región
           const nameElement = region.mainImageOverlay.querySelector(".artist-overlay-name");
           const typeElement = region.mainImageOverlay.querySelector(".artist-overlay-type");
           const locationElement = region.mainImageOverlay.querySelector(".artist-overlay-location");
           
-          // Actualizar los datos en el overlay
           if (nameElement) nameElement.textContent = (artista.name + " " + artista.surname).toUpperCase();
           if (typeElement) typeElement.textContent = artista.type || "Artista";
           if (locationElement) locationElement.textContent = artista.location;
         }
 
-        // Guardar el ID del artista actualmente mostrado
         region.currentArtistId = artista.id;
 
-        // Configurar la redirección a la página de detalles al hacer clic en la imagen principal
         if (region.mainImage) {
           region.mainImage.style.cursor = "pointer";
           region.mainImage.onclick = function() {
@@ -493,7 +485,6 @@
           };
         }
 
-        // También configurar la redirección para todo el contenedor de la imagen principal
         if (region.mainImageContainer) {
           region.mainImageContainer.style.cursor = "pointer";
           region.mainImageContainer.onclick = function() {
@@ -501,41 +492,34 @@
           };
         }
 
-        // Actualizar el enlace del botón "Más del artista" con la misma ID
         if (region.botonArtista) {
           region.botonArtista.href = `/components/detalleArtist.html?id=${artista.id}`;
         }
       }
 
-      // Limpiar los carruseles antes de añadir imágenes para evitar duplicados
       for (const key in regiones) {
         if (regiones[key].carousel) {
           regiones[key].carousel.innerHTML = '';
         }
       }
 
-      // Crear y añadir imágenes al carrusel para cada región
       artistas.forEach(artista => {
         const regionKey = getRegion(artista.location);
         const region = regiones[regionKey];
         
         if (!region || !artista.imags || artista.imags.length < 2) return;
 
-        // Crear contenedor para la imagen y su overlay
         const container = document.createElement("div");
         container.className = "carousel-container";
         
-        // Crear la imagen
         const img = document.createElement("img");
         img.src = artista.imags[1];
         img.alt = `Imagen de ${artista.name}`;
         img.className = "carousel-image";
         
-        // Crear el overlay para el efecto hover
         const overlay = document.createElement("div");
         overlay.className = "carousel-overlay";
         
-        // Añadir información del artista en el overlay
         const nameEl = document.createElement("div");
         nameEl.className = "artist-name-overlay";
         nameEl.textContent = `${artista.name} ${artista.surname}`;
@@ -551,30 +535,24 @@
         locationEl.className = "artist-location-overlay";
         locationEl.textContent = artista.location;
         
-        // Añadir elementos al overlay
         overlay.appendChild(nameEl);
         overlay.appendChild(typeEl);
         overlay.appendChild(locationEl);
         
-        // Añadir imagen y overlay al contenedor
         container.appendChild(img);
         container.appendChild(overlay);
         
-        // Añadir eventos
         container.addEventListener("click", () => {
           actualizarArtista(artista, region);
         });
 
-        // Doble clic para ir directamente a la página de detalles
         container.addEventListener("dblclick", () => {
           window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
         });
         
-        // Añadir contenedor al carrusel
         region.carousel.appendChild(container);
       });
 
-      // Inicializar con el primer artista de cada región
       for (const key in regiones) {
         const region = regiones[key];
         const artistasRegion = artistas.filter(a => getRegion(a.location) === key);

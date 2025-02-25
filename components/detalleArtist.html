@@ -96,11 +96,9 @@
             }
 
             try {
-                // Cargar artistas
                 const responseArtists = await fetch("../artist.json");
                 const artists = await responseArtists.json();
 
-                // Buscar el artista por ID
                 const artist = artists.find(a => a.id == artistId);
 
                 if (!artist) {
@@ -108,20 +106,17 @@
                     return;
                 }
 
-                // Actualizar los datos en la página
                 document.querySelectorAll(".nombre-art").forEach(el => el.textContent = artist.name);
                 document.querySelectorAll(".apellido-art").forEach(el => el.textContent = artist.surname);
                 document.getElementById("artistDescription").textContent = artist.descripcion;
                 document.getElementById("destacado-art").textContent = artist.destacado;
 
-                // Cargar imágenes principales del artista
                 if (artist.imags.length >= 3) {
                     document.getElementById("foto-artist-1").src = artist.imags[0];
                     document.getElementById("foto-artist-2").src = artist.imags[1];
                     document.getElementById("foto-artist-3").src = artist.imags[2];
                 }
 
-                // Mostrar premios/menciones
                 const premiosList = document.getElementById("premios-art");
                 artist.premios.forEach(premio => {
                     let li = document.createElement("li");
@@ -129,17 +124,14 @@
                     premiosList.appendChild(li);
                 });
 
-                // Obtener el texto overlay del elemento con id "ver_mas"
                 const textoVerMas = document.getElementById("ver_mas").innerHTML;
 
-                // Cargar obras del artista
                 const responseObras = await fetch("../obras.json");
                 const obras = await responseObras.json();
 
                 const obrasArtista = obras.filter(o => artist.obras.includes(o.id_img));
                 const galeria = document.getElementById("galeria-obras");
 
-                // Crear las tarjetas de obras del artista
                 obrasArtista.forEach(obra => {
                     let obraDiv = document.createElement("div");
                     obraDiv.classList.add("obra-card");
@@ -149,7 +141,6 @@
                     img.src = obra.img[0];
                     img.alt = obra.titulo;
 
-                    // Crear el elemento de texto overlay
                     let overlayText = document.createElement("div");
                     overlayText.classList.add("overlay-text");
                     overlayText.innerHTML = textoVerMas;
@@ -170,18 +161,15 @@
                     obraDiv.appendChild(info);
                     galeria.appendChild(obraDiv);
 
-                    // Agregar evento de clic para redirigir a la página de detalle
                     obraDiv.addEventListener("click", function () {
                         window.location.href = `detalle.html?id=${obra.id_img}`;
                     });
                 });
 
-                // Cargar otras obras aleatorias
                 const otrasObras = obras.filter(o => !artist.obras.includes(o.id_img));
                 const otrasObrasRandom = otrasObras.sort(() => 0.5 - Math.random()).slice(0, 4);
                 const otrosAutores = document.getElementById("otros-autores");
 
-                // Crear las tarjetas de otras obras
                 otrasObrasRandom.forEach(obra => {
                     let obraDiv = document.createElement("div");
                     obraDiv.classList.add("obra-card");
@@ -191,7 +179,6 @@
                     img.src = obra.img[0];
                     img.alt = obra.titulo;
 
-                    // Crear el elemento de texto overlay usando el mismo texto
                     let overlayText = document.createElement("div");
                     overlayText.classList.add("overlay-text");
                     overlayText.innerHTML = textoVerMas;
@@ -212,13 +199,11 @@
                     obraDiv.appendChild(info);
                     otrosAutores.appendChild(obraDiv);
 
-                    // Agregar evento de clic para redirigir a la página de detalle
                     obraDiv.addEventListener("click", function () {
                         window.location.href = `detalle.html?id=${obra.id_img}`;
                     });
                 });
 
-                // Ocultar el párrafo original "ver_mas" si está en uso en las tarjetas
                 document.getElementById("ver_mas").style.display = "none";
             } catch (error) {
                 console.error("Error al cargar los datos:", error);

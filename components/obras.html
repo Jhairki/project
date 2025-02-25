@@ -16,11 +16,10 @@
     rel="stylesheet">
 
 
-    <link rel="stylesheet" href="/assets/css/obras.css"> <!-- Asegúrate de tener un archivo CSS -->
+    <link rel="stylesheet" href="/assets/css/obras.css">
 </head>
 <body>
     <nav class="custom-navbar">
-        <!-- Aquí va tu código de la barra de navegación -->
     </nav>
 
     <div class="container">
@@ -29,7 +28,6 @@
     </div>
 
     <footer>
-        <!-- Aquí va tu código del footer -->
     </footer>
 
     <script>
@@ -39,7 +37,7 @@
                 const obras = await responseObras.json();
 
                 const galeria = document.getElementById("galeria");
-                galeria.innerHTML = ""; // Limpia el contenido previo
+                galeria.innerHTML = ""; 
 
                 obras.forEach(obra => {
                     const divObra = document.createElement("div");

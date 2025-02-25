@@ -16,7 +16,7 @@
 }
 
 .image-section2 {
-    flex: 0 0 30%; /* Toma el 30% del ancho */
+    flex: 0 0 30%; 
     position: relative;
     height: 100%;
     display: flex;
@@ -31,7 +31,7 @@
 }
 
 .content-section2 {
-    flex: 1; /* Toma el resto del ancho (70%) */
+    flex: 1; 
     background: linear-gradient(to bottom, #646577, #1a1922);
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     padding-right: 10%;
     z-index: 2;
     text-align: left; 
-    justify-content: center; /* Centra verticalmente el contenido */
+    justify-content: center; 
 }
 
 .content-section2 h1,
@@ -97,14 +97,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%; /* Ancho del contenedor centrado */
-    margin: 0 auto; /* Centra el contenedor */
+    width: 60%; 
+    margin: 0 auto; 
 }
 
 .time-column {
-    flex: 1; /* Asegura que todas las columnas tengan el mismo tamaño */
-    text-align: center; /* Centra el texto en cada columna */
-    padding: 20px; /* Ajusta el padding según sea necesario */
+    flex: 1; 
+    text-align: center; 
+    padding: 20px; 
 }
 
 .time-column img {
@@ -117,99 +117,95 @@
 
 
 /* Sección 5 */
-
-
 .contenido-2 {
-    position: relative; /* Posición relativa para que esté encima de la superposición */
-    z-index: 3; /* Asegura que el texto esté por encima de la imagen y la superposición */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    width: 50%; /* Establece el ancho al 50% */
-    padding: 80px 0px; /* Agrega espaciado interno según sea necesario */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 50%;
+    padding: 80px 0px;
+    margin: 0 auto;
 }
 
-
 .section-6 {
-    display: flex; /* Usar flexbox para la disposición en columna */
-    flex-direction: column; /* Colocar las secciones en columna */
-    justify-content: center; /* Centrar el contenido horizontalmente */
-    background: linear-gradient(to bottom, #a0a0a0, #606060); /* Degradado de plomo claro a oscuro */
-    padding: 50px 0; /* Espaciado vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom, #a0a0a0, #606060);
+    padding: 50px 0;
 }
 
 .section-img, .section-img2 {
-    display: flex; /* Disposición en columnas */
-    width: 70%; /* Limitar el ancho al 70% */
-    margin: 0 auto; /* Centrar el contenedor en la página */
-    position: relative; /* Para el posicionamiento de la imagen */
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .col-descript {
-    flex: 0 0 60%; /* Ocupa el 60% del ancho */
-    display: flex; /* Usar flexbox en la columna de texto */
-    flex-direction: column; /* Apilar los elementos verticalmente */
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
-    position: relative; /* Para mantener el contexto del contenido */
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .imagen-sobre-encima, .imagen-sobre-encima2 {
-    flex: 0 0 40%; /* Ocupa el 40% del ancho */
-    display: flex; /* Usar flexbox para centrar el contenido */
-    justify-content: flex-start; /* Alinear la imagen hacia la izquierda */
-    align-items: center; /* Centrar verticalmente */
-    position: relative; /* Para el posicionamiento de la imagen */
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
     z-index: 0;
 }
 
 .imagen-sobre-encima img, .imagen-sobre-encima2 img {
-    width: 120%; /* Asegura que la imagen sobresalga de su contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    position: relative; /* Mantiene la imagen en su flujo normal */
-    left: -10%; /* Ajustar la posición para que se sobreponga a la columna */
+    width: 120%;
+    height: auto;
+    position: relative;
+    left: -10%;
 }
 
-
 .section-7 {
-    position: relative; /* Para colocar la imagen de fondo */
-    margin: 0 auto; /* Centrar la sección */
-    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
-    max-width: 100%; /* Asegurar que la sección use todo el ancho */
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100%;
     padding: 200px;
     color: white;
 }
 
 .background-valores {
-    position: absolute; /* Para que la imagen de fondo cubra todo el contenedor */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Asegura que la imagen cubra todo el ancho */
-    height: 100%; /* Asegura que la imagen cubra todo el alto del contenedor */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-    z-index: -1; /* Coloca la imagen detrás del contenido */
-    filter: grayscale(100%) brightness(50%); /* Aplicar filtro de blanco y negro y oscurecer */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: grayscale(100%) brightness(50%);
 }
 
 .col-descript {
-    position: relative; /* Mantener el contexto del contenido */
-    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    width: 70%; /* Establecer el ancho en 60% */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    margin: 0 auto;
     color: white;
 }
 
 .border-top {
-    display: flex; /* Usar flexbox para alinear el número y título */
-    align-items: center; /* Centrar verticalmente */
-    margin-bottom: 20px; /* Espacio entre el título y la descripción */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 100px 1fr; /* Mantener el diseño en dos columnas */
-    gap: 10px; /* Espacio entre columnas */
-    align-items: start; /* Alinear los elementos al inicio */
+    grid-template-columns: 100px 1fr;
+    gap: 10px;
+    align-items: start;
 }
 
 .square {

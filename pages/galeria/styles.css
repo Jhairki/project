@@ -247,7 +247,7 @@
 .grid-container1 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 200px 100px 200px 100px 250px; /* Aumentar la altura de la última fila */
+    grid-template-rows: 200px 100px 200px 100px 250px; 
     gap: 10px;
     width: 80%;
     margin: 0 auto;
@@ -291,46 +291,109 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
-
-.right-column {
-    background-color: black; /* Fondo negro */
-    color: white; /* Color del texto */
+.artist-name {
+    position: absolute; 
+    top: -8%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 6rem;
+    white-space: nowrap;
+    background-color: #2c2f36;
+    padding-left: 50px;
+    padding-right: 150px; 
+    padding-bottom: 0;
+    font-style: italic;
+  }
+  
+  .artist-surname {
+    font-weight: normal;
+    margin: 0;
+    font-size: 3.5rem;
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    width: 100%;
+    text-align: left;
+    padding-left: 290px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+  }
+  
+  .artist-description {
+    line-height: 1.6;
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'Gelasio', serif;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .boton-artista {
     display: flex;
-    flex-direction: column; /* Apila el contenido verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente todo el contenido */
-    height: 100%; /* Asegura que la columna cubra todo el alto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre la columna */
-    text-align: center; /* Centra el texto */
-}
-
-.right-column .icon {
-    font-size: 60px; /* Tamaño del signo más */
-    transition: opacity 0.3s; 
-}
-
-/* Mostrar el texto y ocultar el icono al pasar el mouse */
-.right-column:hover .text {
-    display: block; /* Muestra el texto al pasar el mouse */
-    color: white; /* Color del texto */
-    font-family: "Gelasio", serif; /* Aplicar la fuente específica */
+    justify-content: flex-end;
+    margin-right: 30px; 
+  }
+  
+  .main-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-image img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-image {
+    position: relative;
+    width: 85%;
+    height: 900px; 
+    overflow: hidden;
+  }
+  
+  .right-column {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .right-column .icon {
+    font-size: 60px;
+    transition: opacity 0.3s;
+  }
+  
+  .right-column:hover .text {
+    display: block;
+    color: white;
+    font-family: "Gelasio", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-style: italic; /* Aplicar estilo cursivo */
-    font-size: calc(0.8rem + 0.5vw); /* Tamaño del texto */
+    font-style: italic;
+    font-size: calc(0.8rem + 0.5vw);
     margin-top: 10px;
-}
-
-.right-column:hover .icon {
-    opacity: 0; /* Oculta el signo más al pasar el mouse */
-}
-
-.right-column:hover .text {
-    position: absolute; /* Permite que el texto se superponga al icono */
-    top: 50%; /* Coloca el texto en el centro vertical */
-    transform: translateY(-50%); /* Ajusta el texto para centrarlo verticalmente */
-}
-
+  }
+  
+  .right-column:hover .icon {
+    opacity: 0;
+  }
+  
+  .right-column:hover .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
 
 /* 
 

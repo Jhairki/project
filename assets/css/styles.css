@@ -1,48 +1,45 @@
-/* styles.css */
 
 body {
-  font-family: 'Gelasio', serif; /* Define Gelasio como la fuente principal */
-  font-weight: 400; /* Peso regular */
+  font-family: 'Gelasio', serif; 
+  font-weight: 400; 
 }
 
-/* Estilo para texto en italic */
 em, .italic {
   font-family: 'Gelasio', serif;
-  font-weight: 400; /* Peso regular para el texto en italic */
-  font-style: italic; /* Aplica el estilo italic */
+  font-weight: 400; 
+  font-style: italic; 
 }
 
-/* Estilo para encabezados (opcional) */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Gelasio', serif;
 }
 
-/* Estilo para texto en bold (opcional) */
+
 strong, .bold {
   font-family: 'Gelasio', serif;
-  font-weight: 700; /* Peso bold */
+  font-weight: 700; 
 }
 
 
 
 .custom-button {
   justify-self: flex-end;
-    background: linear-gradient(to bottom, #c62828, #ff5252); /* Degradado rojo oscuro a claro */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 25px; /* Esquinas redondeadas */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background 0.3s ease; /* Transición suave */
+    background: linear-gradient(to bottom, #c62828, #ff5252);
+    color: white; 
+    border: none; 
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; 
 }
 
 .custom-button:hover {
-    background: #ff8a65; /* Color salmón al pasar el mouse */
+    background: #ff8a65; 
 }
 
 
-/*titulo*/
 
 .text-overlay {
   position: absolute;
@@ -61,42 +58,29 @@ strong, .bold {
 .secundario {
   position: absolute;
   top: 1px;
-  /* Desplaza un poco hacia abajo */
   left: 12px;
-  /* Desplaza un poco a la derecha */
   color: rgba(92, 81, 81, 0.5);
-  /* Color plomo */
   z-index: 0;
   font-family: "Gelasio", serif;
-  /* Aplicar fuente Gelasio */
   font-weight: 700;
-  /* Negrita */
   font-style: italic;
-  /* Cursiva */
 }
 
 .primario {
   position: relative;
   color: white;
   z-index: 1;
-  /* Asegura que el texto blanco esté encima */
   font-family: "Gelasio", serif;
-  /* Aplicar fuente Gelasio */
   font-weight: 700;
-  /* Negrita */
   font-style: italic;
-  /* Cursiva */
 }
 
 .text-overlay h3 {
   font-size: 40px;
   font-family: "Gelasio", serif;
-  /* Aplicar fuente Gelasio */
   font-weight: 700;
-  /* Negrita */
   font-style: italic;
   color: white;
-  /* Cursiva */
 }
 
 
