@@ -176,7 +176,8 @@
     margin: 0 auto; /* Centrar la sección */
     overflow: hidden; /* Ocultar cualquier contenido que se desborde */
     max-width: 100%; /* Asegurar que la sección use todo el ancho */
-    padding: 220px;
+    padding: 200px;
+    color: white;
 }
 
 .background-valores {
@@ -193,8 +194,9 @@
 .col-descript {
     position: relative; /* Mantener el contexto del contenido */
     z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-    width: 50%; /* Establecer el ancho en 60% */
+    width: 70%; /* Establecer el ancho en 60% */
     margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    color: white;
 }
 
 .border-top {
@@ -206,7 +208,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 100px 1fr; /* Mantener el diseño en dos columnas */
-    gap: 40px; /* Espacio entre columnas */
+    gap: 10px; /* Espacio entre columnas */
     align-items: start; /* Alinear los elementos al inicio */
 }
 

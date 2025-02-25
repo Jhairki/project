@@ -7,7 +7,6 @@ const navbarHTML = `
             </a>
         </div>
         <div class="menu">
-            <a href="/pages/inicio/index.html" class="nav-item">Inicio</a>
             <a href="/pages/galeria/index.html" class="nav-item">Galería</a>
             <a href="/pages/obras/index.html" class="nav-item">Obras</a>
             <a href="/pages/artistas/index.html" class="nav-item">Artistas</a>
