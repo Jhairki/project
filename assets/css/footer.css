@@ -1,26 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap');
+
 .custom-footer {
   background-color: #1a1a1a;
   color: white;
   padding: 4rem 0 2rem 0;
-}
-
-/* Estilo para la línea divisoria superior */
-.footer-top-border {
-  height: 8px;
-  background-color: #dc3545;
-  width: 100%;
+  font-family: 'Gelasio', serif;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  margin-top: 40px;
+}
+
+.logo-section {
+  text-align: left;
 }
 
 .logo-section img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: auto;
   padding: 10px;
+  display: block;
 }
 
 .logo-section h1 {
@@ -49,7 +51,6 @@
   color: #dc3545;
 }
 
-/* Estilos específicos para los iconos */
 .icon-container {
   width: 30px;
   height: 30px;
@@ -82,7 +83,7 @@
 }
 
 .menu-links a:hover {
-  color: #dc3545;
+  color: #d4626d;
 }
 
 .cta-section p {
@@ -110,15 +111,44 @@
   font-style: italic;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid #bc193b;
+  font-size: 1rem;
 }
 
+.footer-top-border {
+  height: 50px;
+  background-color: #bc193b;
+  width: 100%;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-  .section {
-      margin-bottom: 2rem;
+  .footer-container {
+    text-align: center;
   }
   
   .logo-section {
-      text-align: center;
+    text-align: center;
+  }
+
+  .logo-section img {
+    width: 120px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .contact-links a {
+    justify-content: center;
+  }
+
+  .menu-links {
+    padding: 0;
+  }
+
+  .footer-quote {
+    font-size: 0.9rem;
   }
 }

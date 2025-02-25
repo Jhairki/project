@@ -1,44 +1,46 @@
-<!-- NAVBAR PRINCIPAL -->
-<nav class="custom-navbar">
-    <!-- LOGO -->
-    <div class="logo">
-        <a href="/pages/inicio/index.html">
-            <img src="/assets/images/general web/MARCA FINAL-06 3.png" alt="Logo">
-        </a>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
 
-    <!-- MENÚ PRINCIPAL -->
-    <div class="menu">
-        <a href="/pages/inicio/index.html" class="nav-item">Inicio</a>
-        <a href="/pages/galeria/index.html" class="nav-item">Galería</a>
-        <a href="/pages/obras/index.html" class="nav-item">Obras</a>
-        <a href="/pages/artistas/index.html" class="nav-item">Artistas</a>
-        <a href="/pages/nosotros/index.html" class="nav-item">Nosotros</a>
-        <a href="/pages/contacto/index.html" class="nav-item">Contacto</a>
-    </div>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Imagen de la marca -->
+            <div class="brand-logo">
+                <img src="./images/MARCA FINAL-06.png" alt="Marca" width="280" height="147">
+            </div>
 
-    <!-- SECCIÓN DE BÚSQUEDA -->
-    <div class="search">
-        <input type="text" placeholder="Buscar...">
-        <button class="search-btn">
-            <i class="bi bi-search"></i>  <!-- Ícono de lupa de Bootstrap -->
-        </button>
-    </div>
+            <!-- Menú de navegación -->
+            <ul class="nav-links">
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Obras</a></li>
+                <li><a href="#">Artistas</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
 
-    <!-- MENÚ HAMBURGUESA -->
-    <div class="hamburger">
-        <button class="hamburger-btn">
-            <i class="bi bi-list"></i>  <!-- Ícono de menú de Bootstrap -->
-        </button>
-    </div>
-</nav>
+            <!-- Buscador -->
+            <div class="search-box">
+                <input type="text" placeholder="Buscar...">
+            </div>
 
-<!-- MENÚ DESPLEGABLE (Hamburguesa) -->
-<div class="mobile-menu">
-    <a href="/pages/inicio/index.html" class="nav-item">Inicio</a>
-    <a href="/pages/galeria/index.html" class="nav-item">Galería</a>
-    <a href="/pages/obras/index.html" class="nav-item">Obras</a>
-    <a href="/pages/artistas/index.html" class="nav-item">Artistas</a>
-    <a href="/pages/nosotros/index.html" class="nav-item">Nosotros</a>
-    <a href="/pages/contacto/index.html" class="nav-item">Contacto</a>
-</div>
+            <!-- Ícono del menú hamburguesa -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

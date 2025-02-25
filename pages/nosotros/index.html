@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Mi Proyecto</title>
+    <title>Arte-Bolivia</title>
 
-    
+
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -22,20 +22,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-       
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <div id="navbar-container"></div>
-
     <div class="section-1">
         <img src="/assets/images/general web/127854 1.png" alt="">
         <div class="text-overlay">
-            <h1>NOSOTROS</h1>
+            <h1>
+                <span class="primario">NOSOTROS</span>
+                <span class="secundario">NOSOTROS</span>
+            </h1>
         </div>
     </div>
 
@@ -47,35 +48,45 @@
             </div>
             <div class="content-section2">
                 <div class="border-container">
-                    <div class="number">01</div>
-                    <div class="title-box">
-                        <h1 class="title">HISTORIA</h1>
+                    <div class="border-top">
+                        <div class="number">01</div>
+                        <div class="title-box">
+                            <h1 class="title">HISTORIA</h1>
+                        </div>
                     </div>
-                    <div class="description">
-                        Gañeria de Arte Boliviano (GAB) fue creada el 3 de enero de 2019 en Facebook por el artista
-                        Ronald
-                        R. Candia Condori, comenzó como un espacio para la presentación y promoción de diversos artistas
-                        del territorio nacional. En su primer año, la galería se estableció como un punto de encuentro
-                        crucial para los talentos artísticos bolivianos, ofreciendo una plataforma para que sus obras
-                        fueran
-                        vistas y apreciadas.
-                        Con el advenimiento de la pandemia en 2020, la galería asumió un rol aún más significativo. En
-                        un
-                        año marcado por desafíos, se convirtió en un pilar de apoyo económico para los artistas,
-                        facilitando
-                        la venta de sus obras de arte de manera virtual. La galería proporcionó a los artistas un
-                        espacio
-                        libre y accesible para exhibir y vender sus trabajos, lo que les permitió continuar con su labor
-                        creativa y generar ingresos a pesar de las dificultades.
+                    <div class="text-box">
+                        <p class="description">
+                            Gañeria de Arte Boliviano (GAB) fue creada el 3 de enero de 2019 en Facebook por el artista
+                            Ronald
+                            R. Candia Condori, comenzó como un espacio para la presentación y promoción de diversos
+                            artistas
+                            del territorio nacional. En su primer año, la galería se estableció como un punto de
+                            encuentro
+                            crucial para los talentos artísticos bolivianos, ofreciendo una plataforma para que sus
+                            obras
+                            fueran
+                            vistas y apreciadas.
+                            Con el advenimiento de la pandemia en 2020, la galería asumió un rol aún más significativo.
+                            En
+                            un
+                            año marcado por desafíos, se convirtió en un pilar de apoyo económico para los artistas,
+                            facilitando
+                            la venta de sus obras de arte de manera virtual. La galería proporcionó a los artistas un
+                            espacio
+                            libre y accesible para exhibir y vender sus trabajos, lo que les permitió continuar con su
+                            labor
+                            creativa y generar ingresos a pesar de las dificultades.
 
-                        En los años siguientes, la "Galería de Arte Boliviano" ha continuado su evolución, formando
-                        valiosas
-                        conexiones y estableciendo alianzas estratégicas. Estos aliados han contribuido al crecimiento y
-                        desarrollo de la página, fortaleciendo la visibilidad de los artistas y ampliando las
-                        oportunidades
-                        de exposición y venta. La galería sigue siendo un punto de referencia clave para el arte
-                        boliviano,
-                        apoyando la creatividad y promoviendo la riqueza cultural del país.
+                            En los años siguientes, la "Galería de Arte Boliviano" ha continuado su evolución, formando
+                            valiosas
+                            conexiones y estableciendo alianzas estratégicas. Estos aliados han contribuido al
+                            crecimiento y
+                            desarrollo de la página, fortaleciendo la visibilidad de los artistas y ampliando las
+                            oportunidades
+                            de exposición y venta. La galería sigue siendo un punto de referencia clave para el arte
+                            boliviano,
+                            apoyando la creatividad y promoviendo la riqueza cultural del país.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -85,7 +96,7 @@
 
     <div class="section-4">
         <div class="background-image">
-            <img src="/assets/images/general web/bandera-de-bolivia-flag-flutter-waving.jpg" alt="Bandera de Bolivia">
+            <img src="/assets/images/general web/bandera.jpg" alt="Bandera de Bolivia">
             <div class="overlay"></div>
         </div>
         <div class="overlay-content"></div>
@@ -104,7 +115,6 @@
 
 
     <div class="section-5">
-
         <div class="container">
             <div class="content-column">
                 <h1>"EL PRESAGIO DE LAS GOLONDRINAS"</h1>
@@ -129,140 +139,130 @@
     </div>
 
 
-    <script>
-        const image = document.querySelector('.image-section img');
-        const imageSection = document.querySelector('.image-section');
-
-        function handleScroll() {
-            const rect = imageSection.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            const scrollPosition = window.scrollY;
-
-            const viewportPosition = 1 - (rect.top / viewportHeight);
-
-            if (rect.top < viewportHeight && rect.bottom > 0) {
-                const moveY = Math.sin(viewportPosition * Math.PI) * 50;
-                image.style.transform = `rotate(-40deg) translateY(${-moveY}px)`;
-            } else {
-                image.style.transform = 'rotate(-40deg) translateY(50px)';
-            }
-        }
-
-        window.addEventListener('scroll', () => {
-            requestAnimationFrame(handleScroll);
-        });
-
-        handleScroll();
-    </script>
-
-
     <div class="section-4">
         <div class="background-image">
-            <img src="/assets/images/general web/bandera-de-bolivia-flag-flutter-waving.jpg" alt="Bandera de Bolivia">
+            <img src="/assets/images/general web/bandera.jpg" alt="Bandera de Bolivia">
             <div class="overlay"></div>
         </div>
-        <div class="overlay-content"></div>
-        <div class="time-content">
-
+        <div class="contenido-2">
             <h1>"EL PRESAGIO DE LAS GOLONDRINAS"</h1>
             <h3>Esta obra se ha convertid en l aimagen de esta pagina con un contenido y una tematica adecuada a lo que
                 encamina "Galeria de Arte Boliviano"</h3>
         </div>
     </div>
 
-    <div class="container-5">
-        <div class="content-section-5">
-            <div class="border-container">
-                <div class="number">02</div>
-                <div class="title-box">
-                    <h1 class="title">MISIÓN</h1>
+    <div class="section-6">
+        <div class="section-img">
+            <div class="imagen-sobre-encima">
+                <img src="/assets/images/general web/46605 1.png"
+                    alt="Galería de arte vista a través de un teléfono móvil" />
+            </div>
+            <div class="col-descript">
+                <div class="border-container">
+                    <div class="border-top">
+                        <div class="number">01</div>
+                        <div class="title-box">
+                            <h1 class="title">EXPOSICIONES</h1>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <p class="description">
+                            La misión de la Galería de Arte Boliviano es compartir de manera abierta y gratuita la
+                            producción
+                            artística de todos los artistas del territorio boliviano. La galería se dedica a
+                            proporcionar una
+                            plataforma accesible para la exposición y promoción de sus obras, fomentando así la
+                            visibilidad y el
+                            reconocimiento de la riqueza creativa de Bolivia.
+                        </p>
+                    </div>
                 </div>
-                <p class="description">
-                    La misión de la Galería de Arte Boliviano es compartir de manera abierta y gratuita la producción
-                    artística de todos los artistas del territorio boliviano. La galería se dedica a proporcionar una
-                    plataforma accesible para la exposición y promoción de sus obras, fomentando así la visibilidad y el
-                    reconocimiento de la riqueza creativa de Bolivia.
-                </p>
             </div>
         </div>
-        <div class="image-section-sec">
-            <img src="/assets/images/general web/46605 1.png"
-                alt="Galería de arte vista a través de un teléfono móvil" />
+
+        <div class="section-img2">
+            <div class="col-descript">
+                <div class="border-container">
+                    <div class="border-top">
+                        <div class="number">02</div>
+                        <div class="title-box">
+                            <h1 class="title">VISION</h1>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <p class="description2">
+                            La visión de la Galería de Arte Boliviano es crear un espacio confiable y abierto para la
+                            promoción
+                            y difusión de las artes plásticas de los artistas bolivianos. La galería busca establecerse
+                            como un referente destacado en la exhibición de la creatividad y el talento del país,
+                            ofreciendo una
+                            plataforma accesible que impulse el reconocimiento y la apreciación del arte boliviano a
+                            nivel
+                            nacional e internacional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="imagen-sobre-encima2">
+                <img src="/assets/images/general web/ARCOIRIS CELULAR 2 1.png" />
+            </div>
         </div>
     </div>
 
 
 
-    <div class="container">
-        <div class="image-section-sec">
-            <img src="/assets/images/general web/ARCOIRIS CELULAR 2 1.png"
-                alt="Galería de arte vista a través de un teléfono móvil" />
-        </div>
-        <div class="content-section">
+
+    <div class="section-7">
+        <img src="/assets/images/general web/VALORES.jpg" alt="" class="background-valores">
+        <div class="col-descript">
             <div class="border-container">
-                <div class="number">03</div>
-                <div class="title-box">
-                    <h1 class="title">VISION</h1>
+                <div class="border-top">
+                    <div class="number">04</div>
+                    <div class="title-box">
+                        <h1 class="title">VALORES</h1>
+                    </div>
                 </div>
-                <p class="description">
-                    La visión de la Galeria de Arte Boliviano es crear un espacio confiable y abierto para la promoción
-                    y difusión de las artes plásticas de los artistas bolivianos. La galexia busca establecerse como un
-                    referente destacado en la exhibición de la creatividad y el talento del pais, ofreciendo una
-                    plataforma arreable que impulse el reconocimiesato y la apreciación del arte boliviano a nivel
-                    nacional e internacional
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container">
-        <div class="content-section">
-            <div class="border-container">
-                <div class="number">04</div>
-                <div class="title-box">
-                    <h1 class="title">VALORES</h1>
-                </div>
-                <div class="description">
-                    <div class="grid-container">
-                        <div class="square"></div>
-                        <div class="value-text">
-                            <h3>Inclusión:</h3>
-                            <p>Promovemos un espacio donde los artistas bolivianos, sin importar su trayectoria o
-                                reconocimiento previo, puedan participar y ser valorados para su desarrollo profesional
-                                y creativo.</p>
-                        </div>
-                        <div class="square"></div>
-                        <div class="value-text">
-                            <h3>Accesibilidad:</h3>
-                            <p>Nos comprometemos a ofrecer una plataforma abierta y gratuita, facilitando que el arte
-                                boliviano llegue a un público amplio y diverso.</p>
-                        </div>
-                        <div class="square"></div>
-                        <div class="value-text">
-                            <h3>Autenticidad:</h3>
-                            <p>Valoramos y respetamos la originalidad de cada artista, asegurando que las obras
-                                presentadas reflejen la diversidad cultural y creativa de Bolivia.</p>
-                        </div>
-                        <div class="square"></div>
-                        <div class="value-text">
-                            <h3>Innovación:</h3>
-                            <p>Fomentar el uso de tecnologías digitales para transformar la manera en que se presenta y
-                                comercializa el arte, adaptándonos a las necesidades contemporáneas de los artistas y
-                                los consumidores.</p>
+                <div class="text-box">
+                    <div class="description">
+                        <div class="grid-container">
+                            <div class="square"></div>
+                            <div class="value-text">
+                                <h3>Inclusión:</h3>
+                                <p>Promovemos un espacio donde los artistas bolivianos, sin importar su trayectoria o
+                                    reconocimiento previo, puedan participar y ser valorados para su desarrollo
+                                    profesional
+                                    y creativo.</p>
+                            </div>
+                            <div class="square"></div>
+                            <div class="value-text">
+                                <h3>Accesibilidad:</h3>
+                                <p>Nos comprometemos a ofrecer una plataforma abierta y gratuita, facilitando que el
+                                    arte
+                                    boliviano llegue a un público amplio y diverso.</p>
+                            </div>
+                            <div class="square"></div>
+                            <div class="value-text">
+                                <h3>Autenticidad:</h3>
+                                <p>Valoramos y respetamos la originalidad de cada artista, asegurando que las obras
+                                    presentadas reflejen la diversidad cultural y creativa de Bolivia.</p>
+                            </div>
+                            <div class="square"></div>
+                            <div class="value-text">
+                                <h3>Innovación:</h3>
+                                <p>Fomentar el uso de tecnologías digitales para transformar la manera en que se
+                                    presenta y
+                                    comercializa el arte, adaptándonos a las necesidades contemporáneas de los artistas
+                                    y
+                                    los consumidores.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <div id="footer-container"></div>
-
+    
+    
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar.js"></script>
     <script src="/assets/js/footer.js"></script>

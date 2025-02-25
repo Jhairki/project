@@ -1,11 +1,15 @@
-// footer.js
 const footerHTML = `
-     <footer class="custom-footer">
+    <footer class="custom-footer">
+        <!-- Línea divisoria superior -->
+        <div class="footer-top-border"></div>
+        
         <div class="footer-container">
             <div class="row">
                 
                 <div class="col-md-3 section logo-section">
-                    <img src="/assets/images/general web/marca en negativo-09.png" alt="Logo Galería de Arte">
+                    <a href="/pages/inicio/index">
+                        <img src="/assets/images/general web/marca en negativo-09.png" alt="Logo Galería de Arte">
+                    </a>
                 </div>
 
                 <!-- Contact Section -->
@@ -20,7 +24,7 @@ const footerHTML = `
                             </div>
                             gab.bolivian@gmail.com
                         </a>
-                        <a href="#">
+                        <a href="https://www.instagram.com/gab_artbolivian/?fbclid=IwZXh0bgNhZW0CMTAAAR10e1o7QEIdyrS0Z13k5YPWy29UsbftvORzuq4lRHDejM8J0ctkfBO_4Kc_aem_jCkTdZDs4yFhIaPyXs3bSw#">
                             <div class="icon-container">
                                 <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -29,7 +33,7 @@ const footerHTML = `
                             </div>
                             gab_artbolivian
                         </a>
-                        <a href="#">
+                        <a href="https://www.facebook.com/ArteDeBolivia?locale=es_LA">
                             <div class="icon-container">
                                 <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
@@ -44,11 +48,11 @@ const footerHTML = `
                 <div class="col-md-3 section">
                     <h3>MENÚ</h3>
                     <ul class="menu-links">
-                        <li><a href="#">Galería</a></li>
-                        <li><a href="#">Obras</a></li>
-                        <li><a href="#">Artistas</a></li>
-                        <li><a href="#">Nosotros</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="/pages/galeria/index.html">Galería</a></li>
+                        <li><a href="/pages/obras/index.html">Obras</a></li>
+                        <li><a href="/pages/artistas/index.html">Artistas</a></li>
+                        <li><a href="/pages/nosotros/index.html">Nosotros</a></li>
+                        <li><a href="/pages/contacto/index.html">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -60,7 +64,9 @@ const footerHTML = `
                         ofreciendo a los artistas un lugar para desarrollarse y conectar con coleccionistas y
                         amantes del arte.
                     </p>
-                    <a href="#" class="cta-button">Llena el formulario</a>
+                    <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                    <button class="custom-button">Llena el formulario</button>
+                </a>
                 </div>
             </div>
 

@@ -1,36 +1,7 @@
-/* Sección 1 */
-.section-1 {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-}
 
-.section-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 50px;
-    right: 80px;
-    text-align: right;
-    z-index: 10;
-}
-
-.text-overlay h1 {
-    margin: 0;
-    font-size: 6rem;
-    font-style: italic;
-    font-weight: bold;
-    text-shadow: 5px 5px 15px rgba(169, 169, 169, 0.7);
-}
 
 /* Sección 2 */
-/* Sección 2 */
+/* Sección 2 *//* Sección 2 */
 .section-2 {
     display: flex;
     width: 100%;
@@ -45,232 +16,203 @@
 }
 
 .image-section2 {
-    flex: 1;
+    flex: 0 0 30%; /* Toma el 30% del ancho */
     position: relative;
     height: 100%;
-    /* La imagen cubre todo el alto de la columna */
     display: flex;
     align-items: center;
-    margin-right: -10%;
-    z-index: 1;
+    margin-right: 0;
 }
 
 .image-section2 img {
-    width: 110%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .content-section2 {
-    flex: 1;
+    flex: 1; /* Toma el resto del ancho (70%) */
     background: linear-gradient(to bottom, #646577, #1a1922);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 20px;
+    padding: 100px 40px;
+    padding-right: 10%;
     z-index: 2;
+    text-align: left; 
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+.content-section2 h1,
+.content-section2 p {
+    color: white; 
 }
 
 .border-container {
-    position: relative;
-    margin: 60px;
-    padding: 40px 20px 20px;
-    border: 2px solid #fa8072;
-    /* Color salmón para el borde */
+    width: 100%;
 }
 
-.number {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #646577;
-    /* Color salmón para el número */
-    color: rgb(173, 63, 63);
-    font-size: 6.5rem;
-    padding: 0 15px;
-    z-index: 1;
-    /* Mueve el número detrás del título */
+.border-top {
+    display: flex;
+    align-items: center;
 }
 
-.title-box {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.3);
-    /* Fondo negro casi transparente */
-    padding: 10px 30px;
-    z-index: 2;
-    /* Asegura que el título esté por encima del número */
-}
 
-.title {
-    color: white;
-    font-size: 2.8rem;
-    margin: 0;
-    text-align: center;
-}
 
-.description {
-    margin-top: 70px;
-    color: white;
-    line-height: 1.6;
-}
-
-/* Sección 4 */
 .section-4 {
     position: relative;
     width: 100%;
-    height: auto;
-    min-height: 500px;
     overflow: hidden;
+    color: white;
 }
 
 .background-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background-image img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center center;
 }
 
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 0, 0, 0.5);
-    /* Cambié a color rojo con opacidad */
-    z-index: 1;
-}
-
-.overlay-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(235, 37, 40, 0.5);
-    z-index: 2;
+    right: 0;
+    bottom: 0;
 }
 
 .time-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
     position: relative;
-    z-index: 3;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    width: 60%; /* Ancho del contenedor centrado */
+    margin: 0 auto; /* Centra el contenedor */
 }
 
 .time-column {
-    margin-bottom: 20px;
+    flex: 1; /* Asegura que todas las columnas tengan el mismo tamaño */
+    text-align: center; /* Centra el texto en cada columna */
+    padding: 20px; /* Ajusta el padding según sea necesario */
 }
 
 .time-column img {
-    width: 100%;
+    width: 80%; 
     height: auto;
-    filter: grayscale(100%);
+    filter: grayscale(80%) brightness(1000%);
 }
+
+
 
 
 /* Sección 5 */
-.section-5 {
-    background-color: #363a45;
+
+
+.contenido-2 {
+    position: relative; /* Posición relativa para que esté encima de la superposición */
+    z-index: 3; /* Asegura que el texto esté por encima de la imagen y la superposición */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    width: 50%; /* Establece el ancho al 50% */
+    padding: 80px 0px; /* Agrega espaciado interno según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 40px;
-    min-height: 100vh;
+
+.section-6 {
+    display: flex; /* Usar flexbox para la disposición en columna */
+    flex-direction: column; /* Colocar las secciones en columna */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    background: linear-gradient(to bottom, #a0a0a0, #606060); /* Degradado de plomo claro a oscuro */
+    padding: 50px 0; /* Espaciado vertical */
 }
 
-.content-column {
-    flex: 1;
-    padding: 20px;
-    position: sticky;
-    top: 20px;
-    height: fit-content;
-    max-height: calc(100vh - 40px);
+.section-img, .section-img2 {
+    display: flex; /* Disposición en columnas */
+    width: 70%; /* Limitar el ancho al 70% */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    position: relative; /* Para el posicionamiento de la imagen */
 }
 
-.content-column h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.col-descript {
+    flex: 0 0 60%; /* Ocupa el 60% del ancho */
+    display: flex; /* Usar flexbox en la columna de texto */
+    flex-direction: column; /* Apilar los elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    position: relative; /* Para mantener el contexto del contenido */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
 }
 
-.content-column p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+.imagen-sobre-encima, .imagen-sobre-encima2 {
+    flex: 0 0 40%; /* Ocupa el 40% del ancho */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: flex-start; /* Alinear la imagen hacia la izquierda */
+    align-items: center; /* Centrar verticalmente */
+    position: relative; /* Para el posicionamiento de la imagen */
+    z-index: 0;
 }
 
-.image-section {
-    flex: 1;
-    position: sticky;
+.imagen-sobre-encima img, .imagen-sobre-encima2 img {
+    width: 120%; /* Asegura que la imagen sobresalga de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: relative; /* Mantiene la imagen en su flujo normal */
+    left: -10%; /* Ajustar la posición para que se sobreponga a la columna */
+}
+
+
+.section-7 {
+    position: relative; /* Para colocar la imagen de fondo */
+    margin: 0 auto; /* Centrar la sección */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    max-width: 100%; /* Asegurar que la sección use todo el ancho */
+    padding: 220px;
+}
+
+.background-valores {
+    position: absolute; /* Para que la imagen de fondo cubra todo el contenedor */
     top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    left: 0;
+    width: 100%; /* Asegura que la imagen cubra todo el ancho */
+    height: 100%; /* Asegura que la imagen cubra todo el alto del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+    filter: grayscale(100%) brightness(50%); /* Aplicar filtro de blanco y negro y oscurecer */
 }
 
-.image-section img {
-    width: 100%;
-    max-width: 500px;
-    transform: rotate(-30deg);
-    transition: transform 0.3s ease-out;
-    will-change: transform;
+.col-descript {
+    position: relative; /* Mantener el contexto del contenido */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+    width: 50%; /* Establecer el ancho en 60% */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
 }
 
-/* Container 5 */
-.container-5 {
-    display: flex;
-    padding: 2rem;
-    background-color: #2A2A2A;
-    color: white;
-    font-family: Arial, sans-serif;
-    position: relative;
-    min-height: 400px;
-}
-
-.content-section-5 {
-    flex: 1;
-    position: relative;
-    padding: 2rem;
+.border-top {
+    display: flex; /* Usar flexbox para alinear el número y título */
+    align-items: center; /* Centrar verticalmente */
+    margin-bottom: 20px; /* Espacio entre el título y la descripción */
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 40px;
-    align-items: start;
+    grid-template-columns: 100px 1fr; /* Mantener el diseño en dos columnas */
+    gap: 40px; /* Espacio entre columnas */
+    align-items: start; /* Alinear los elementos al inicio */
 }
 
 .square {
     width: 20px;
     height: 20px;
-    margin-left: 50px;
     background-color: rgb(197, 110, 110);
 }
 
@@ -283,60 +225,5 @@
 .value-text p {
     margin: 5px 0;
     font-size: 16px;
-}
-
-.image-section-sec {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-left: -10%;
-    position: relative;
-    z-index: 0;
-}
-
-.image-section-sec img {
-    max-width: 100%;
-    height: 400px;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media (max-width: 768px) {
-
-    .container,
-    .container2 {
-        flex-direction: column;
-    }
-
-    .content-column,
-    .image-section {
-        position: relative;
-        top: 0;
-        height: auto;
-    }
-
-    .image-section2 {
-        margin-right: 0;
-        height: 300px;
-    }
-
-    .border-container {
-        margin: 30px;
-    }
-
-    .time-content {
-        grid-template-columns: 1fr;
-    }
-
-    .image-section-sec {
-        margin-left: 0;
-    }
-
-    .image-section-sec img {
-        position: relative;
-        height: 300px;
-    }
+    padding-right: 280px;
 }

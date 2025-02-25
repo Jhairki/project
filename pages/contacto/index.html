@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Mi Proyecto</title>
 
-    
+
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -22,60 +22,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-       
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div id="navbar-container"></div>
 
+    <header id="navbar"></header>
+
+y
     <div class="section-1">
         <img src="/assets/images/general web/6466 1.png" alt="">
         <div class="text-overlay">
-            <h1>CONTACTOS</h1>
+            <h1>
+                <span class="primario">CONTACTOS</span>
+                <span class="secundario">CONTACTOS</span>
+            </h1>
         </div>
     </div>
 
-    <div class="form-container">
-        <h1>TIENES ALGO QUE DECIRNOS</h1>
-        <div class="form-wrapper">
-            <p>Para cualquier consulta o duda, puedes dirigirme a nuestro correo gab.bolivian@gmail.com y responderemos
-                lo más pronto posible.</p>
-
-            <form>
-                <div class="form-row">
-                    <div class="form-field wide">
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+    <div class="primer-formulario">
+        <div class="form-container">
+            <h1>TIENES ALGO QUE DECIRNOS</h1>
+            <div class="form-wrapper">
+                <p>Para cualquier consulta o duda, puedes dirigirme a nuestro correo gab.bolivian@gmail.com y responderemos
+                    lo más pronto posible.</p>
+    
+                <form>
+                    <div class="form-row">
+                        <div class="form-field wide">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido">
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field wide">
-                        <input type="email" id="gmail" name="gmail" placeholder="Gmail">
+    
+                    <div class="form-row">
+                        <div class="form-field wide">
+                            <input type="email" id="gmail" name="gmail" placeholder="Gmail">
+                        </div>
+                        <div class="form-field narrow">
+                            <input type="text" id="celular" name="celular" placeholder="Celular">
+                        </div>
                     </div>
-                    <div class="form-field narrow">
-                        <input type="text" id="celular" name="celular" placeholder="Celular">
+    
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-field full">
-                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
+    
+                    <div class="form-row">
+                        <div class="form-actions">
+                            <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                                <button class="custom-button">Llena el formulario</button>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-actions">
-                        <button type="submit">Enviar</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 
-    <div class="form-container-wrapper">
+    <div class="segundo-formulario">
         <div class="form-container">
             <h1>QUIERES ENSENAR TU TRABAJO?</h1>
             <p>GALERIA DE ARTE BOLIVIANO es un espacio que busca democratizar el acceso al arte, ofreciendo a los
@@ -113,15 +122,15 @@
 
                     <div class="form-row">
                         <div class="form-actions">
-                            <button type="submit">Enviar</button>
+                            <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                                <button class="custom-button">Llena el formulario</button>
+                            </a>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-    <div id="footer-container"></div>
 
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/navbar.js"></script>
