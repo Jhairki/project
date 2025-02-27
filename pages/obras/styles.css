@@ -364,7 +364,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 869px) {
     .imagen-column {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -374,7 +374,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     .text-overlay h1 {
         font-size: 2rem;
         bottom: 20px;

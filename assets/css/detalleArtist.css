@@ -1,39 +1,168 @@
-.secciones{
+/* Estilos generales de las secciones */
+.secciones {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, #5d6067, #383a41); 
+    background: linear-gradient(to bottom, #5d6067, #383a3f);
     padding: 20px;
 }
 
-
+/* Contenedor general */
 .container {
     display: flex;
-    width: 80%; 
-    max-width: 1200px; 
-    justify-content: space-between; 
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
+
+/* Columnas de texto e imagen */
+.text-column, .image-column, .image-column2, .text-colum2 {
+    flex: 1;
+    padding: 10px;
+    text-align: start;
+}
+
+/* Ajuste de imágenes */
+.image-column img, .image-column2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+/* RESPONSIVE: Cambio a una sola columna */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-column {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist-name {
+        position: relative; 
+        top: 0; 
+        left: 0; 
+        transform: none;
+        margin: 0;
+        text-align: center;
+        font-size: 2.5rem;
+        white-space: normal;
+        padding: 10px 20px;
+    }
+
+    .artist-surname {
+        text-align: center;
+        padding-left: 0;
+        font-size: 2rem;
+    }
+
+    .artist-description {
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .boton-artista {
+        justify-content: center;
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+    }
+}
+
+
 
 .text-column {
     flex: 1; 
     padding: 20px; 
 }
 
+
+/* Contenedor de la imagen del artista con efecto hover */
 .image-column {
     flex: 1; 
     display: flex;
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    position: relative; /* Para posicionar el overlay correctamente */
 }
 
-.image-column img {
-    max-width: 100%; 
-    height: auto; 
-    border-radius: 10px; 
-    object-fit: cover; 
-    filter: grayscale(100%); 
+/* Contenedor de la imagen con efecto zoom */
+.image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Para mantener el zoom dentro del contenedor */
+    position: relative; /* Para posicionar el overlay */
+    border-radius: 10px; /* Mantener el radio de borde */
 }
 
+/* Estilos de la imagen */
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Radio de borde */
+    object-fit: cover;
+    filter: grayscale(100%); /* Mantener el filtro de escala de grises */
+    transition: transform 0.5s ease; /* Transición suave para el zoom */
+}
 
+/* Efecto de zoom al pasar el ratón */
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom interno */
+}
+
+/* Overlay negro con nombre y apellido */
+.artist-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Velo negro semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave */
+    border-radius: 10px; /* Mismo radio que la imagen */
+}
+
+/* Mostrar overlay al pasar el ratón */
+.image-container:hover .artist-overlay {
+    opacity: 1;
+}
+
+/* Estilos para el nombre del artista en el overlay */
+.artist-overlay .overlay-name {
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el apellido del artista en el overlay */
+.artist-overlay .overlay-surname {
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
 
 
 .secciones {
@@ -130,9 +259,7 @@
 
 
 .obra-card:hover img {
-    transform: scale(1.1); 
-    position: relative; 
-    top: -14px; 
+    transform: scale(1.2); 
 }
 
 .obra-info {
@@ -239,3 +366,68 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
+
+
+.info-box {
+    border: 2px solid #fa7582;
+    padding: 50px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    height: 40%; 
+    position: relative;
+    margin: 2rem 2rem;
+    color: white;
+  }
+
+  .artist-name {
+    position: absolute; 
+    top: -5%; 
+    left: 0%; 
+    transform: translateX(-200%);
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+    font-size: 3rem;
+    white-space: nowrap;
+    background-color: #5b5e65;
+    padding: 0 30px;
+    font-style: italic;
+    margin: 0 500px;
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+
+}
+
+
+  .artist-surname {
+    font-weight: normal;
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    width: 100%;
+    text-align: left;
+    padding-left: 90px;
+  }
+  
+  .artist-description {
+    line-height: 1.6;
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-family: 'Gelasio', serif;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .custom-button {
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+    margin-left: 30px; 
+  }
+

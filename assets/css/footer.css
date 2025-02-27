@@ -3,12 +3,13 @@
 .custom-footer {
   background-color: #1a1a1a;
   color: white;
-  padding: 4rem 0 2rem 0;
+  padding: 20px 20px;
   font-family: 'Gelasio', serif;
+  border-top: 1.5cm solid #bc193b; /* Borde superior de 3 cm color salmón */
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 900px; /* Ajusta el ancho según sea necesario */
   margin: 0 auto;
   padding: 0 15px;
   margin-top: 40px;
@@ -111,18 +112,11 @@
   font-style: italic;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #bc193b;
   font-size: 1rem;
 }
 
-.footer-top-border {
-  height: 50px;
-  background-color: #bc193b;
-  width: 100%;
-}
-
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
   .footer-container {
     text-align: center;
   }

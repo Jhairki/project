@@ -127,12 +127,12 @@ strong, .bold {
 .border-top::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: -2.5px;
   left: 50%;
   transform: translateX(-50%);
-  width: 40%;
-  height: 2px;
-  background-color: #21252e;
+  width: 60%;
+  height: 4px;
+  background-color:#5c5c6d;
   z-index: 1;
 }
 
@@ -166,7 +166,7 @@ strong, .bold {
   font-family: "Gelasio", serif;
   font-weight: 100;
   font-style: italic;
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .text-box {

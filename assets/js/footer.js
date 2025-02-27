@@ -1,7 +1,5 @@
 const footerHTML = `
     <footer class="custom-footer">
-        <!-- Línea divisoria superior -->
-        <div class="footer-top-border"></div>
         
         <div class="footer-container">
             <div class="row">

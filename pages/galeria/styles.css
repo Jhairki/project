@@ -8,25 +8,22 @@
 
 .image-section {
     width: 35%;
-    /* Columna más estrecha */
     padding-left: 20px;
-    /* Espacio entre columnas */
     display: flex;
     justify-content: center;
-    /* Centra la imagen */
     align-items: stretch;
-    /* Asegura que la imagen estire a la altura de su contenedor */
 }
 
 .image-section img {
     height: auto;
-    /* La imagen se ajusta automáticamente a la altura */
     width: 100%;
     max-height: 100%;
     object-fit: cover;
 }
 
-
+.text-box{
+    height: 100px;
+}
 
 
 
@@ -395,7 +392,7 @@
   }
   
 
-/* 
+
 
 .grid-table {
     display: grid;
@@ -534,11 +531,15 @@
     left: 50%;     
     transform: translate(-50%, -50%); 
 }
- */
+
+
+
+
+
+
 
 
 /*section 4*/
- 
 .section-4 {
     padding: 40px;
     background-color: #21252e;
@@ -569,19 +570,28 @@
 .text-column h3,
 .text-column h4 {
     margin-bottom: 15px;
+    font-family: "Gelasio", serif; /* Aplica la fuente Gelasio */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .text-column p {
     margin-bottom: 20px;
-    color: #555;
+    color: white;
     line-height: 1.6;
+    font-family: "Gelasio", serif; /* Aplica la fuente Gelasio */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    
 }
 
-
-
-@media screen and (max-width: 768px) {
+/* Estilos responsivos */
+@media screen and (max-width: 868px) {
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+        grid-template-rows: auto; /* Asegurar que las filas se adapten automáticamente */
     }
 
     .text-column {
@@ -589,7 +599,7 @@
     }
 
     .image-column img {
-        height: 300px;
+        height: 300px; /* Ajustar la altura de la imagen en pantallas pequeñas */
         object-fit: cover;
     }
 }
@@ -629,14 +639,14 @@
 }
 
 .toggle-btn {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 50px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -658,3 +668,9 @@
     display: block;
     opacity: 1;
 } 
+
+
+
+.border-top::before {
+    background-color:#21252e;
+  }

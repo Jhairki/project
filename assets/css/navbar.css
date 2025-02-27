@@ -1,21 +1,17 @@
+/* CSS existente */
 .custom-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 160px;
     background-color: #282a36;
+    position: relative; /* Para el menú hamburguesa */
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima */
 }
-
 
 .logo img {
     max-height: 70px;
     width: auto;
-}
-
-
-.menu {
-    display: flex;
-    gap: 10px;
 }
 
 .nav-item {
@@ -28,7 +24,6 @@
     transition: 0.3s;
 }
 
-
 .nav-item:focus,
 .nav-item:active {
     color: black;
@@ -36,11 +31,11 @@
     background-color: white;
 }
 
-
 .search {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px; /* Espacio entre el buscador y el ícono de menú */
+    justify-content: center; /* Centra el contenido dentro de la barra de navegación */
 }
 
 .search-btn {
@@ -56,38 +51,78 @@
     background-color: #1d1d1f;
     color: #fff;
     outline: none;
+    width: 250px; /* Ancho reducido del buscador */
 }
 
 .search input::placeholder {
     color: #aaa;
 }
 
+.menu {
+    display: flex;
+    gap: 10px;
+}
 
-@media (max-width: 768px) {
+/* Estilos para el menú hamburguesa */
+.hamburger {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Estilos para el menú en pantallas pequeñas */
+@media (max-width: 868px) {
     .custom-navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 20px; 
+        flex-direction: row; /* Mantener en fila */
+        justify-content: center; /* Centrar la barra de navegación */
+        padding: 10px 20px;
     }
 
     .menu {
+        display: none; /* Ocultar el menú por defecto */
         flex-direction: column;
         align-items: center;
         width: 100%;
+        position: absolute; /* Posición absoluta para cubrir el contenido */
+        top: 70px; /* Ajusta según la altura de la barra de navegación */
+        left: 0;
+        background-color: #282a36; /* Color de fondo del menú */
+        z-index: 999; /* Asegura que esté por encima del contenido */
+        padding: 10px 0; /* Espaciado del menú */
+    }
+
+    .menu.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+
+    .hamburger {
+        display: flex; /* Mostrar el ícono de hamburguesa */
     }
 
     .nav-item {
-        width: 100%; 
+        width: 100%;
         text-align: center;
-        padding: 15px 0; 
+        padding: 15px 0;
     }
 
     .search {
-        width: 100%;
-        justify-content: center;
+        flex: 1; /* Asegura que el buscador ocupe espacio */
+        justify-content: center; /* Centra el buscador y el menú hamburguesa */
     }
 
     .search input {
-        width: 80%;
+        width: 250px; /* Ancho reducido del buscador */
+    }
+
+    .hamburger {
+        order: 1; /* Mueve el menú hamburguesa después del buscador */
     }
 }

@@ -45,8 +45,8 @@
         <div class="container">
             <div class="text-column">
                 <div class="info-box">
-                    <h1 class="artist-name nombre-art"></h1>
-                    <h3 class="artist-surname apellido-art"></h3>
+                    <div class="artist-name nombre-art"></div>
+                    <div class="artist-surname apellido-art"></div>
                     <div class="artist-description" id="artistDescription"></div>
                 </div>
                 <a href="#">
@@ -54,7 +54,13 @@
                 </a>
             </div>
             <div class="image-column">
-                <img id="foto-artist-2" src="" alt="Foto del artista">
+                <div class="image-container">
+                    <img id="foto-artist-2" src="" alt="Foto del artista">
+                    <div class="artist-overlay">
+                        <div class="overlay-name nombre-art"></div>
+                        <div class="overlay-surname apellido-art"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -209,6 +215,8 @@
                 console.error("Error al cargar los datos:", error);
             }
         });
+
+        
     </script>
 
     <script src="/assets/js/main.js"></script>

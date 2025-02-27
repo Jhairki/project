@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .imagen-cuadro {
+    position: relative;
+    background: linear-gradient(to right, #2b2c36 0%, #424252 50%, #2b2c36 100%);
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: border 0.3s ease-in-out;
+}
+
+.imagen-cuadro:hover {
+    border: 2px solid white;
+}
+
+.imagen-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 300px; /* Cambia según tus necesidades */
+    border-radius: 5px;
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagen-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.imagen-cuadro:hover .overlay {
+    opacity: 1;
+}
+
+.texto-cuadro {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.texto-cuadro h4,
+.texto-cuadro h6,
+.texto-cuadro p,
+.texto-cuadro h3 {
+    color: white;
+    margin: 5px 0;
+}
+
+.signo-plus {
+    position: absolute;
+    background-color: black;
+    padding: 15px;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.signo-plus:hover {
+    background-color: white;
+    color: black;
+}
+    </style>
+    <div class="imagen-cuadro">
+        <div class="imagen-container">
+            <a href="../../components/detalle.html?id=img20">
+                <img src="/assets/images/obras/natalia montes/5032819296107081290.jpg" alt="Imagen 4">
+                <div class="overlay">
+                    <p>Más acerca de la obra</p>
+                </div>
+            </a>
+        </div>
+        <div class="texto-cuadro">
+            <h4>"SOLEDAD Y VITILIGO"</h4>
+            <h6>Natalia Montes Dávalos</h6>
+            <p>Pintura - 120 x 120 cm.</p>
+            <p>Disponible</p>
+            <h3>2600 Bs.</h3>
+        </div>
+        <div class="signo-plus">+</div>
+    </div>
+</body>
+</html>
