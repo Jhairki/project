@@ -42,6 +42,7 @@
     </div>
 
     <div class="secciones">
+        <div class="titulo-tipo" id="type"></div>
         <div class="container">
             <div class="text-column">
                 <div class="info-box">
@@ -79,17 +80,16 @@
         </div>
     </div>
 
-    <div class="secciones">
-        <h1>Trabajos del Artista</h1>
-        <div id="galeria-obras" class="galeria-grid"></div>
-
+    <div class="section-5">
+        <h1 class="titulo">OTROS TRABAJOS DE LA PINTORA</h1>
+        <div class="obras-similares" id="obras-similares"></div>
     </div>
 
-    <div class="secciones">
-        <h1>Descubra Otras Obras</h1>
-        <div id="otros-autores" class="galeria-grid"></div>
+    <div class="section-3">
+        <h1 class="titulo">DESCUBRA OTRAS OBRAS DE LA CATALOGO</h1>
+        <div class="otros-autores" id="otros-autores"></div>
     </div>
-    <p id="ver_mas">"Más acerca <br> del artista"</p>
+    
 
     <script>
         document.addEventListener("DOMContentLoaded", async function () {
@@ -114,109 +114,138 @@
 
                 document.querySelectorAll(".nombre-art").forEach(el => el.textContent = artist.name);
                 document.querySelectorAll(".apellido-art").forEach(el => el.textContent = artist.surname);
-                document.getElementById("artistDescription").textContent = artist.descripcion;
-                document.getElementById("destacado-art").textContent = artist.destacado;
 
-                if (artist.imags.length >= 3) {
-                    document.getElementById("foto-artist-1").src = artist.imags[0];
-                    document.getElementById("foto-artist-2").src = artist.imags[1];
-                    document.getElementById("foto-artist-3").src = artist.imags[2];
+                const tipoPintor = document.getElementById("type");
+                if (tipoPintor) {
+                    tipoPintor.textContent = artist.type; // Asegúrate de que "type" sea la propiedad correcta en tu JSON
+                }
+
+                const artistDescription = document.getElementById("artistDescription");
+                if (artistDescription) {
+                    artistDescription.textContent = artist.descripcion;
+                }
+
+                const destacadoArt = document.getElementById("destacado-art");
+                if (destacadoArt) {
+                    destacadoArt.textContent = artist.destacado;
+                }
+
+                if (artist.imags && artist.imags.length >= 3) {
+                    const fotoArtist1 = document.getElementById("foto-artist-1");
+                    const fotoArtist2 = document.getElementById("foto-artist-2");
+                    const fotoArtist3 = document.getElementById("foto-artist-3");
+
+                    if (fotoArtist1) fotoArtist1.src = artist.imags[0];
+                    if (fotoArtist2) fotoArtist2.src = artist.imags[1];
+                    if (fotoArtist3) fotoArtist3.src = artist.imags[2];
                 }
 
                 const premiosList = document.getElementById("premios-art");
-                artist.premios.forEach(premio => {
-                    let li = document.createElement("li");
-                    li.textContent = premio;
-                    premiosList.appendChild(li);
-                });
-
-                const textoVerMas = document.getElementById("ver_mas").innerHTML;
+                if (premiosList && artist.premios && artist.premios.length > 0) {
+                    artist.premios.forEach(premio => {
+                        let li = document.createElement("li");
+                        li.textContent = premio;
+                        premiosList.appendChild(li);
+                    });
+                }
 
                 const responseObras = await fetch("../obras.json");
                 const obras = await responseObras.json();
 
-                const obrasArtista = obras.filter(o => artist.obras.includes(o.id_img));
-                const galeria = document.getElementById("galeria-obras");
+                const contenedorObrasSimilares = document.getElementById("obras-similares");
+                if (contenedorObrasSimilares) {
+                    const obrasDeLaAutora = obras.filter(o => o.id_autor === artist.id);
 
-                obrasArtista.forEach(obra => {
-                    let obraDiv = document.createElement("div");
-                    obraDiv.classList.add("obra-card");
-                    obraDiv.dataset.idImg = obra.id_img;
+                    contenedorObrasSimilares.innerHTML = "";
 
-                    let img = document.createElement("img");
-                    img.src = obra.img[0];
-                    img.alt = obra.titulo;
+                    obrasDeLaAutora.forEach(obra => {
+                        const divObra = document.createElement("div");
+                        divObra.className = "obra-similar";
+                        divObra.setAttribute("data-id", obra.id_img);
+                        divObra.innerHTML = `
+                    <div class="imagen-container">
+                        <img src="${obra.img[0]}" alt="Obra similar" class="obra-similar-img">
+                    </div>
+                    <div class="text-descript">
+                        <p class="titulo-inclinado">"${obra.titulo}"</p>
+                        <p><b>${obra.autor}</b></p>
+                        <p>${obra.tamano}</p>
+                        <p>${obra.estado}</p>
+                        <p class="precio">${obra.precio} Bs.</p>
+                        <div class="plus-button">+</div>
+                    </div>
+                `;
 
-                    let overlayText = document.createElement("div");
-                    overlayText.classList.add("overlay-text");
-                    overlayText.innerHTML = textoVerMas;
+                        divObra.addEventListener('click', function () {
+                            window.location.href = `detalle.html?id=${obra.id_img}`;
+                        });
 
-                    let info = document.createElement("div");
-                    info.classList.add("obra-info");
-                    info.innerHTML = `
-                <h3>"${obra.titulo}"</h3>
-                <p>${obra.autor}</p>
-                <p>${obra.tipo}</p>
-                <p>${obra.tamano}</p>
-                <p>${obra.estado}</p>
-                <p>${obra.precio} Bs.</p>
-            `;
-
-                    obraDiv.appendChild(img);
-                    obraDiv.appendChild(overlayText);
-                    obraDiv.appendChild(info);
-                    galeria.appendChild(obraDiv);
-
-                    obraDiv.addEventListener("click", function () {
-                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                        contenedorObrasSimilares.appendChild(divObra);
                     });
-                });
+                }
 
-                const otrasObras = obras.filter(o => !artist.obras.includes(o.id_img));
-                const otrasObrasRandom = otrasObras.sort(() => 0.5 - Math.random()).slice(0, 4);
-                const otrosAutores = document.getElementById("otros-autores");
+                const contenedorOtrosAutores = document.getElementById("otros-autores");
+                if (contenedorOtrosAutores) {
+                    const obrasDeOtrosArtistas = obras.filter(o => o.id_autor !== artist.id);
+                    const obrasAleatorias = [];
 
-                otrasObrasRandom.forEach(obra => {
-                    let obraDiv = document.createElement("div");
-                    obraDiv.classList.add("obra-card");
-                    obraDiv.dataset.idImg = obra.id_img;
+                    if (obrasDeOtrosArtistas.length > 0) {
+                        const totalObrasAMostrar = 4;
 
-                    let img = document.createElement("img");
-                    img.src = obra.img[0];
-                    img.alt = obra.titulo;
+                        if (obrasDeOtrosArtistas.length >= totalObrasAMostrar) {
+                            const obrasCopia = [...obrasDeOtrosArtistas];
 
-                    let overlayText = document.createElement("div");
-                    overlayText.classList.add("overlay-text");
-                    overlayText.innerHTML = textoVerMas;
+                            for (let i = 0; i < totalObrasAMostrar; i++) {
+                                const randomIndex = Math.floor(Math.random() * obrasCopia.length);
+                                obrasAleatorias.push(obrasCopia[randomIndex]);
+                                obrasCopia.splice(randomIndex, 1);
+                            }
+                        }
+                        // Si no hay suficientes, repetir algunas obras para llegar a 4
+                        else {
+                            // Primero agregamos todas las obras disponibles
+                            obrasAleatorias.push(...obrasDeOtrosArtistas);
 
-                    let info = document.createElement("div");
-                    info.classList.add("obra-info");
-                    info.innerHTML = `
-                <h3>${obra.titulo}</h3>
-                <p>${obra.autor}</p>
-                <p>${obra.tipo}</p>
-                <p> ${obra.tamano}</p>
-                <p>${obra.estado}</p>
-                <p> ${obra.precio} Bs.</p>
-            `;
+                            // Luego repetimos algunas hasta llegar a 4
+                            let index = 0;
+                            while (obrasAleatorias.length < totalObrasAMostrar) {
+                                obrasAleatorias.push(obrasDeOtrosArtistas[index % obrasDeOtrosArtistas.length]);
+                                index++;
+                            }
+                        }
+                    }
 
-                    obraDiv.appendChild(img);
-                    obraDiv.appendChild(overlayText);
-                    obraDiv.appendChild(info);
-                    otrosAutores.appendChild(obraDiv);
+                    contenedorOtrosAutores.innerHTML = "";
 
-                    obraDiv.addEventListener("click", function () {
-                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                    obrasAleatorias.forEach(obra => {
+                        const divObra = document.createElement("div");
+                        divObra.className = "obra-similar";
+                        divObra.setAttribute("data-id", obra.id_img);
+                        divObra.innerHTML = `
+                    <div class="imagen-container">
+                        <img src="${obra.img[0]}" alt="Obra de otro autor" class="obra-similar-img">
+                        <div class="overlay"><p>Ver más</p></div>
+                    </div>
+                    <p>"${obra.titulo}"</p>
+                    <p>${obra.autor}</p>
+                    <p>${obra.tamano}</p>
+                    <p>${obra.estado}</p>
+                    <p class="precio">${obra.precio} Bs.</p>
+                    <div class="plus-button">+</div>
+                `;
+
+                        divObra.addEventListener('click', function () {
+                            window.location.href = `detalle.html?id=${obra.id_img}`;
+                        });
+
+                        contenedorOtrosAutores.appendChild(divObra);
                     });
-                });
+                }
 
-                document.getElementById("ver_mas").style.display = "none";
             } catch (error) {
                 console.error("Error al cargar los datos:", error);
             }
         });
-
-        
     </script>
 
     <script src="/assets/js/main.js"></script>

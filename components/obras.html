@@ -4,69 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obras de Arte</title>
+
     
     <link rel="stylesheet" href="/assets/css/navbar.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/obras.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@1,700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+       
+    
 </head>
 <body>
 
-    <div class="section-induccion d-flex justify-content-between">
-        <div class="col-md-6">
-            <img src="/assets/images/general web/50618 1.png" alt="" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h2>TU PATRIA <br> TU AGOSTO</h2>
-            <p>EXPOSICIÓN - Jueves 1 al sábado 31 de agosto 2024</p>
-            <p>Presentación</p>
-            <p>En este agosto, conmemoramos el Mes Patrio con una celebración especial dedicada al arte que refleja nuestra identidad boliviana. Este mes es una oportunidad para explorar y apreciar las obras de nuestros artistas locales, cuyas creaciones capturan la esencia de nuestra historia, cultura y espíritu nacional.</p>
+    <div class="section-1">
+        <div class="section-induccion d-flex justify-content-between">
+            <div class="col-md-6">
+                <img src="/assets/images/general web/50618 1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>TU PATRIA <br> TU AGOSTO</h2>
+                <p>EXPOSICIÓN - Jueves 1 al sábado 31 de agosto 2024</p>
+                <p>Presentación</p>
+                <p>En este agosto, conmemoramos el Mes Patrio con una celebración especial dedicada al arte que refleja nuestra identidad boliviana. Este mes es una oportunidad para explorar y apreciar las obras de nuestros artistas locales, cuyas creaciones capturan la esencia de nuestra historia, cultura y espíritu nacional.</p>
+            </div>
         </div>
     </div>
 
-    <h1 class="titulo-section text-center">OBRAS DE ARTE</h1>
-    <div class="container">
-        <div id="galeria" class="gallery"></div>
+    
+    <div class="section-2">
+        <h1 class="titulo-section text-center">OBRAS DE ARTE</h1>
+        <div class="container">
+            <div id="galeria" class="gallery"></div>
+        </div>
     </div>
 
+    
     <script>
-        document.addEventListener("DOMContentLoaded", async function () {
-            try {
-                const responseObras = await fetch("../../obras.json");
-                const obras = await responseObras.json();
+    document.addEventListener("DOMContentLoaded", async function () {
+    // Cargar las obras
+    try {
+        const responseObras = await fetch("../../obras.json");
+        const obras = await responseObras.json();
 
-                const galeria = document.getElementById("galeria");
-                galeria.innerHTML = ""; 
+        const galeria = document.getElementById("galeria");
+        galeria.innerHTML = ""; 
 
-                obras.forEach(obra => {
-                    const divObra = document.createElement("div");
-                    divObra.className = "artwork";
-                    divObra.innerHTML = `
-                        <div class="imagen-container" onclick="window.location.href='detalle.html?id=${obra.id_img}'">
-                            <img src="${obra.img[0]}" alt="${obra.titulo}">
-                            <div class="overlay">
-                                <p>Más acerca de la obra</p>
-                            </div>
-                        </div>
-                        <h2>${obra.titulo}</h2>
-                        <p>Autor: ${obra.autor}</p>
-                        <p>Precio: ${obra.precio} Bs.</p>
-                        <div class="signo-plus">+</div>
-                    `;
-                    galeria.appendChild(divObra);
-                });
-            } catch (error) {
-                console.error("Error al cargar los datos:", error);
-                document.body.innerHTML = "<h2>Error al cargar las obras</h2>";
-            }
+        obras.forEach(obra => {
+            const divObra = document.createElement("div");
+            divObra.className = "obra-similar"; // Se aplica la clase correcta
+            divObra.innerHTML = `
+                <div class="imagen-container">
+                    <img class="obra-similar-img" src="${obra.img[0]}" alt="${obra.titulo}">
+                    <div class="overlay">
+                        <p>Más acerca de la obra</p>
+                    </div>
+                </div>
+                <p><strong>${obra.titulo}</strong></p>
+                <p>Autor: ${obra.autor}</p>
+                <p>Precio: ${obra.precio} Bs.</p>
+                <div class="plus-button">+</div>
+            `;
+            
+            // Hacer clic en la obra lleva a la página de detalles
+            divObra.addEventListener("click", () => {
+                window.location.href = `detalle.html?id=${obra.id_img}`;
+            });
+            
+            galeria.appendChild(divObra);
         });
+    } catch (error) {
+        console.error("Error al cargar las obras:", error);
+        document.body.innerHTML = "<h2>Error al cargar las obras</h2>";
+    }
+});
+
     </script>
 
     <script src="/assets/js/navbar.js"></script>

@@ -266,7 +266,6 @@
     </div>
   </div>
 
-
   <div class="section-4" id="artistas-occidente">
     <div class="region-title">
       <h3>Región</h3>
@@ -294,29 +293,29 @@
       <div class="main-image">
         <img id="mainImageOccidental" src="" alt="Main artist photo">
         <div class="main-image-overlay">
-          <div class="artist-overlay-name" id="name"></div>
-          <div class="artist-overlay-type" id="tipoA"></div>
-          <div class="artist-overlay-location" id="localidad-art"></div>
+          <div class="artist-overlay-name" id="nameOccidental"></div>
+          <div class="artist-overlay-type" id="tipoAOccidental"></div>
+          <div class="artist-overlay-location" id="localidadOccidental"></div>
         </div>
       </div>
     </div>
   </div>
-
 
   <div class="section-4" id="artistas-central">
     <div class="region-title">
       <h3>Región</h3>
       <h1 onclick="location.href='#region-central'">CENTRAL</h1>
     </div>
+
     <div class="location" id="artistLocationCentral"></div>
     <div class="container-3">
       <div class="left-bar"></div>
 
-      <div class="carousel" id="carouselCentral"> </div>
+      <div class="carousel" id="carouselCentral"></div>
       <div>
         <div class="info-box">
           <h1 class="artist-name" id="artistNameCentral"></h1>
-          <h3 class="artist-surname" id="artistSurnameCentral"></h3>
+          <h2 class="artist-surname" id="artistSurnameCentral"></h2>
           <div class="artist-description" id="artistDescriptionCentral"></div>
         </div>
         <div class="boton-artista">
@@ -325,12 +324,13 @@
           </a>
         </div>
       </div>
+
       <div class="main-image">
-        <img id="mainImageCentral" src="" alt="Foto principal">
+        <img id="mainImageCentral" src="" alt="Main artist photo">
         <div class="main-image-overlay">
-          <div class="artist-overlay-name" id="name"></div>
-          <div class="artist-overlay-type" id="tipoA"></div>
-          <div class="artist-overlay-location" id="localidad-art"></div>
+          <div class="artist-overlay-name" id="nameCentral"></div>
+          <div class="artist-overlay-type" id="tipoACentral"></div>
+          <div class="artist-overlay-location" id="localidadCentral"></div>
         </div>
       </div>
     </div>
@@ -342,40 +342,35 @@
       <h1 onclick="location.href='#region-oriente'">ORIENTE</h1>
     </div>
 
-    <div class="location" id="artistLocationOriental"></div>
+    <div class="location" id="artistLocationOriente"></div>
     <div class="container-3">
       <div class="left-bar"></div>
-      <div class="carousel" id="carouselOriental">
-        <div class="carousel-image">
-          <div class="carousel-text">
 
-          </div>
-        </div>
-      </div>
-      <div class="segunda-colum">
+      <div class="carousel" id="carouselOriente"></div>
+      <div>
         <div class="info-box">
-          <h1 class="artist-name" id="artistNameOriental"></h1>
-          <h3 class="artist-surname" id="artistSurnameOriental"></h3>
-          <div class="artist-description" id="artistDescriptionOriental"> </div>
-    
+          <h1 class="artist-name" id="artistNameOriente"></h1>
+          <h2 class="artist-surname" id="artistSurnameOriente"></h2>
+          <div class="artist-description" id="artistDescriptionOriente"></div>
         </div>
         <div class="boton-artista">
-          <a href="/components/detalleArtist.html">
+          <a href="/components/detalleArtist.html?id=${artista.id}">
             <button class="custom-button">Más del artista</button>
           </a>
         </div>
       </div>
 
       <div class="main-image">
-        <img id="mainImageOriental" src="" alt="Foto principal">
+        <img id="mainImageOriente" src="" alt="Main artist photo">
         <div class="main-image-overlay">
-          <div class="artist-overlay-name" id="name"></div>
-          <div class="artist-overlay-type" id="tipoA"></div>
-          <div class="artist-overlay-location" id="localidad-art"></div>
+          <div class="artist-overlay-name" id="nameOriente"></div>
+          <div class="artist-overlay-type" id="tipoAOriente"></div>
+          <div class="artist-overlay-location" id="localidadOriente"></div>
         </div>
       </div>
     </div>
   </div>
+
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -400,14 +395,88 @@
     });
   }
 
-  // Definir regiones y departamentos una sola vez
-  const departamentosOccidente = ["La Paz", "Potosi", "Oruro"];
-  const departamentosOriente = ["Santa Cruz", "Beni", "Pando"];
+  // Define all regions to display the same artists
+  const regiones = {
+    Occidente: {
+      carousel: document.getElementById("carouselOccidental"),
+      mainImage: document.getElementById("mainImageOccidental"),
+      artistName: document.getElementById("artistNameOccidental"),
+      artistSurname: document.getElementById("artistSurnameOccidental"),
+      artistLocation: document.getElementById("artistLocationOccidental"),
+      artistDescription: document.getElementById("artistDescriptionOccidental"),
+      mainImageContainer: document.querySelector("#artistas-occidente .main-image"),
+      mainImageOverlay: document.querySelector("#artistas-occidente .main-image-overlay"),
+      botonArtista: document.querySelector("#artistas-occidente .boton-artista a"),
+      nameOverlay: document.getElementById("nameOccidental"),
+      typeOverlay: document.getElementById("tipoAOccidental"),
+      locationOverlay: document.getElementById("localidadOccidental")
+    },
+    Central: {
+      carousel: document.getElementById("carouselCentral"),
+      mainImage: document.getElementById("mainImageCentral"),
+      artistName: document.getElementById("artistNameCentral"),
+      artistSurname: document.getElementById("artistSurnameCentral"),
+      artistLocation: document.getElementById("artistLocationCentral"),
+      artistDescription: document.getElementById("artistDescriptionCentral"),
+      mainImageContainer: document.querySelector("#artistas-central .main-image"),
+      mainImageOverlay: document.querySelector("#artistas-central .main-image-overlay"),
+      botonArtista: document.querySelector("#artistas-central .boton-artista a"),
+      nameOverlay: document.getElementById("nameCentral"),
+      typeOverlay: document.getElementById("tipoACentral"),
+      locationOverlay: document.getElementById("localidadCentral")
+    },
+    Oriente: {
+      carousel: document.getElementById("carouselOriente"),
+      mainImage: document.getElementById("mainImageOriente"),
+      artistName: document.getElementById("artistNameOriente"),
+      artistSurname: document.getElementById("artistSurnameOriente"),
+      artistLocation: document.getElementById("artistLocationOriente"),
+      artistDescription: document.getElementById("artistDescriptionOriente"),
+      mainImageContainer: document.querySelector("#artistas-oriente .main-image"),
+      mainImageOverlay: document.querySelector("#artistas-oriente .main-image-overlay"),
+      botonArtista: document.querySelector("#artistas-oriente .boton-artista a"),
+      nameOverlay: document.getElementById("nameOriente"),
+      typeOverlay: document.getElementById("tipoAOriente"),
+      locationOverlay: document.getElementById("localidadOriente")
+    }
+  };
 
-  function getRegion(location) {
-    if (departamentosOccidente.includes(location)) return "Occidental";
-    if (departamentosOriente.includes(location)) return "Oriental";
-    return "Central";
+  function actualizarArtista(artista, region) {
+    if (!artista.imags || artista.imags.length < 2) {
+      console.error("El artista no tiene suficientes imágenes:", artista);
+      return;
+    }
+
+    region.mainImage.src = artista.imags[1];
+    region.artistName.textContent = artista.name;
+    region.artistSurname.textContent = artista.surname;
+    region.artistLocation.textContent = artista.location;
+    region.artistDescription.innerHTML = artista.descripcion;
+
+    // Update overlay elements
+    if (region.nameOverlay) region.nameOverlay.textContent = (artista.name + " " + artista.surname).toUpperCase();
+    if (region.typeOverlay) region.typeOverlay.textContent = artista.type || "Artista";
+    if (region.locationOverlay) region.locationOverlay.textContent = artista.location;
+
+    region.currentArtistId = artista.id;
+
+    if (region.mainImage) {
+      region.mainImage.style.cursor = "pointer";
+      region.mainImage.onclick = function () {
+        window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+      };
+    }
+
+    if (region.mainImageContainer) {
+      region.mainImageContainer.style.cursor = "pointer";
+      region.mainImageContainer.onclick = function () {
+        window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+      };
+    }
+
+    if (region.botonArtista) {
+      region.botonArtista.href = `/components/detalleArtist.html?id=${artista.id}`;
+    }
   }
 
   fetch("../../artist.json")
@@ -418,146 +487,71 @@
         return;
       }
 
-      const regiones = {
-        Occidental: {
-          carousel: document.getElementById("carouselOccidental"),
-          mainImage: document.getElementById("mainImageOccidental"),
-          artistName: document.getElementById("artistNameOccidental"),
-          artistSurname: document.getElementById("artistSurnameOccidental"),
-          artistLocation: document.getElementById("artistLocationOccidental"),
-          artistDescription: document.getElementById("artistDescriptionOccidental"),
-          mainImageContainer: document.querySelector("#artistas-occidente .main-image"),
-          mainImageOverlay: document.querySelector("#artistas-occidente .main-image-overlay"),
-          botonArtista: document.querySelector("#artistas-occidente .boton-artista a")
-        },
-        Central: {
-          carousel: document.getElementById("carouselCentral"),
-          mainImage: document.getElementById("mainImageCentral"),
-          artistName: document.getElementById("artistNameCentral"),
-          artistSurname: document.getElementById("artistSurnameCentral"),
-          artistLocation: document.getElementById("artistLocationCentral"),
-          artistDescription: document.getElementById("artistDescriptionCentral"),
-          mainImageContainer: document.querySelector("#artistas-central .main-image"),
-          mainImageOverlay: document.querySelector("#artistas-central .main-image-overlay"),
-          botonArtista: document.querySelector("#artistas-central .boton-artista a")
-        },
-        Oriental: {
-          carousel: document.getElementById("carouselOriental"),
-          mainImage: document.getElementById("mainImageOriental"),
-          artistName: document.getElementById("artistNameOriental"),
-          artistSurname: document.getElementById("artistSurnameOriental"),
-          artistLocation: document.getElementById("artistLocationOriental"),
-          artistDescription: document.getElementById("artistDescriptionOriental"),
-          mainImageContainer: document.querySelector("#artistas-oriente .main-image"),
-          mainImageOverlay: document.querySelector("#artistas-oriente .main-image-overlay"),
-          botonArtista: document.querySelector("#artistas-oriente .boton-artista a")
-        }
-      };
-
-      function actualizarArtista(artista, region) {
-        if (!artista.imags || artista.imags.length < 2) {
-          console.error("El artista no tiene suficientes imágenes:", artista);
-          return;
-        }
-
-        region.mainImage.src = artista.imags[1];
-        region.artistName.textContent = artista.name;
-        region.artistSurname.textContent = artista.surname;
-        region.artistLocation.textContent = artista.location;
-        region.artistDescription.innerHTML = artista.descripcion;
-
-        if (region.mainImageOverlay) {
-          const nameElement = region.mainImageOverlay.querySelector(".artist-overlay-name");
-          const typeElement = region.mainImageOverlay.querySelector(".artist-overlay-type");
-          const locationElement = region.mainImageOverlay.querySelector(".artist-overlay-location");
-          
-          if (nameElement) nameElement.textContent = (artista.name + " " + artista.surname).toUpperCase();
-          if (typeElement) typeElement.textContent = artista.type || "Artista";
-          if (locationElement) locationElement.textContent = artista.location;
-        }
-
-        region.currentArtistId = artista.id;
-
-        if (region.mainImage) {
-          region.mainImage.style.cursor = "pointer";
-          region.mainImage.onclick = function() {
-            window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
-          };
-        }
-
-        if (region.mainImageContainer) {
-          region.mainImageContainer.style.cursor = "pointer";
-          region.mainImageContainer.onclick = function() {
-            window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
-          };
-        }
-
-        if (region.botonArtista) {
-          region.botonArtista.href = `/components/detalleArtist.html?id=${artista.id}`;
-        }
-      }
-
+      // Clear all carousels
       for (const key in regiones) {
         if (regiones[key].carousel) {
           regiones[key].carousel.innerHTML = '';
         }
       }
 
+      // Add all artists to all three carousels
       artistas.forEach(artista => {
-        const regionKey = getRegion(artista.location);
-        const region = regiones[regionKey];
-        
-        if (!region || !artista.imags || artista.imags.length < 2) return;
+        if (!artista.imags || artista.imags.length < 2) return;
 
-        const container = document.createElement("div");
-        container.className = "carousel-container";
-        
-        const img = document.createElement("img");
-        img.src = artista.imags[1];
-        img.alt = `Imagen de ${artista.name}`;
-        img.className = "carousel-image";
-        
-        const overlay = document.createElement("div");
-        overlay.className = "carousel-overlay";
-        
-        const nameEl = document.createElement("div");
-        nameEl.className = "artist-name-overlay";
-        nameEl.textContent = `${artista.name} ${artista.surname}`;
-        nameEl.style.fontWeight = "bold";
-        nameEl.style.fontSize = "16px";
-        nameEl.style.marginBottom = "5px";
-        
-        const typeEl = document.createElement("div");
-        typeEl.className = "artist-type-overlay";
-        typeEl.textContent = artista.type || "Artista";
-        
-        const locationEl = document.createElement("div");
-        locationEl.className = "artist-location-overlay";
-        locationEl.textContent = artista.location;
-        
-        overlay.appendChild(nameEl);
-        overlay.appendChild(typeEl);
-        overlay.appendChild(locationEl);
-        
-        container.appendChild(img);
-        container.appendChild(overlay);
-        
-        container.addEventListener("click", () => {
-          actualizarArtista(artista, region);
-        });
+        // Add this artist to all three regions
+        for (const regionKey in regiones) {
+          const region = regiones[regionKey];
+          if (!region.carousel) continue;
 
-        container.addEventListener("dblclick", () => {
-          window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
-        });
-        
-        region.carousel.appendChild(container);
+          const container = document.createElement("div");
+          container.className = "carousel-container";
+
+          const img = document.createElement("img");
+          img.src = artista.imags[1];
+          img.alt = `Imagen de ${artista.name}`;
+          img.className = "carousel-image";
+
+          const overlay = document.createElement("div");
+          overlay.className = "carousel-overlay";
+
+          const nameEl = document.createElement("div");
+          nameEl.className = "artist-name-overlay";
+          nameEl.textContent = `${artista.name} ${artista.surname}`;
+          nameEl.style.fontWeight = "bold";
+          nameEl.style.fontSize = "16px";
+          nameEl.style.marginBottom = "5px";
+
+          const typeEl = document.createElement("div");
+          typeEl.className = "artist-type-overlay";
+          typeEl.textContent = artista.type || "Artista";
+
+          const locationEl = document.createElement("div");
+          locationEl.className = "artist-location-overlay";
+          locationEl.textContent = artista.location;
+
+          overlay.appendChild(nameEl);
+          overlay.appendChild(typeEl);
+          overlay.appendChild(locationEl);
+
+          container.appendChild(img);
+          container.appendChild(overlay);
+
+          container.addEventListener("click", () => {
+            actualizarArtista(artista, region);
+          });
+
+          container.addEventListener("dblclick", () => {
+            window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+          });
+
+          region.carousel.appendChild(container);
+        }
       });
 
-      for (const key in regiones) {
-        const region = regiones[key];
-        const artistasRegion = artistas.filter(a => getRegion(a.location) === key);
-        if (artistasRegion.length > 0) {
-          actualizarArtista(artistasRegion[0], region);
+      // Initialize each region with the first artist
+      if (artistas.length > 0) {
+        for (const key in regiones) {
+          actualizarArtista(artistas[0], regiones[key]);
         }
       }
     })

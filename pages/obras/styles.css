@@ -139,6 +139,9 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out;
+    font-family: "Gelasio", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
 }
 
 .imagen-cuadro {

@@ -106,38 +106,39 @@
     </div>
 
     <div class="section-5">
-        <h1 class="title">OTROS TRABAJOS DE LA PINTORA</h1>
-        <div class="obras-similares" id="obras-similares"></div>
+            <h1 class="titulo">OTROS TRABAJOS DE LA PINTORA</h1>
+            <div class="obras-similares" id="obras-similares"></div>
     </div>
 
-    <div class="section-2">
-        <div class="artist-info-container">
-            <div class="artist-info">
-                <div class="artist-description-box">
-                    <div class="artist-name-box">
-                        <p id="artists-name">Nombre del Autor</p>
-                        <p id="artists-surname">Apellido del Autor</p>
+    <div class="section-art">
+        <div class="section-2">
+            <div class="artist-info-container">
+                <div class="artist-info">
+                    <div class="artist-description-box">
+                        <div class="artist-name-box">
+                            <p id="artists-name" class="nombre">Nombre del Autor</p>
+                            <p id="artists-surname" class="apellido">Apellido del Autor</p>
+                        </div>
+                        <p id="artist-type">Tipo de Autor</p>
+                        <p id="autor-descripcion">Descripción del autor...</p>
                     </div>
-                    <p id="artist-type">Tipo de Autor</p>
-                    <p id="autor-descripcion">Descripción del autor...</p>
+                    <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                        <button class="custom-button">Contacta con el artista</button>
+                    </a>
                 </div>
-                <a href="../contacto/index.html#contacto-ensenar-trabajo">
-                    <button class="custom-button">Contacta con el artista</button>
-                </a>
-            </div>
-            <div class="author-image">
-                <img id="autor-imagen" src="ruta-a-imagen.jpg" alt="Imagen del autor">
+                <div class="author-image">
+                    <img id="autor-imagen" src="ruta-a-imagen.jpg" alt="Imagen del autor">
+                </div>
             </div>
         </div>
     </div>
 
+    
     <img id="preview-img"
         style="display: none; position: fixed; top: 10px; right: 10px; width: 150px; border: 2px solid #ccc;">
 
-
-
     <div class="section-3">
-        <h1>DESCUBRA OTRAS OBRAS</h1>
+        <h1 class="titulo">DESCUBRA OTRAS OBRAS</h1>
         <div class="otros-autores" id="otros-autores"></div>
     </div>
 
@@ -268,26 +269,35 @@
                 const obrasDeLaAutora = obras.filter(o => o.id_autor === obra.id_autor);
                 const obrasMuestra = obrasDeLaAutora.slice(0, 4);
 
+                // SECCIÓN: OTROS TRABAJOS DE LA PINTORA
                 const contenedorObrasSimilares = document.getElementById("obras-similares");
                 contenedorObrasSimilares.innerHTML = "";
 
                 obrasMuestra.forEach(obra => {
                     const divObra = document.createElement("div");
                     divObra.className = "obra-similar";
+                    divObra.setAttribute("data-id", obra.id_img);
                     divObra.innerHTML = `
                 <div class="imagen-container">
-                    <img src="${obra.img[0]}" alt="Obra similar" class="obra-similar-img" data-id="${obra.id_img}">
+                    <img src="${obra.img[0]}" alt="Obra similar" class="obra-similar-img">
                 </div>
-                <p><strong>Título:</strong> ${obra.titulo}</p>
-                <p><strong>Autor:</strong> ${obra.autor}</p>
-                <p><strong>Tamaño:</strong> ${obra.tamano}</p>
-                <p><strong>Estado:</strong> ${obra.estado}</p>
-                <p><strong>Precio:</strong> ${obra.precio} Bs.</p>
+                <div class="text-descript">
+                <p class="titulo-inclinado">"${obra.titulo}"</p>
+                <p><b> ${obra.autor} </b></p>
+                <p> ${obra.tamano}</p>
+                <p> ${obra.estado}</p>
+                <p class"precio"> ${obra.precio} Bs.</p>
+                <div class="plus-button">+</div></div>
             `;
+
+                    divObra.addEventListener('click', function () {
+                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                    });
 
                     contenedorObrasSimilares.appendChild(divObra);
                 });
 
+                // SECCIÓN: DESCUBRA OTRAS OBRAS
                 const otrosAutores = autores.filter(a => a.id !== obra.id_autor);
                 const obrasAleatorias = [];
 
@@ -306,27 +316,27 @@
                 obrasAleatorias.forEach(obra => {
                     const divObra = document.createElement("div");
                     divObra.className = "obra-similar";
+                    divObra.setAttribute("data-id", obra.id_img);
                     divObra.innerHTML = `
                 <div class="imagen-container">
-                    <img src="${obra.img[0]}" alt="Obra de otro autor" class="obra-similar-img" data-id="${obra.id_img}">
+                    <img src="${obra.img[0]}" alt="Obra de otro autor" class="obra-similar-img">
+                    <div class="overlay"><p>Ver más</p></div>
                 </div>
-                <p><strong>Título:</strong> ${obra.titulo}</p>
-                <p><strong>Autor:</strong> ${obra.autor}</p>
-                <p><strong>Tamaño:</strong> ${obra.tamano}</p>
-                <p><strong>Estado:</strong> ${obra.estado}</p>
-                <p><strong>Precio:</strong> ${obra.precio} Bs.</p>
+                <p>"${obra.titulo}"</p>
+                <p>${obra.autor}</p>
+                <p> ${obra.tamano}</p>
+                <p> ${obra.estado}</p>
+                <p class"precio"> ${obra.precio} Bs.</p>
+                <div class="plus-button">+</div>
             `;
+
+                    divObra.addEventListener('click', function () {
+                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                    });
+
                     contenedorOtrosAutores.appendChild(divObra);
                 });
 
-                document.querySelectorAll('.obra-similar-img').forEach(img => {
-                    img.addEventListener('click', function () {
-                        const id = this.getAttribute('data-id');
-                        if (id) {
-                            window.location.href = `detalle.html?id=${id}`;
-                        }
-                    });
-                });
             } catch (error) {
                 console.error("Error al cargar los datos:", error);
             }

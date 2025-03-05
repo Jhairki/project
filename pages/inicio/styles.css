@@ -1,8 +1,15 @@
-
+.backgroundcolor{
+  background-color:#43444d;
+}
 .carousel {
   background-color: #646577;
 }
 
+.carousel-item.active img.firstimage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 .carousel-item {
   height: 500px; /* Altura del carrusel */
@@ -69,6 +76,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  flex-direction: row-reverse;
 }
 
 .image-section2 {
@@ -118,6 +126,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     color: white;
+    padding-top: 30px;
 }
 
 /*seccion del grid*/
@@ -429,11 +438,6 @@ background-color: #43444d;
 
 
 
-
-
-
-
-
 /* Corrección para el primer grid - Sección 3 */
 .section-3 {
   display: flex;
@@ -472,6 +476,7 @@ background-color: #43444d;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
   transition: transform 0.3s ease-in-out;
 }
 
@@ -506,3 +511,389 @@ background-color: #43444d;
   transform: scale(1.1);
 }
 
+
+
+
+
+.section-artistar-fotos{
+  background-color:#43444d;
+}
+
+/* Estilos para el contenedor principal */
+#artistas {
+  display: flex;
+  overflow: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+#artistas::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contenedor de cada artista */
+.artista-container {
+  position: relative;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  padding-left: 15px; 
+}
+
+.artista-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+/* Patrón zigzag - alternar posición vertical */
+.artista-container:nth-child(odd) {
+  margin-top: 60px;
+}
+
+.artista-container:nth-child(even) {
+  margin-top: -60px;
+}
+
+.imagen-container {
+  width: 200px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Estilos para las imágenes */
+.imagen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%); 
+  transition: transform 0.6s ease;
+}
+
+
+.imagen-container:hover img {
+  transform: scale(1.2);
+}
+
+/* Overlay oscuro con información */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Velo negro semitransparente */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Mostrar overlay al pasar el cursor */
+.imagen-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Contenedor de texto dentro del overlay */
+.overlay div {
+  color: white;
+  font-family: 'Gelasio', serif;
+  text-align: center; 
+  text-transform: uppercase; 
+}
+
+/* Estilos para el nombre del artista */
+.overlay h5 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Estilos para los detalles del artista */
+.overlay p {
+  margin: 5px 0 0 0;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.artista-container:nth-child(odd) .linea-vertical {
+  display: block;
+}
+
+
+.artistas-section{
+  width: 60%;
+  color: white;
+  padding: 50px;
+}
+
+.artistas {
+  background-color: #5c5c6d;
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;  /* Centra verticalmente */
+  width: 100%;
+  margin: 0;
+}
+
+
+.custom-button{
+ margin-top: 50px;
+}
+
+@media (max-width: 768px) { 
+  .container2 {
+    flex-direction: column; 
+  }
+
+  .image-section2 {
+    flex: 0 0 auto; 
+    width: 100%; 
+    height: auto; 
+  }
+
+  .image-section2 img {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .content-section2 {
+    padding: 40px 20px;
+  }
+
+  .section-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+  }
+
+  .grid-container {
+    order: 1; 
+    width: 100%;
+  }
+
+  .container {
+    order: 2; 
+    padding: 20px; 
+  }
+
+  .grid-item img {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .thumbnails {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    flex-direction: column; 
+  }
+
+  .left-column {
+    order: 1; 
+  }
+
+  .right-column {
+    order: 2; 
+  }
+
+  .text-box {
+    flex-direction: column; 
+  }
+
+  .section-artistar-fotos .container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    scroll: false;
+  }
+
+  .container {
+    flex-direction: column; 
+    padding: 0; 
+    width: 100vw; 
+    height: auto; 
+    gap: 10px; 
+  }
+  
+}
+
+@media (max-width: 350px) { 
+  .container2 {
+    flex-direction: column; 
+    padding: 10px;
+  }
+
+  .image-section2 {
+    flex:1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .image-section2 img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+  }
+
+  .content-section2 {
+    padding: 20px 15px; 
+    text-align: center;
+  }
+
+  .content-section2 h1 {
+    font-size: 1.1rem; 
+    margin-bottom: 8px;
+  }
+
+  .content-section2 p {
+    font-size: 0.85rem;
+  }
+
+  .section-3 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .grid-container {
+    order: 1;
+    width: 100%;
+  }
+
+  .container {
+    order: 2;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail {
+    width: 48%; 
+    height: auto;
+    max-width: 100px; 
+  }
+
+  .left-column,
+  .right-column {
+    order: unset; 
+  }
+
+  .text-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .section-artistar-fotos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    gap: 8px; 
+  }
+
+  .section-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .image-section2 {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .image-section2 img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; 
+  }
+
+  .content-section2 {
+    padding: 20px 15px; 
+    text-align: center;
+  }
+
+  .content-section2 h1 {
+    font-size: 1.2rem; 
+    margin-bottom: 10px;
+  }
+
+  .content-section2 p {
+    font-size: 0.9rem; 
+  }
+
+  .border-container {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .description {
+    font-size: 12px; 
+    text-align: center;
+    padding-top: 70px;
+    margin: 0px;
+  }
+
+  .artistas-section {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+  }
+
+  .artistas{
+    width: 100;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .grid-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  columna-descrip{
+    width: 100;
+    padding: 10px;
+  }
+  .padding-class{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+}

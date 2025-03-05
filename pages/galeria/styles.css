@@ -23,6 +23,8 @@
 
 .text-box{
     height: 100px;
+    flex-direction: row;
+    gap: 20px
 }
 
 
@@ -272,7 +274,7 @@
 
 .left-column {
     padding: 20px;
-    font-size: 19px;
+    font-size: 0.45em;
     color: black;
     background-color: white;
     height: 100%;
@@ -668,9 +670,3 @@
     display: block;
     opacity: 1;
 } 
-
-
-
-.border-top::before {
-    background-color:#21252e;
-  }
