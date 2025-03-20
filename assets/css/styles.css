@@ -50,7 +50,7 @@ strong, .bold {
 
 .text-overlay h1 {
   position: relative;
-  font-size: 80px;
+  
   margin: 0;
   display: inline-block;
 }
@@ -84,19 +84,15 @@ strong, .bold {
 }
 
 
-
-
-
-
-
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   padding: 90px 0px;
+  height: auto;
 }
 
 .text-column {
@@ -105,15 +101,24 @@ strong, .bold {
   padding-right: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  height: auto;
 }
+
+
+
 
 .border-container {
   border: 2px solid #fa7582;
   position: relative;
-  height: auto;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .border-top {
@@ -171,14 +176,24 @@ strong, .bold {
 
 .text-box {
   color: #c62828;
-  padding: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.6;
+  word-wrap: break-word;
 }
 
-
-
-
-
-
+.description {
+  font-family: "Gelasio", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: white;
+  padding-top: 30px;
+}
 
 /*section-1 banner*/
 .section-1 {
@@ -195,3 +210,71 @@ strong, .bold {
   opacity: 0.8;
 }
 
+@media (max-width: 350px) {
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+  }
+
+  .textpositiongal {
+    position: absolute;
+    bottom: 0px;
+    font-size: 10px;
+    right: 10px;
+    text-align: right;
+  }
+
+  .textpositionobras {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    text-align: right;
+  }
+
+  .textpositionartistas {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    font-size: 20px;
+  }
+
+  .text-box {
+    color: #c62828;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+  }
+
+  .border-container {
+    border: 2px solid #fa7582;
+    position: relative;
+    display: flex;
+    padding: 8px;
+    width: 100%;
+    height: auto;
+  }
+
+  .description {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 70px;
+    margin: 0px;
+  }
+
+  .custom-button {
+    margin-top: 10px;
+  }
+
+  .text-column {
+    width: 100%;
+  }
+
+  .primario {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+  }
+
+}

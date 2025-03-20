@@ -126,3 +126,31 @@
         order: 1; /* Mueve el menú hamburguesa después del buscador */
     }
 }
+
+@media (max-width: 350px) {
+    .custom-navbar {
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        max-height: 50px; 
+    }
+
+    .search input {
+        width: 140px; 
+        padding: 8px;
+    }
+
+    .hamburger div {
+        width: 25px; 
+    }
+
+    .menu {
+        top: 55px; 
+    }
+
+    .nav-item {
+        font-size: 14px; 
+        padding: 10px;
+    }
+}
