@@ -1,14 +1,14 @@
-.backgroundcolor{
-  background-color:#43444d;
+.backgroundcolor {
+  background-color: #43444d;
 }
 .carousel {
   background-color: #646577;
 }
 
 .carousel-item.active img.firstimage {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .carousel-item {
@@ -43,8 +43,8 @@
 }
 .carousel-caption {
   position: absolute;
-  top: 50%; 
-  left: 5%; 
+  top: 50%;
+  left: 5%;
   transform: translate(-50%, -50%); /* Ajuste perfecto */
   color: white;
   text-align: center;
@@ -59,11 +59,7 @@
   margin-top: 5px; /* Espaciado entre título y descripción */
 }
 
-
-
-
 /*=======*/
-
 
 .section-2 {
   display: flex;
@@ -80,7 +76,7 @@
 }
 
 .image-section2 {
-  flex: 0 0 30%; 
+  flex: 0 0 30%;
   position: relative;
   height: 100%;
   display: flex;
@@ -95,25 +91,22 @@
 }
 
 .content-section2 {
-  flex: 1; 
+  flex: 1;
   background: linear-gradient(to bottom, #646577, #1a1922);
   display: flex;
   flex-direction: column;
   padding: 100px 40px;
   padding-right: 10%;
   z-index: 2;
-  text-align: left; 
-  justify-content: center; 
+  text-align: left;
+  justify-content: center;
 }
 
 .content-section2 h1,
 .content-section2 p {
-  color: white; 
+  color: white;
 }
 
-.border-container {
-  width: 100%;
-}
 
 .border-top {
   display: flex;
@@ -121,16 +114,9 @@
 }
 
 
-.description{
-  font-family: "Gelasio", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    color: white;
-    padding-top: 30px;
-}
+
 
 /*seccion del grid*/
-
 
 .section-3 {
   display: flex;
@@ -212,7 +198,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(185,69,98, 0.7); /* Velo rojo semi-transparente */
+  background-color: rgba(185, 69, 98, 0.7); /* Velo rojo semi-transparente */
   color: white;
   display: flex;
   justify-content: center;
@@ -222,9 +208,15 @@
   transition: opacity 0.3s ease;
   z-index: 2;
   font-family: "Gelasio", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: italic;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.padding-class {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
 }
 
 .grid-item a:hover::before {
@@ -235,15 +227,16 @@
   transform: scale(1.1);
 }
 
-
 .container {
   display: flex;
   flex-direction: row;
   gap: 6px;
-  padding: 10px;
+  padding-top: 30px;
   max-width: 800px;
-  height: 800px; 
-  align-items: center; 
+  height: auto;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .left-column {
@@ -265,7 +258,7 @@
   justify-content: center; /* Centra verticalmente el contenido */
   align-items: center; /* Centra horizontalmente el contenido */
   padding: 0px;
-  height: 80%; 
+  height: 80%;
 }
 
 .diamond-container {
@@ -276,7 +269,10 @@
   display: flex; /* Usar flex para centrar */
   justify-content: center;
   align-items: center;
-  transform: translate(-60%, 30px); /* Ajusta los valores según sea necesario para mover más a la izquierda y hacia abajo */
+  transform: translate(
+    -60%,
+    30px
+  ); /* Ajusta los valores según sea necesario para mover más a la izquierda y hacia abajo */
 }
 
 .diamond {
@@ -294,34 +290,46 @@
   padding-bottom: 130px;
 }
 
-.thumbnails {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
 .thumbnails img {
-  width: 60px; /* Ajusta el tamaño de las miniaturas */
-  height: 60px; /* Ajusta el tamaño de las miniaturas */
+  width: 100%; /* Ocupará el ancho disponible */
+  max-width: 150px; /* Ajusta este valor según tu diseño */
+  height: 100px; /* Mantiene la altura definida */
+  object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
+  padding: 5px;
 }
 
 /* Estilos para las miniaturas */
 .thumbnails {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas en desktop */
   gap: 15px;
+  width: 100%;
+}
+
+.colum-img {
+  display: flex;
+  flex-direction: column; /* Asegura que las imágenes estén en columna */
+  align-items: center;
+  gap: 10px;
 }
 
 .thumbnail {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.3s ease;
   position: relative;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas en desktop */
+  gap: 15px;
+  padding: auto;
 }
 
 .thumbnail.active {
@@ -330,7 +338,7 @@
 
 /* Indicador blanco debajo de la miniatura seleccionada */
 .thumbnail.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -340,14 +348,15 @@
   background-color: white;
 }
 
-
 /* Estilos para la información de la obra */
 .columna-descrip {
   transition: opacity 0.3s ease;
+  padding: 10px;
+  align-items: center;
 }
 
 .columna-descrip h4 {
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 0.5rem;
   font-family: "Gelasio", serif;
   font-optical-sizing: auto;
@@ -357,7 +366,7 @@
 
 .columna-descrip h3 {
   font-size: 15px;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   font-family: "Gelasio", serif;
   font-optical-sizing: auto;
   font-style: italic;
@@ -376,14 +385,11 @@
   font-size: 10px;
   font-family: "Gelasio", serif;
   font-optical-sizing: auto;
-  
+
   font-style: italic;
   font-weight: 400;
   color: white;
 }
-
-
-
 
 .columna-descrip {
   flex: 1; /* Toma un ancho proporcional en la fila */
@@ -400,42 +406,24 @@
 }
 
 .thumbnails {
-  display: grid; /* Usamos grid para organizar las imágenes */
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas en desktop */
   gap: 10px; /* Espacio entre las imágenes */
+}
+
+.colum-img-1, .colum-img-2 {
+  display: grid;
+  grid-template-rows: 1fr; /* Dos filas por columna */
+  gap: 15px;
 }
 
 .thumbnail {
   width: 100%; /* Las imágenes ocupan el 100% del espacio de su celda */
   height: auto; /* Mantiene la proporción de las imágenes */
   cursor: pointer;
-  display: flex; /* Asegura que las imágenes se alineen correctamente */
-  justify-content: center; /* Centra horizontalmente la imagen si es necesario */
-  align-items: center; /* Centra verticalmente la imagen si es necesario */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  transition: all 0.3s ease;
 }
-
-
-
-
-.section-final{
-  white: 100%;
-background-color: #43444d;
-}
-
-
-.border-top::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 4px;
-  background-color:#5c5c6d;
-  z-index: 1;
-}
-
-
 
 
 /* Corrección para el primer grid - Sección 3 */
@@ -476,7 +464,7 @@ background-color: #43444d;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+
   transition: transform 0.3s ease-in-out;
 }
 
@@ -488,7 +476,7 @@ background-color: #43444d;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(185,69,98, 0.7);
+  background-color: rgba(185, 69, 98, 0.7);
   color: white;
   display: flex;
   justify-content: center;
@@ -511,19 +499,15 @@ background-color: #43444d;
   transform: scale(1.1);
 }
 
-
-
-
-
-.section-artistar-fotos{
-  background-color:#43444d;
+.section-artistar-fotos {
+  background-color: #43444d;
 }
 
 /* Estilos para el contenedor principal */
 #artistas {
   display: flex;
   overflow: auto;
-  scrollbar-width: none; 
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -536,7 +520,7 @@ background-color: #43444d;
   position: relative;
   margin: 0 10px;
   transition: transform 0.3s ease;
-  padding-left: 15px; 
+  padding-left: 15px;
 }
 
 .artista-container::before {
@@ -572,10 +556,9 @@ background-color: #43444d;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%); 
+  filter: grayscale(100%);
   transition: transform 0.6s ease;
 }
-
 
 .imagen-container:hover img {
   transform: scale(1.2);
@@ -606,9 +589,9 @@ background-color: #43444d;
 /* Contenedor de texto dentro del overlay */
 .overlay div {
   color: white;
-  font-family: 'Gelasio', serif;
-  text-align: center; 
-  text-transform: uppercase; 
+  font-family: "Gelasio", serif;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* Estilos para el nombre del artista */
@@ -630,8 +613,7 @@ background-color: #43444d;
   display: block;
 }
 
-
-.artistas-section{
+.artistas-section {
   width: 60%;
   color: white;
   padding: 50px;
@@ -640,122 +622,23 @@ background-color: #43444d;
 .artistas {
   background-color: #5c5c6d;
   display: flex;
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;  /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
   width: 100%;
   margin: 0;
 }
 
 
-.custom-button{
- margin-top: 50px;
-}
-
-@media (max-width: 768px) { 
-  .container2 {
-    flex-direction: column; 
-  }
-
-  .image-section2 {
-    flex: 0 0 auto; 
-    width: 100%; 
-    height: auto; 
-  }
-
-  .image-section2 img {
-    width: 100%; 
-    height: auto; 
-  }
-
+@media (max-width: 350px) {
   .content-section2 {
-    padding: 40px 20px;
-  }
-
-  .section-3 {
-    display: flex;
-    flex-direction: column;
-    padding: 10px; 
-  }
-
-  .grid-container {
-    order: 1; 
-    width: 100%;
-  }
-
-  .container {
-    order: 2; 
-    padding: 20px; 
-  }
-
-  .grid-item img {
-    width: 100%; 
-    height: auto; 
-  }
-
-  .thumbnails {
-    grid-template-columns: 1fr;
-  }
-
-  .container {
-    flex-direction: column; 
-  }
-
-  .left-column {
-    order: 1; 
-  }
-
-  .right-column {
-    order: 2; 
-  }
-
-  .text-box {
-    flex-direction: column; 
-  }
-
-  .section-artistar-fotos .container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
-    scroll: false;
-  }
-
-  .container {
-    flex-direction: column; 
-    padding: 0; 
-    width: 100vw; 
-    height: auto; 
-    gap: 10px; 
-  }
-  
-}
-
-@media (max-width: 350px) { 
-  .container2 {
-    flex-direction: column; 
-    padding: 10px;
-  }
-
-  .image-section2 {
-    flex:1;
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
-  }
-
-  .image-section2 img {
-    width: 100%;
-    height: auto;
-    max-height: 200px; 
-  }
-
-  .content-section2 {
-    padding: 20px 15px; 
+    padding: 20px 15px;
     text-align: center;
   }
 
   .content-section2 h1 {
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
     margin-bottom: 8px;
   }
 
@@ -774,11 +657,6 @@ background-color: #43444d;
     width: 100%;
   }
 
-  .container {
-    order: 2;
-    padding: 15px;
-    margin-top: 30px;
-  }
 
   .grid-item img {
     width: 100%;
@@ -786,21 +664,17 @@ background-color: #43444d;
   }
 
   .thumbnail {
-    width: 48%; 
+    width: 48%;
     height: auto;
-    max-width: 100px; 
+    max-width: 100px;
   }
 
   .left-column,
   .right-column {
-    order: unset; 
+    order: unset;
+    width: 100%;
   }
 
-  .text-box {
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-  }
 
   .section-artistar-fotos .container {
     display: flex;
@@ -814,7 +688,7 @@ background-color: #43444d;
     padding: 0;
     width: 100%;
     height: auto;
-    gap: 8px; 
+    gap: 8px;
   }
 
   .section-2 {
@@ -823,9 +697,9 @@ background-color: #43444d;
   }
 
   .container2 {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    padding: 10px;
+    padding-top: 20px;
   }
 
   .image-section2 {
@@ -838,46 +712,32 @@ background-color: #43444d;
   .image-section2 img {
     width: 100%;
     height: auto;
-    max-height: 250px; 
+    max-height: 350px;
   }
 
   .content-section2 {
-    padding: 20px 15px; 
+    padding: 20px 15px;
     text-align: center;
   }
 
   .content-section2 h1 {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     margin-bottom: 10px;
   }
 
   .content-section2 p {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
 
-  .border-container {
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-  }
-
-  .description {
-    font-size: 12px; 
-    text-align: center;
-    padding-top: 70px;
-    margin: 0px;
-  }
 
   .artistas-section {
     padding: 10px;
-    margin: 10px;
     width: 100%;
   }
 
-  .artistas{
+  .artistas {
     width: 100;
     padding: 10px;
-    margin: 10px;
   }
 
   .grid-item img {
@@ -886,14 +746,43 @@ background-color: #43444d;
     height: 100%;
   }
 
-  columna-descrip{
+  .columna-descrip {
     width: 100;
     padding: 10px;
   }
-  .padding-class{
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
+  .padding-class {
+    align-items: center;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0px;
   }
 
+  .swiper-container {
+    display: block;
+  }
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .thumbnails {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 15px; /* Aumenta el espacio entre las imágenes en mobile */
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  .colum-img-1, .colum-img-2 {
+    grid-template-columns: 1fr; /* Una imagen por fila */
+    grid-template-rows: auto;
+  }
+
+  .responsive-grid {
+    grid-template-columns: 1fr; /* 1 columna */
+    grid-template-rows: auto;
+  }
+
+  .columna-img4 {
+    margin: 0px;
+  }
 }
