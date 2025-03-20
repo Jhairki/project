@@ -524,7 +524,7 @@
 
     document.addEventListener("DOMContentLoaded", async function () {
       try {
-        const response = await fetch("artist.json"); // Ruta al archivo JSON
+        const response = await fetch("../../artist.json"); // Ruta al archivo JSON
         const artistas = await response.json();
 
         const contenedorArtistas = document.getElementById("artistas");
@@ -535,7 +535,7 @@
 
           divArtista.innerHTML = `
                 <div class="linea-vertical"></div>
-                <div class="imagen-container" onclick="window.location.href='components/detalleArtist.html?id=${artista.id}'">
+                <div class="imagen-container" onclick="window.location.href='../../components/detalleArtist.html?id=${artista.id}'">
                     <img src="${artista.imags[1]}" alt="${artista.name} ${artista.surname}">
                     <div class="overlay">
                         <div>
