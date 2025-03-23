@@ -9,11 +9,14 @@
     justify-content: center; /* Centrar horizontalmente */
     flex-wrap: wrap; /* Permitir que se ajuste en pantallas pequeñas */
     gap: 20px;
+    height: 100%;
     
 }
 
 .section-1{
     background-color: #42454e;
+    width: 100%;
+    height: 100%;
 }
 
 .section-induccion .col-md-6 {
@@ -45,8 +48,9 @@
 
 /* Sección de título */
 .titulo-section {
-    margin: 20px 0;
+    padding: 20px 0;
     text-align: center;
+    background-color: #42454e;
 }
 
 /* Galería de obras */
@@ -167,5 +171,12 @@
 @media (max-width: 600px) {
     .obra-similar {
         width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .section-induccion {
+        width: 100%;
+        flex-direction: column;
     }
 }

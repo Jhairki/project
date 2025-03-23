@@ -673,3 +673,10 @@ span {
       height: 250px; /* Altura fija para la imagen en móviles */
   }
 }
+
+@media (max-width: 480px) {
+  .foto-artist-3 {
+    width: 100%;
+    height: auto;
+  }
+}
