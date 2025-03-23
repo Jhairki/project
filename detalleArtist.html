@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Artista</title>
+    <link rel="stylesheet" href="/assets/css/detalleArtist.css">
+
+
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="section-1">
+        <img id="foto-artist-1" src="" alt="Foto principal">
+        <div class="text-overlay">
+            <h1>
+                <span class="primario nombre-art"></span>
+                <span class="secundario nombre-art"></span>
+            </h1>
+            <h3 class="italic apellido-art"></h3>
+        </div>
+    </div>
+
+    <div class="secciones">
+        <div class="titulo-tipo" id="type"></div>
+        <div class="container">
+            <div class="text-column">
+                <div class="info-box">
+                    <div class="artist-name nombre-art"></div>
+                    <div class="artist-surname apellido-art"></div>
+                    <div class="artist-description" id="artistDescription"></div>
+                </div>
+                <a href="#">
+                    <button class="custom-button">Contacta con el artista</button>
+                </a>
+            </div>
+            <div class="image-column">
+                <div class="image-container">
+                    <img id="foto-artist-2" src="" alt="Foto del artista">
+                    <div class="artist-overlay">
+                        <div class="overlay-name nombre-art"></div>
+                        <div class="overlay-surname apellido-art"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="secciones">
+        <div class="container">
+            <div class="image-column2">
+                <img id="foto-artist-3" src="" alt="">
+                <p id="destacado-art"></p>
+            </div>
+            <div class="text-colum2">
+                <h1>Premios/Menciones</h1>
+                <ul id="premios-art"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-5">
+        <h1 class="titulo">OTROS TRABAJOS DE LA PINTORA</h1>
+        <div class="obras-similares" id="obras-similares"></div>
+    </div>
+
+    <div class="section-3">
+        <h1 class="titulo">DESCUBRA OTRAS OBRAS DE LA CATALOGO</h1>
+        <div class="otros-autores" id="otros-autores"></div>
+    </div>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const params = new URLSearchParams(window.location.search);
+            const artistId = params.get("id");
+
+            if (!artistId) {
+                console.error("No se encontró un ID en la URL");
+                return;
+            }
+
+            try {
+                const responseArtists = await fetch("../artist.json");
+                const artists = await responseArtists.json();
+
+                const artist = artists.find(a => a.id == artistId);
+
+                if (!artist) {
+                    console.error("Artista no encontrado");
+                    return;
+                }
+
+                document.querySelectorAll(".nombre-art").forEach(el => el.textContent = artist.name);
+                document.querySelectorAll(".apellido-art").forEach(el => el.textContent = artist.surname);
+
+                const tipoPintor = document.getElementById("type");
+                if (tipoPintor) {
+                    tipoPintor.textContent = artist.type; // Asegúrate de que "type" sea la propiedad correcta en tu JSON
+                }
+
+                const artistDescription = document.getElementById("artistDescription");
+                if (artistDescription) {
+                    artistDescription.textContent = artist.descripcion;
+                }
+
+                const destacadoArt = document.getElementById("destacado-art");
+                if (destacadoArt) {
+                    destacadoArt.textContent = artist.destacado;
+                }
+
+                if (artist.imags && artist.imags.length >= 3) {
+                    const fotoArtist1 = document.getElementById("foto-artist-1");
+                    const fotoArtist2 = document.getElementById("foto-artist-2");
+                    const fotoArtist3 = document.getElementById("foto-artist-3");
+
+                    if (fotoArtist1) fotoArtist1.src = artist.imags[0];
+                    if (fotoArtist2) fotoArtist2.src = artist.imags[1];
+                    if (fotoArtist3) fotoArtist3.src = artist.imags[2];
+                }
+
+                const premiosList = document.getElementById("premios-art");
+                if (premiosList && artist.premios && artist.premios.length > 0) {
+                    artist.premios.forEach(premio => {
+                        let li = document.createElement("li");
+                        li.textContent = premio;
+                        premiosList.appendChild(li);
+                    });
+                }
+
+                const responseObras = await fetch("../obras.json");
+                const obras = await responseObras.json();
+
+                const contenedorObrasSimilares = document.getElementById("obras-similares");
+                if (contenedorObrasSimilares) {
+                    const obrasDeLaAutora = obras.filter(o => o.id_autor === artist.id);
+
+                    contenedorObrasSimilares.innerHTML = "";
+
+                    obrasDeLaAutora.forEach(obra => {
+                        const divObra = document.createElement("div");
+                        divObra.className = "obra-similar";
+                        divObra.setAttribute("data-id", obra.id_img);
+                        divObra.innerHTML = `
+                    <div class="imagen-container">
+                        <img src="${obra.img[0]}" alt="Obra similar" class="obra-similar-img">
+                    </div>
+                    <div class="text-descript">
+                        <p class="titulo-inclinado">"${obra.titulo}"</p>
+                        <p><b>${obra.autor}</b></p>
+                        <p>${obra.tamano}</p>
+                        <p>${obra.estado}</p>
+                        <p class="precio">${obra.precio} Bs.</p>
+                        <div class="plus-button">+</div>
+                    </div>
+                `;
+
+                        divObra.addEventListener('click', function () {
+                            window.location.href = `detalle.html?id=${obra.id_img}`;
+                        });
+
+                        contenedorObrasSimilares.appendChild(divObra);
+                    });
+                }
+
+                const contenedorOtrosAutores = document.getElementById("otros-autores");
+                if (contenedorOtrosAutores) {
+                    const obrasDeOtrosArtistas = obras.filter(o => o.id_autor !== artist.id);
+                    const obrasAleatorias = [];
+
+                    if (obrasDeOtrosArtistas.length > 0) {
+                        const totalObrasAMostrar = 4;
+
+                        if (obrasDeOtrosArtistas.length >= totalObrasAMostrar) {
+                            const obrasCopia = [...obrasDeOtrosArtistas];
+
+                            for (let i = 0; i < totalObrasAMostrar; i++) {
+                                const randomIndex = Math.floor(Math.random() * obrasCopia.length);
+                                obrasAleatorias.push(obrasCopia[randomIndex]);
+                                obrasCopia.splice(randomIndex, 1);
+                            }
+                        }
+                        // Si no hay suficientes, repetir algunas obras para llegar a 4
+                        else {
+                            // Primero agregamos todas las obras disponibles
+                            obrasAleatorias.push(...obrasDeOtrosArtistas);
+
+                            // Luego repetimos algunas hasta llegar a 4
+                            let index = 0;
+                            while (obrasAleatorias.length < totalObrasAMostrar) {
+                                obrasAleatorias.push(obrasDeOtrosArtistas[index % obrasDeOtrosArtistas.length]);
+                                index++;
+                            }
+                        }
+                    }
+
+                    contenedorOtrosAutores.innerHTML = "";
+
+                    obrasAleatorias.forEach(obra => {
+                        const divObra = document.createElement("div");
+                        divObra.className = "obra-similar";
+                        divObra.setAttribute("data-id", obra.id_img);
+                        divObra.innerHTML = `
+                    <div class="imagen-container">
+                        <img src="${obra.img[0]}" alt="Obra de otro autor" class="obra-similar-img">
+                        <div class="overlay"><p>Ver más</p></div>
+                    </div>
+                    <p>"${obra.titulo}"</p>
+                    <p>${obra.autor}</p>
+                    <p>${obra.tamano}</p>
+                    <p>${obra.estado}</p>
+                    <p class="precio">${obra.precio} Bs.</p>
+                    <div class="plus-button">+</div>
+                `;
+
+                        divObra.addEventListener('click', function () {
+                            window.location.href = `detalle.html?id=${obra.id_img}`;
+                        });
+
+                        contenedorOtrosAutores.appendChild(divObra);
+                    });
+                }
+
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        });
+    </script>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/footer.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalles del Artista</title>
+    <link rel="stylesheet" href="/assets/css/detalle.css">
+
+
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="section-detall">
+        <div class="section-carrusel">
+            <div class="title-obra">
+                <h4>
+                    <a href="/pages/galertia/index.html" class="titulo-inclinado">GALERIA</a> <span>|</span> <a
+                        href="obras.html" class="titulo-inclinado">TU AGOSTO, TU PATRIA</a> <span>|</span>
+                    <a href="/components/detalleArtist.html?id=${artista.id}">
+                        <span id="autor-name" class="titulo-inclinado"></span> <span id="autor-surname"
+                            class="titulo-inclinado"></span>
+                    </a>
+                </h4>
+            </div>
+
+            <div class="detalle-container">
+                <div class="detalle-imagenes">
+                    <div class="carrusel-container">
+                        <button id="prev" class="carrusel-btn">&#10094;</button>
+                        <div class="carrusel">
+                            <img id="imagen-principal" class="detalle-imagen" src="" alt="Imagen principal de la obra">
+                        </div>
+                        <button id="next" class="carrusel-btn">&#10095;</button>
+                    </div>
+                    <div class="galeria" id="galeria"></div>
+                </div>
+
+                <div class="detalle-info">
+                    <p class="titulo-inclinado">ACERCA DE LA OBRA</p>
+                    <h1 id="titulo" class="tituloArt"></h1>
+                    <h1 class="tituloArt">Bs. <span id="precio" class="tituloArt"></span></h1>
+                    <strong>Detalles:</strong>
+                    <ul>
+                        <li>
+                            <p class="nombre-autora">Autora:<span id="autor" class="nombre-autora"></span></p>
+                        </li>
+                        <li>
+                            <p>Tipo:<span id="type"></span></p>
+                        </li>
+                        <li>
+                            <p>Técnica:<span id="tecnica"></span></p>
+                        </li>
+                        <li>
+                            <p>Estilo:<span id="estilo"></span></p>
+                        </li>
+                        <li>
+                            <p>Tamaño:<span id="tamano"></span></p>
+                        </li>
+                        <li>
+                            <p>Estado de la obra:<span id="estado"></span></p>
+                        </li>
+                        <li>
+                            <p>Tirada:<span id="tirada"></span></p>
+                        </li>
+                        <li>
+                            <p>Firma:<span id="firma"></span></p>
+                        </li>
+                        <li>
+                            <p>Localización:<span id="localizacion"></span></p>
+                        </li>
+                    </ul>
+                    <strong>Lo que la autuora dice de la obra:</strong>
+                    <p> <span id="descripcion"></span></p>
+
+                    <p>*Todas las obras de arte vienen con su certificado de autenticidad</p>
+
+                    <div class="interesado">
+                        <p>¿Estas insteresado en esta obra?</p>
+                        <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                            <button class="custom-button">Contacta con el artista</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-5">
+            <h1 class="titulo">OTROS TRABAJOS DE LA PINTORA</h1>
+            <div class="obras-similares" id="obras-similares"></div>
+    </div>
+
+    <div class="section-art">
+        <div class="section-2">
+            <div class="artist-info-container">
+                <div class="artist-info">
+                    <div class="artist-description-box">
+                        <div class="artist-name-box">
+                            <p id="artists-name" class="nombre">Nombre del Autor</p>
+                            <p id="artists-surname" class="apellido">Apellido del Autor</p>
+                        </div>
+                        <p id="artist-type">Tipo de Autor</p>
+                        <p id="autor-descripcion">Descripción del autor...</p>
+                    </div>
+                    <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                        <button class="custom-button">Contacta con el artista</button>
+                    </a>
+                </div>
+                <div class="author-image">
+                    <img id="autor-imagen" src="ruta-a-imagen.jpg" alt="Imagen del autor">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <img id="preview-img"
+        style="display: none; position: fixed; top: 10px; right: 10px; width: 150px; border: 2px solid #ccc;">
+
+    <div class="section-3">
+        <h1 class="titulo">DESCUBRA OTRAS OBRAS</h1>
+        <div class="otros-autores" id="otros-autores"></div>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const params = new URLSearchParams(window.location.search);
+            const obraId = params.get('id');
+
+            if (!obraId) {
+                document.body.innerHTML = "<h2>Error: Obra no encontrada</h2>";
+                return;
+            }
+
+            try {
+                const responseObras = await fetch("../../obras.json");
+                const obras = await responseObras.json();
+                const obra = obras.find(o => o.id_img === obraId);
+
+                if (!obra) {
+                    document.body.innerHTML = "<h2>Error: Obra no encontrada</h2>";
+                    return;
+                }
+
+                document.getElementById("titulo").textContent = obra.titulo;
+                document.getElementById("precio").textContent = obra.precio;
+                document.getElementById("autor").textContent = obra.autor;
+                document.getElementById("tecnica").textContent = obra.tecnica;
+                document.getElementById("estilo").textContent = obra.estilo;
+                document.getElementById("tamano").textContent = obra.tamano;
+                document.getElementById("estado").textContent = obra.estado;
+                document.getElementById("tirada").textContent = obra.tirada;
+                document.getElementById("firma").textContent = obra.firma;
+                document.getElementById("localizacion").textContent = obra.localizacion;
+                document.getElementById("descripcion").textContent = obra.descripcion;
+
+                const imagenes = obra.img || [];
+                if (imagenes.length > 0) {
+                    let indiceActual = 0;
+                    const imagenPrincipal = document.getElementById("imagen-principal");
+                    imagenPrincipal.src = imagenes[indiceActual];
+
+                    document.getElementById("prev").addEventListener("click", function () {
+                        indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+                        imagenPrincipal.src = imagenes[indiceActual];
+                        actualizarMiniaturaActiva(indiceActual);
+                    });
+
+                    document.getElementById("next").addEventListener("click", function () {
+                        indiceActual = (indiceActual + 1) % imagenes.length;
+                        imagenPrincipal.src = imagenes[indiceActual];
+                        actualizarMiniaturaActiva(indiceActual);
+                    });
+
+                    const galeria = document.getElementById("galeria");
+                    galeria.innerHTML = "";
+
+                    imagenes.forEach((src, index) => {
+                        const miniatura = document.createElement("div");
+                        miniatura.className = "miniatura";
+                        if (index === indiceActual) {
+                            miniatura.classList.add("activa");
+                        }
+
+                        const img = document.createElement("img");
+                        img.src = src;
+                        img.className = "detalle-imagen";
+                        img.style.cursor = "pointer";
+
+                        // Crear el velo negro
+                        const velo = document.createElement("div");
+                        velo.className = "velo";
+
+                        const textoDetalle = document.createElement("p");
+                        textoDetalle.className = "texto-detalle";
+
+                        // Cambio aquí: La primera imagen dice "Obra completa"
+                        if (index === 0) {
+                            textoDetalle.textContent = "Obra completa";
+                        } else if (index === imagenes.length - 1) {
+                            textoDetalle.textContent = "Ver en mi hogar";
+                        } else {
+                            textoDetalle.textContent = `Detalle N° ${index}`;
+                        }
+
+                        miniatura.appendChild(img);
+                        miniatura.appendChild(velo);
+                        miniatura.appendChild(textoDetalle);
+                        galeria.appendChild(miniatura);
+
+                        miniatura.addEventListener("mouseover", function () {
+                            imagenPrincipal.src = src;
+                            indiceActual = index;
+                            actualizarMiniaturaActiva(indiceActual);
+                        });
+                    });
+
+                    // Función para actualizar la miniatura activa
+                    function actualizarMiniaturaActiva(indice) {
+                        document.querySelectorAll('.galeria .miniatura').forEach((mini, idx) => {
+                            if (idx === indice) {
+                                mini.classList.add('activa');
+                            } else {
+                                mini.classList.remove('activa');
+                            }
+                        });
+                    }
+
+                    // Inicializar la primera miniatura como activa
+                    actualizarMiniaturaActiva(indiceActual);
+
+                } else {
+                    console.log("No se encontraron imágenes para esta obra.");
+                }
+
+                const autores = JSON.parse(await fetch("../../artist.json").then(res => res.text()));
+                const autor = autores.find(a => a.id === obra.id_autor);
+
+                if (autor) {
+                    document.getElementById("autor-imagen").src = autor.imags[1];
+                    document.getElementById("autor-descripcion").textContent = autor.descripcion;
+                    document.getElementById("artists-name").textContent = autor.name;
+                    document.getElementById("artists-surname").textContent = autor.surname;
+                } else {
+                    console.log("No se encontró el autor");
+                }
+
+                const obrasDeLaAutora = obras.filter(o => o.id_autor === obra.id_autor);
+                const obrasMuestra = obrasDeLaAutora.slice(0, 4);
+
+                // SECCIÓN: OTROS TRABAJOS DE LA PINTORA
+                const contenedorObrasSimilares = document.getElementById("obras-similares");
+                contenedorObrasSimilares.innerHTML = "";
+
+                obrasMuestra.forEach(obra => {
+                    const divObra = document.createElement("div");
+                    divObra.className = "obra-similar";
+                    divObra.setAttribute("data-id", obra.id_img);
+                    divObra.innerHTML = `
+                <div class="imagen-container">
+                    <img src="${obra.img[0]}" alt="Obra similar" class="obra-similar-img">
+                </div>
+                <div class="text-descript">
+                <p class="titulo-inclinado">"${obra.titulo}"</p>
+                <p><b> ${obra.autor} </b></p>
+                <p> ${obra.tamano}</p>
+                <p> ${obra.estado}</p>
+                <p class"precio"> ${obra.precio} Bs.</p>
+                <div class="plus-button">+</div></div>
+            `;
+
+                    divObra.addEventListener('click', function () {
+                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                    });
+
+                    contenedorObrasSimilares.appendChild(divObra);
+                });
+
+                // SECCIÓN: DESCUBRA OTRAS OBRAS
+                const otrosAutores = autores.filter(a => a.id !== obra.id_autor);
+                const obrasAleatorias = [];
+
+                while (obrasAleatorias.length < 4) {
+                    const randomAutor = otrosAutores[Math.floor(Math.random() * otrosAutores.length)];
+                    const randomObra = obras.filter(o => o.id_autor === randomAutor.id);
+                    if (randomObra.length > 0) {
+                        const obraAleatoria = randomObra[Math.floor(Math.random() * randomObra.length)];
+                        obrasAleatorias.push(obraAleatoria);
+                    }
+                }
+
+                const contenedorOtrosAutores = document.getElementById("otros-autores");
+                contenedorOtrosAutores.innerHTML = "";
+
+                obrasAleatorias.forEach(obra => {
+                    const divObra = document.createElement("div");
+                    divObra.className = "obra-similar";
+                    divObra.setAttribute("data-id", obra.id_img);
+                    divObra.innerHTML = `
+                <div class="imagen-container">
+                    <img src="${obra.img[0]}" alt="Obra de otro autor" class="obra-similar-img">
+                    <div class="overlay"><p>Ver más</p></div>
+                </div>
+                <p>"${obra.titulo}"</p>
+                <p>${obra.autor}</p>
+                <p> ${obra.tamano}</p>
+                <p> ${obra.estado}</p>
+                <p class"precio"> ${obra.precio} Bs.</p>
+                <div class="plus-button">+</div>
+            `;
+
+                    divObra.addEventListener('click', function () {
+                        window.location.href = `detalle.html?id=${obra.id_img}`;
+                    });
+
+                    contenedorOtrosAutores.appendChild(divObra);
+                });
+
+            } catch (error) {
+                console.error("Error al cargar los datos:", error);
+            }
+        });
+    </script>
+
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/footer.js"></script>
+</body>
+
+</html>
