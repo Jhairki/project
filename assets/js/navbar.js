@@ -1,7 +1,7 @@
 const navbarHTML = `
 <nav class="custom-navbar">
     <div class="logo">
-        <a href="../index.html">
+        <a href="index.html">
             <img src="assets/images/general web/MARCA FINAL-06 3.png" alt="Logo">
         </a>
     </div>
@@ -11,11 +11,11 @@ const navbarHTML = `
         <div></div>
     </div>
     <div class="menu" id="menu">
-        <a href="../galeria.html" class="nav-item">Galería</a>
-        <a href="../obras.html" class="nav-item">Obras</a>
-        <a href="../artistas.html" class="nav-item">Artistas</a>
-        <a href="../nosotros.html" class="nav-item">Nosotros</a>
-        <a href="../contacto.html" class="nav-item">Contacto</a>
+        <a href="galeria.html" class="nav-item">Galería</a>
+        <a href="obras.html" class="nav-item">Obras</a>
+        <a href="artistas.html" class="nav-item">Artistas</a>
+        <a href="nosotros.html" class="nav-item">Nosotros</a>
+        <a href="contacto.html" class="nav-item">Contacto</a>
     </div>
     <div class="search">
         <button class="search-btn">
