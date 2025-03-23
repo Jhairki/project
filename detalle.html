@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Detalles del Artista</title>
-    <link rel="stylesheet" href="/assets/css/detalle.css">
+    <link rel="stylesheet" href="assets/css/detalle.css">
 
 
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -33,9 +33,9 @@
         <div class="section-carrusel">
             <div class="title-obra">
                 <h4>
-                    <a href="/pages/galertia/index.html" class="titulo-inclinado">GALERIA</a> <span>|</span> <a
+                    <a href="galeria.html" class="titulo-inclinado">GALERIA</a> <span>|</span> <a
                         href="obras.html" class="titulo-inclinado">TU AGOSTO, TU PATRIA</a> <span>|</span>
-                    <a href="/components/detalleArtist.html?id=${artista.id}">
+                    <a href="detalleArtist.html?id=${artista.id}">
                         <span id="autor-name" class="titulo-inclinado"></span> <span id="autor-surname"
                             class="titulo-inclinado"></span>
                     </a>
@@ -95,7 +95,7 @@
 
                     <div class="interesado">
                         <p>¿Estas insteresado en esta obra?</p>
-                        <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                        <a href="contacto.html#contacto-ensenar-trabajo">
                             <button class="custom-button">Contacta con el artista</button>
                         </a>
                     </div>
@@ -122,7 +122,7 @@
                         <p id="artist-type">Tipo de Autor</p>
                         <p id="autor-descripcion">Descripción del autor...</p>
                     </div>
-                    <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                    <a href="contacto.html#contacto-ensenar-trabajo">
                         <button class="custom-button">Contacta con el artista</button>
                     </a>
                 </div>
@@ -142,7 +142,7 @@
         <div class="otros-autores" id="otros-autores"></div>
     </div>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", async function () {
             const params = new URLSearchParams(window.location.search);
@@ -154,7 +154,7 @@
             }
 
             try {
-                const responseObras = await fetch("../../obras.json");
+                const responseObras = await fetch("obras.json");
                 const obras = await responseObras.json();
                 const obra = obras.find(o => o.id_img === obraId);
 
@@ -254,7 +254,7 @@
                     console.log("No se encontraron imágenes para esta obra.");
                 }
 
-                const autores = JSON.parse(await fetch("../../artist.json").then(res => res.text()));
+                const autores = JSON.parse(await fetch("artist.json").then(res => res.text()));
                 const autor = autores.find(a => a.id === obra.id_autor);
 
                 if (autor) {
@@ -343,8 +343,8 @@
         });
     </script>
 
-    <script src="/assets/js/navbar.js"></script>
-    <script src="/assets/js/footer.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
 </body>
 
 </html>

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Artista</title>
-    <link rel="stylesheet" href="/assets/css/detalleArtist.css">
+    <link rel="stylesheet" href="assets/css/detalleArtist.css">
 
 
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -102,7 +102,7 @@
             }
 
             try {
-                const responseArtists = await fetch("../artist.json");
+                const responseArtists = await fetch("artist.json");
                 const artists = await responseArtists.json();
 
                 const artist = artists.find(a => a.id == artistId);
@@ -149,7 +149,7 @@
                     });
                 }
 
-                const responseObras = await fetch("../obras.json");
+                const responseObras = await fetch("obras.json");
                 const obras = await responseObras.json();
 
                 const contenedorObrasSimilares = document.getElementById("obras-similares");
@@ -248,9 +248,9 @@
         });
     </script>
 
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/navbar.js"></script>
-    <script src="/assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
 
 
 </body>

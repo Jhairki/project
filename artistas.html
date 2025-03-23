@@ -7,10 +7,10 @@
   <title>Arte-Bolivia</title>
 
 
-  <link rel="stylesheet" href="/assets/css/navbar.css">
-  <link rel="stylesheet" href="/assets/css/footer.css">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="pages/artistas/styles.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -30,7 +30,7 @@
 
 <body>
   <div class="section-1">
-    <img src="/assets/images/general web/banner bolivia 1.png" alt="" style="width: 100%;">
+    <img src="assets/images/general web/banner bolivia 1.png" alt="" style="width: 100%;">
     <div class="text-overlay">
       <h1>
         <span class="primario">ARTISTAS</span>
@@ -82,7 +82,7 @@
         <div class="occidental">OCCIDENTE</div>
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-occidente'">
-            <img src="/assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
+            <img src="assets/images/general web/2.final la paz 1.png" alt="La Paz" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -102,7 +102,7 @@
       <div class="bottom-cities">
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-occidente'">
-            <img src="/assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
+            <img src="assets/images/general web/2.final oruro 1.png" alt="Oruro" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div>
               <!-- Texto en overlay -->
@@ -122,7 +122,7 @@
 
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-occidente'">
-            <img src="/assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
+            <img src="assets/images/general web/2.final potosi 1.png" alt="Potosi" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -147,7 +147,7 @@
         <div class="occidental">CENTRAL</div>
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-central'">
-            <img src="/assets/images/general web/2.final cochabamaba 2.png" class="city-image">
+            <img src="assets/images/general web/2.final cochabamaba 2.png" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -167,7 +167,7 @@
       <div class="bottom-cities">
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-central'">
-            <img src="/assets/images/general web/2.final sucre 1.png" class="city-image">
+            <img src="assets/images/general web/2.final sucre 1.png" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -185,7 +185,7 @@
 
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-central'">
-            <img src="/assets/images/general web/2.final tarija 1.png" class="city-image">
+            <img src="assets/images/general web/2.final tarija 1.png" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -210,7 +210,7 @@
         <div class="occidental">ORIENTE</div>
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-oriente'">
-            <img src="/assets/images/general web/2.final santa cruz 1.png" alt="La Paz" class="city-image">
+            <img src="assets/images/general web/2.final santa cruz 1.png" alt="La Paz" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -229,7 +229,7 @@
       <div class="bottom-cities">
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-oriente'">
-            <img src="/assets/images/general web/2.final pando.png" alt="Oruro" class="city-image">
+            <img src="assets/images/general web/2.final pando.png" alt="Oruro" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -247,7 +247,7 @@
 
         <div class="city-card">
           <div class="image-container" onclick="location.href='#artistas-oriente'">
-            <img src="/assets/images/general web/2.final beni.png" alt="Potosi" class="city-image">
+            <img src="assets/images/general web/2.final beni.png" alt="Potosi" class="city-image">
             <div class="flag-overlay">
               <div class="more-artists">Ver <br> Artistas</div> <!-- Texto en overlay -->
             </div>
@@ -284,7 +284,7 @@
           <div class="artist-description" id="artistDescriptionOccidental"></div>
         </div>
         <div class="boton-artista">
-          <a href="/components/detalleArtist.html?id=${artista.id}">
+          <a href="detalleArtist.html?id=${artista.id}">
             <button class="custom-button">Más del artista</button>
           </a>
         </div>
@@ -319,7 +319,7 @@
           <div class="artist-description" id="artistDescriptionCentral"></div>
         </div>
         <div class="boton-artista">
-          <a href="/components/detalleArtist.html?id=${artista.id}">
+          <a href="detalleArtist.html?id=${artista.id}">
             <button class="custom-button">Más del artista</button>
           </a>
         </div>
@@ -354,7 +354,7 @@
           <div class="artist-description" id="artistDescriptionOriente"></div>
         </div>
         <div class="boton-artista">
-          <a href="/components/detalleArtist.html?id=${artista.id}">
+          <a href="detalleArtist.html?id=${artista.id}">
             <button class="custom-button">Más del artista</button>
           </a>
         </div>
@@ -463,23 +463,23 @@
     if (region.mainImage) {
       region.mainImage.style.cursor = "pointer";
       region.mainImage.onclick = function () {
-        window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+        window.location.href = `detalleArtist.html?id=${artista.id}`;
       };
     }
 
     if (region.mainImageContainer) {
       region.mainImageContainer.style.cursor = "pointer";
       region.mainImageContainer.onclick = function () {
-        window.location.href = `/components/detalleArtist.html?id=${artista.id}`;
+        window.location.href = `detalleArtist.html?id=${artista.id}`;
       };
     }
 
     if (region.botonArtista) {
-      region.botonArtista.href = `/components/detalleArtist.html?id=${artista.id}`;
+      region.botonArtista.href = `detalleArtist.html?id=${artista.id}`;
     }
   }
 
-  fetch("/project/artist.json")
+  fetch("artist.json")
     .then(response => response.json())
     .then(artistas => {
       if (!Array.isArray(artistas) || artistas.length === 0) {
@@ -541,7 +541,7 @@
           });
 
           container.addEventListener("dblclick", () => {
-            window.location.href = `/project/components/detalleArtist.html?id=${artista.id}`;
+            window.location.href = `detalleArtist.html?id=${artista.id}`;
           });
 
           region.carousel.appendChild(container);
@@ -561,9 +561,9 @@
 });
   </script>
 
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/navbar.js"></script>
-  <script src="/assets/js/footer.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
 
 </body>
 

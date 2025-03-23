@@ -5,8 +5,8 @@ const footerHTML = `
             <div class="row">
                 
                 <div class="col-md-3 section logo-section">
-                    <a href="/pages/inicio/index">
-                        <img src="/assets/images/general web/marca en negativo-09.png" alt="Logo Galería de Arte">
+                    <a href="index.htm">
+                        <img src="assets/images/general web/marca en negativo-09.png" alt="Logo Galería de Arte">
                     </a>
                 </div>
 
@@ -46,11 +46,11 @@ const footerHTML = `
                 <div class="col-md-3 section">
                     <h3>MENÚ</h3>
                     <ul class="menu-links">
-                        <li><a href="/pages/galeria/index.html">Galería</a></li>
-                        <li><a href="/pages/obras/index.html">Obras</a></li>
-                        <li><a href="/pages/artistas/index.html">Artistas</a></li>
-                        <li><a href="/pages/nosotros/index.html">Nosotros</a></li>
-                        <li><a href="/pages/contacto/index.html">Contacto</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="obras.html">Obras</a></li>
+                        <li><a href="artistas.html">Artistas</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -62,7 +62,7 @@ const footerHTML = `
                         ofreciendo a los artistas un lugar para desarrollarse y conectar con coleccionistas y
                         amantes del arte.
                     </p>
-                    <a href="../contacto/index.html#contacto-ensenar-trabajo">
+                    <a href="contacto.html#contacto-ensenar-trabajo">
                     <button class="custom-button">Llena el formulario</button>
                 </a>
                 </div>

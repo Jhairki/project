@@ -2,10 +2,10 @@
   {
     "id_img":"img1",
     "img" : [
-      "/assets/images/obras/laura mollinedo/14. Tiempo. Taco perdido. Laura Mollinedo Aruni.jpg",
-      "/assets/images/obras/laura mollinedo/Tiempo DETALLE 1 .jpg",
-      "/assets/images/obras/laura mollinedo/Tiempo DETALLE 2.jpg",
-      "/assets/images/obras/laura mollinedo/VERTICAL lau 3.jpg"
+      "assets/images/obras/laura mollinedo/14. Tiempo. Taco perdido. Laura Mollinedo Aruni.jpg",
+      "assets/images/obras/laura mollinedo/Tiempo DETALLE 1 .jpg",
+      "assets/images/obras/laura mollinedo/Tiempo DETALLE 2.jpg",
+      "assets/images/obras/laura mollinedo/VERTICAL lau 3.jpg"
     
     ],
     "titulo": "Tiempo",
@@ -25,10 +25,10 @@
   {
     "id_img":"img2",
     "img" :[
-      "/assets/images/obras/laura mollinedo/6. Hipocresía y poder. Punta Seca. Laura Mollinedo Aruni.jpg",
-      "/assets/images/obras/laura mollinedo/Hipocresia y poder DETALLE 1.jpg",
-      "/assets/images/obras/laura mollinedo/Hipocresia y poder DETALLE 2.jpg",
-      "/assets/images/obras/laura mollinedo/VERTICAL lau 4.jpg"
+      "assets/images/obras/laura mollinedo/6. Hipocresía y poder. Punta Seca. Laura Mollinedo Aruni.jpg",
+      "assets/images/obras/laura mollinedo/Hipocresia y poder DETALLE 1.jpg",
+      "assets/images/obras/laura mollinedo/Hipocresia y poder DETALLE 2.jpg",
+      "assets/images/obras/laura mollinedo/VERTICAL lau 4.jpg"
     ],
     "titulo": "Hipocrecia y Poder",
     "precio": "300",
@@ -47,10 +47,10 @@
   {
     "id_img":"img3",
     "img" :[
-      "/assets/images/obras/laura mollinedo/12. Simbiosis natural. Dibujo. Laura Mollinedo Aruni.jpg",
-    "/assets/images/obras/laura mollinedo/Simbiosis natural.DETALLE 1 Dibujo..jpg",
-    "/assets/images/obras/laura mollinedo/Simbiosis natural.DETALLE 2 Dibujo..jpg",
-    "/assets/images/obras/laura mollinedo/VERTICAL lau 1.jpg" 
+      "assets/images/obras/laura mollinedo/12. Simbiosis natural. Dibujo. Laura Mollinedo Aruni.jpg",
+    "assets/images/obras/laura mollinedo/Simbiosis natural.DETALLE 1 Dibujo..jpg",
+    "assets/images/obras/laura mollinedo/Simbiosis natural.DETALLE 2 Dibujo..jpg",
+    "assets/images/obras/laura mollinedo/VERTICAL lau 1.jpg" 
     
     ],
     "titulo": "Simbiosis Natural",
@@ -70,10 +70,10 @@
   {
     "id_img":"img4",
     "img" :[
-      "/assets/images/obras/laura mollinedo/5. El Gran Hermano te vigila. Serigrafia artística. Laura Mollinedo Aruni.jpg",
-      "/assets/images/obras/laura mollinedo/El Gran Hermano te vigila DETALLE 1.jpg",
-      "/assets/images/obras/laura mollinedo/El Gran Hermano te vigila DETALLE 2.jpg",
-      "/assets/images/obras/laura mollinedo/VERTICAL lau 2.jpg"
+      "assets/images/obras/laura mollinedo/5. El Gran Hermano te vigila. Serigrafia artística. Laura Mollinedo Aruni.jpg",
+      "assets/images/obras/laura mollinedo/El Gran Hermano te vigila DETALLE 1.jpg",
+      "assets/images/obras/laura mollinedo/El Gran Hermano te vigila DETALLE 2.jpg",
+      "assets/images/obras/laura mollinedo/VERTICAL lau 2.jpg"
     ],
     "titulo": "El Gran Hermano te vigila",
     "precio": "500",
@@ -93,10 +93,10 @@
   {
     "id_img":"img5",
     "img" : [
-      "/assets/images/obras/carol bitre/Descubriendo_el_color.DamarBitre.jpg",
-      "/assets/images/obras/carol bitre/20241029_213645.jpg",
-      "/assets/images/obras/carol bitre/20241029_213634.jpg",
-      "/assets/images/obras/carol bitre/damar 1.jpg"
+      "assets/images/obras/carol bitre/Descubriendo_el_color.DamarBitre.jpg",
+      "assets/images/obras/carol bitre/20241029_213645.jpg",
+      "assets/images/obras/carol bitre/20241029_213634.jpg",
+      "assets/images/obras/carol bitre/damar 1.jpg"
     ],
     "titulo": "Descubriendo el color",
     "precio": "2000",
@@ -115,10 +115,10 @@
   {
     "id_img":"img6",
     "img" :[
-      "/assets/images/obras/carol bitre/20240616_210154_113153.jpg" ,
-      "/assets/images/obras/carol bitre/20241029_203957.jpg" ,
-      "/assets/images/obras/carol bitre/20241029_203926.jpg" ,
-      "/assets/images/obras/carol bitre/VERTICAL carol 3.jpg" 
+      "assets/images/obras/carol bitre/20240616_210154_113153.jpg" ,
+      "assets/images/obras/carol bitre/20241029_203957.jpg" ,
+      "assets/images/obras/carol bitre/20241029_203926.jpg" ,
+      "assets/images/obras/carol bitre/VERTICAL carol 3.jpg" 
     ],
     "titulo": "Anatomia de una desilusion",
     "precio": "3000",
@@ -137,10 +137,10 @@
   {
     "id_img":"img7",
     "img" :[
-      "/assets/images/obras/carol bitre/DAMAR_BITRE.jpg" ,
-      "/assets/images/obras/carol bitre/20241029_213452.jpg" ,
-      "/assets/images/obras/carol bitre/20241029_213500.jpg" ,
-      "/assets/images/obras/carol bitre/damar 2.jpg" 
+      "assets/images/obras/carol bitre/DAMAR_BITRE.jpg" ,
+      "assets/images/obras/carol bitre/20241029_213452.jpg" ,
+      "assets/images/obras/carol bitre/20241029_213500.jpg" ,
+      "assets/images/obras/carol bitre/damar 2.jpg" 
 
     ],
     "titulo": "Dulce Dolor",
@@ -160,10 +160,10 @@
   {
     "id_img":"img8",
     "img" :[
-      "/assets/images/obras/carol bitre/obra 3.jpg" ,
-      "/assets/images/obras/carol bitre/20241029_205652.jpg" ,
-      "/assets/images/obras/carol bitre/20241029_205825.jpg" ,
-      "/assets/images/obras/carol bitre/VERTICAL carol 4.jpg" 
+      "assets/images/obras/carol bitre/obra 3.jpg" ,
+      "assets/images/obras/carol bitre/20241029_205652.jpg" ,
+      "assets/images/obras/carol bitre/20241029_205825.jpg" ,
+      "assets/images/obras/carol bitre/VERTICAL carol 4.jpg" 
 
     ],
     "titulo": "Infierno sentir",
@@ -185,10 +185,10 @@
   {
     "id_img":"img9",
     "img" :[
-      "/assets/images/obras/abdel pomacusi/IMG_20241008_104016_343.jpg" ,
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_141808.jpg" ,
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_141819.jpg" ,
-      "/assets/images/obras/abdel pomacusi/mockup abdel 1.jpg" 
+      "assets/images/obras/abdel pomacusi/IMG_20241008_104016_343.jpg" ,
+      "assets/images/obras/abdel pomacusi/IMG_20241224_141808.jpg" ,
+      "assets/images/obras/abdel pomacusi/IMG_20241224_141819.jpg" ,
+      "assets/images/obras/abdel pomacusi/mockup abdel 1.jpg" 
 
     ],
     "titulo": "El triunfo de la naturaleza",
@@ -209,10 +209,10 @@
   {
     "id_img":"img10",
     "img" :[
-      "/assets/images/obras/abdel pomacusi/IMG_20241014_221912.jpg",
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_142934.jpg",
-      "/assets/images/obras/abdel pomacusi/IMG_20241014_221912.jpg",
-      "/assets/images/obras/abdel pomacusi/mockup abdel 2.jpg"
+      "assets/images/obras/abdel pomacusi/IMG_20241014_221912.jpg",
+      "assets/images/obras/abdel pomacusi/IMG_20241224_142934.jpg",
+      "assets/images/obras/abdel pomacusi/IMG_20241014_221912.jpg",
+      "assets/images/obras/abdel pomacusi/mockup abdel 2.jpg"
     ],
     "titulo": "Preludio de una feria",
     "precio": "800",
@@ -232,10 +232,10 @@
   {
     "id_img":"img11",
     "img" :[
-      "/assets/images/obras/abdel pomacusi/IMG_20241117_192303.jpg",
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_141509.jpg",
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_141451.jpg",
-      "/assets/images/obras/abdel pomacusi/mockup abdel 3.jpg"
+      "assets/images/obras/abdel pomacusi/IMG_20241117_192303.jpg",
+      "assets/images/obras/abdel pomacusi/IMG_20241224_141509.jpg",
+      "assets/images/obras/abdel pomacusi/IMG_20241224_141451.jpg",
+      "assets/images/obras/abdel pomacusi/mockup abdel 3.jpg"
     ],
     "titulo": "Dialogos entre tiempos",
     "precio": "1100",
@@ -255,10 +255,10 @@
   {
     "id_img":"img12",
     "img" :[
-      "/assets/images/obras/abdel pomacusi/IMG_20241206_205244.jpg" ,
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_141725.jpg" ,
-      "/assets/images/obras/abdel pomacusi/IMG_20241224_141738.jpg" ,
-      "/assets/images/obras/abdel pomacusi/mockup abdel 4.jpg" 
+      "assets/images/obras/abdel pomacusi/IMG_20241206_205244.jpg" ,
+      "assets/images/obras/abdel pomacusi/IMG_20241224_141725.jpg" ,
+      "assets/images/obras/abdel pomacusi/IMG_20241224_141738.jpg" ,
+      "assets/images/obras/abdel pomacusi/mockup abdel 4.jpg" 
   
     ],
     "titulo": "El ultimo canto",
@@ -288,10 +288,10 @@
   {
     "id_img":"img13",
     "img" :[
-      "/assets/images/obras/paola aliaga/5028685317070236916.jpg",
-      "/assets/images/obras/paola aliaga/5028685317070236914.jpg",
-      "/assets/images/obras/paola aliaga/5028685317070236915.jpg",
-      "/assets/images/obras/paola aliaga/1 PAOLA.jpg"
+      "assets/images/obras/paola aliaga/5028685317070236916.jpg",
+      "assets/images/obras/paola aliaga/5028685317070236914.jpg",
+      "assets/images/obras/paola aliaga/5028685317070236915.jpg",
+      "assets/images/obras/paola aliaga/1 PAOLA.jpg"
     ],
     "titulo": "Al sol del suenio",
     "precio": "1500",
@@ -311,10 +311,10 @@
   {
     "id_img":"img14",
     "img" :[
-      "/assets/images/obras/paola aliaga/5028685317070236927.jpg" ,
-      "/assets/images/obras/paola aliaga/5125609809679330553.jpg" ,
-      "/assets/images/obras/paola aliaga/5125609809679330552.jpg" ,
-      "/assets/images/obras/paola aliaga/2 PAOLA.jpg" 
+      "assets/images/obras/paola aliaga/5028685317070236927.jpg" ,
+      "assets/images/obras/paola aliaga/5125609809679330553.jpg" ,
+      "assets/images/obras/paola aliaga/5125609809679330552.jpg" ,
+      "assets/images/obras/paola aliaga/2 PAOLA.jpg" 
 
     ],
     "titulo": "El ultimo Carnaval",
@@ -335,10 +335,10 @@
   {
     "id_img":"img15",
     "img" :[
-      "/assets/images/obras/paola aliaga/5028685317070236917.jpg" ,
-      "/assets/images/obras/paola aliaga/5125609809679330545.jpg" ,
-      "/assets/images/obras/paola aliaga/5125609809679330546.jpg" ,
-      "/assets/images/obras/paola aliaga/3 PAOLA.jpg" 
+      "assets/images/obras/paola aliaga/5028685317070236917.jpg" ,
+      "assets/images/obras/paola aliaga/5125609809679330545.jpg" ,
+      "assets/images/obras/paola aliaga/5125609809679330546.jpg" ,
+      "assets/images/obras/paola aliaga/3 PAOLA.jpg" 
 
 
     ],
@@ -360,10 +360,10 @@
   {
     "id_img":"img16",
     "img" :[
-      "/assets/images/obras/paola aliaga/5019516846088498627.jpg" ,
-      "/assets/images/obras/paola aliaga/5125609809679330548.jpg" ,
-      "/assets/images/obras/paola aliaga/5125609809679330547.jpg" ,
-      "/assets/images/obras/paola aliaga/4 PAOLA.jpg" 
+      "assets/images/obras/paola aliaga/5019516846088498627.jpg" ,
+      "assets/images/obras/paola aliaga/5125609809679330548.jpg" ,
+      "assets/images/obras/paola aliaga/5125609809679330547.jpg" ,
+      "assets/images/obras/paola aliaga/4 PAOLA.jpg" 
 
     ],
     "titulo": "Entre suenios y realidad",
@@ -397,10 +397,10 @@
   {
     "id_img":"img17",
     "img" :[
-      "/assets/images/obras/natalia montes/5033114154201886374.jpg",
-      "/assets/images/obras/natalia montes/detalle 2.jpg",
-      "/assets/images/obras/natalia montes/IMG_0560.jpg",
-      "/assets/images/obras/natalia montes/CUADRADO 1.jpg"
+      "assets/images/obras/natalia montes/5033114154201886374.jpg",
+      "assets/images/obras/natalia montes/detalle 2.jpg",
+      "assets/images/obras/natalia montes/IMG_0560.jpg",
+      "assets/images/obras/natalia montes/CUADRADO 1.jpg"
     ],
     "titulo": "Serie \"Introversion\"",
     "precio": "700",
@@ -421,10 +421,10 @@
   {
     "id_img":"img18",
     "img" :[
-      "/assets/images/obras/natalia montes/5035071095920766386.jpg" ,
-      "/assets/images/obras/natalia montes/5035071095920766386.jpg" ,
-      "/assets/images/obras/natalia montes/5035071095920766386.jpg" ,
-      "/assets/images/obras/natalia montes/CUADRADO2.jpg" 
+      "assets/images/obras/natalia montes/5035071095920766386.jpg" ,
+      "assets/images/obras/natalia montes/5035071095920766386.jpg" ,
+      "assets/images/obras/natalia montes/5035071095920766386.jpg" ,
+      "assets/images/obras/natalia montes/CUADRADO2.jpg" 
     ],
     "titulo": "Urbe en Movimiento",
     "precio": "2000",
@@ -444,10 +444,10 @@
   {
     "id_img":"img19",
     "img" :[
-      "/assets/images/obras/natalia montes/5035071095920766388.jpg",
-      "/assets/images/obras/natalia montes/20241031_113349.JPEG",
-      "/assets/images/obras/natalia montes/5035071095920766387.jpg",
-      "/assets/images/obras/natalia montes/CUADRADO3.jpg"
+      "assets/images/obras/natalia montes/5035071095920766388.jpg",
+      "assets/images/obras/natalia montes/20241031_113349.JPEG",
+      "assets/images/obras/natalia montes/5035071095920766387.jpg",
+      "assets/images/obras/natalia montes/CUADRADO3.jpg"
 
     ],
     "titulo": "Levitar",
@@ -469,10 +469,10 @@
   {
     "id_img":"img20",
     "img" :[
-      "/assets/images/obras/natalia montes/5032819296107081290.jpg",
-      "/assets/images/obras/natalia montes/20210523_120807.JPEG",
-      "/assets/images/obras/natalia montes/20210523_120853.JPEG",
-      "/assets/images/obras/natalia montes/CUADRADO4.jpg"
+      "assets/images/obras/natalia montes/5032819296107081290.jpg",
+      "assets/images/obras/natalia montes/20210523_120807.JPEG",
+      "assets/images/obras/natalia montes/20210523_120853.JPEG",
+      "assets/images/obras/natalia montes/CUADRADO4.jpg"
     ],
     "titulo": "Soledad y vitiligio",
     "precio": "2600",
@@ -493,10 +493,10 @@
   {
     "id_img":"img21",
     "img" :[
-      "/assets/images/obras/guido quispe/Bienal Foto_1.jpg" ,
-      "/assets/images/obras/guido quispe/IMG_20241030_080714_479.jpg" ,
-      "/assets/images/obras/guido quispe/IMG_20241030_080756_540.jpg" ,
-      "/assets/images/obras/guido quispe/GUIDO 1.jpg"
+      "assets/images/obras/guido quispe/Bienal Foto_1.jpg" ,
+      "assets/images/obras/guido quispe/IMG_20241030_080714_479.jpg" ,
+      "assets/images/obras/guido quispe/IMG_20241030_080756_540.jpg" ,
+      "assets/images/obras/guido quispe/GUIDO 1.jpg"
     ],
     "titulo": "Campo de estrellas perdidas",
     "precio": "2500",
@@ -516,10 +516,10 @@
   {
     "id_img":"img22",
     "img" :[
-      "/assets/images/obras/guido quispe/IMG_20240611_152809_667 (1).jpg",
-      "/assets/images/obras/guido quispe/IMG_20241030_083428_145.jpg",
-      "/assets/images/obras/guido quispe/IMG_20241030_083351_682.jpg",
-      "/assets/images/obras/guido quispe/GUIDO 2.jpg"
+      "assets/images/obras/guido quispe/IMG_20240611_152809_667 (1).jpg",
+      "assets/images/obras/guido quispe/IMG_20241030_083428_145.jpg",
+      "assets/images/obras/guido quispe/IMG_20241030_083351_682.jpg",
+      "assets/images/obras/guido quispe/GUIDO 2.jpg"
 
     ],
     "titulo": "Serie Patrimonios",
@@ -540,10 +540,10 @@
   {
     "id_img":"img23",
     "img" :[
-      "/assets/images/obras/guido quispe/IMG_20240403_170350_331.jpg",
-      "/assets/images/obras/guido quispe/IMG_20241030_083243_124.jpg",
-      "/assets/images/obras/guido quispe/IMG_20241030_083303_474.jpg",
-      "/assets/images/obras/guido quispe/GUIDO 3.jpg"
+      "assets/images/obras/guido quispe/IMG_20240403_170350_331.jpg",
+      "assets/images/obras/guido quispe/IMG_20241030_083243_124.jpg",
+      "assets/images/obras/guido quispe/IMG_20241030_083303_474.jpg",
+      "assets/images/obras/guido quispe/GUIDO 3.jpg"
 
     ],
     "titulo": "Iglesia de Lampa",
@@ -564,10 +564,10 @@
   {
     "id_img":"img24",
     "img" :[
-      "/assets/images/obras/guido quispe/IMG_20240413_233604_600.jpg",
-      "/assets/images/obras/guido quispe/IMG_20241030_083458_283.jpg",
-      "/assets/images/obras/guido quispe/IMG_20241030_083515_269.jpg",
-      "/assets/images/obras/guido quispe/GUIDO 4.jpg"
+      "assets/images/obras/guido quispe/IMG_20240413_233604_600.jpg",
+      "assets/images/obras/guido quispe/IMG_20241030_083458_283.jpg",
+      "assets/images/obras/guido quispe/IMG_20241030_083515_269.jpg",
+      "assets/images/obras/guido quispe/GUIDO 4.jpg"
     ],
     "titulo": "Iglesia de Lampa",
     "precio": "2000",
