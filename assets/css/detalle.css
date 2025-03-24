@@ -524,6 +524,8 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centra verticalmente el contenido */
+  border-radius: 10px;
+  gap: 20px
 }
 
 /* Estilo para la imagen del autor */
@@ -547,11 +549,12 @@ span {
 /* Estilos para la caja de descripción del artista */
 .artist-description-box {
   position: relative;
-  border: 2px solid; /* Cambia el color de todo el borde */
+  border: 2px solid #fa7582;
   padding: 30px 20px 20px;
   margin-top: 20px;
   height: 100%; 
   display: flex;
+  border-radius: 10px;
   flex-direction: column;
   justify-content: center; /* Centra verticalmente el contenido */
 }
@@ -593,10 +596,29 @@ span {
 /* Estilo para la caja de nombre del artista */
 .artist-name-box {
   position: relative;
-  text-align: center;
-  margin-top: -40px;
+  margin-top: -60px;
   margin-bottom: 15px;
   z-index: 2;
+  font-weight: bold;
+  color: #ff4d6d;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.nombre {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  width: 50%;
+  background-color: #3f424a;
+  font-style: italic;
+}
+
+.apellido {
+  font-size: 30px;
+  text-align:center;
+  font-style: italic;
 }
 
 /* Estilos para los nombres y apellidos */
@@ -635,6 +657,8 @@ span {
 .custom-button:hover {
   background-color: #555;
 }
+
+
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {
