@@ -494,7 +494,7 @@
 
           // Add all artists to all three carousels
           artistas.forEach(artista => {
-            if (!artista.imags || artista.imags.length < 3) return;
+            if (!artista.imags || artista.imags.length < 2) return;
 
             // Add this artist to all three regions
             for (const regionKey in regiones) {
@@ -505,7 +505,7 @@
               container.className = "carousel-container";
 
               const img = document.createElement("img");
-              img.src = artista.imags[3];
+              img.src = artista.imags[1];
               img.alt = `Imagen de ${artista.name}`;
               img.className = "carousel-image";
 
