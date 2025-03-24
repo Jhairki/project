@@ -676,4 +676,9 @@
   padding-inline: 20px;
 }
 
+.imagetrain {
+  width: 100%;
+  height: auto;
+  
+}
 }
