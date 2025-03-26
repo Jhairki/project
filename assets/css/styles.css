@@ -28,7 +28,7 @@ strong, .bold {
     background: linear-gradient(to bottom, #c62828, #ff5252);
     color: white; 
     border: none; 
-    border-radius: 25px; 
+    border-radius: 20px;
     padding: 10px 20px; 
     font-size: 16px;
     cursor: pointer;
@@ -189,10 +189,10 @@ strong, .bold {
 
 .description {
   font-family: "Gelasio", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   color: white;
   padding-top: 30px;
+  text-align: left;
 }
 
 /*section-1 banner*/

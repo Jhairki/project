@@ -63,7 +63,7 @@ const footerHTML = `
                         amantes del arte.
                     </p>
                     <a href="contacto.html#contacto-ensenar-trabajo">
-                    <button class="custom-button">Llena el formulario</button>
+                    <button class="custom-button rounded-4">Llena el formulario</button>
                 </a>
                 </div>
             </div>

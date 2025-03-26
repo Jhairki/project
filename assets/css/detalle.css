@@ -1,3 +1,8 @@
+
+body{
+  font-family: 'Gelasio', serif; 
+}
+
 /* SECCIÓN CARRUSEL */
 .section-detall {
   display: flex;
@@ -19,9 +24,12 @@
 .section-3 {
   display: grid;
   place-items: center; /* Centra horizontal y verticalmente */
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #3f424a;
   text-align: center;
+  place-items: center;
+  width: 100%;
 }
 
 
@@ -132,7 +140,6 @@ span {
   font-style: italic;
   font-size: 35px;
   justify-self: flex-start;
-  padding-left: 120px;
 }
 
 
@@ -254,7 +261,7 @@ span {
   flex-wrap: wrap;
   gap: 20px;
   margin: 30px 0;
-  width: 80%;
+  width: 100%;
   justify-content: flex-start; 
 }
 
@@ -270,7 +277,7 @@ span {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -497,7 +504,8 @@ span {
 
 
 .section-art {
-  background-color: #64656e;
+  background-color: rgb(63, 66, 74);
+  width: 100%;
 }
 
 /* Estilo para la sección principal */
@@ -638,19 +646,20 @@ span {
 /* Estilo para la descripción del autor */
 #autor-descripcion {
   line-height: 1.6;
+  font-family: 'Gelasio', serif; 
 }
 
 /* Estilo para el botón */
 .custom-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  align-self: center; /* Centra el botón horizontalmente */
+  justify-self: flex-end;
+    background: linear-gradient(to bottom, #c62828, #ff5252);
+    color: white; 
+    border: none; 
+    border-radius: 20px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; 
 }
 
 /* Efecto de hover en el botón */
